@@ -13,6 +13,12 @@
       },
       "commands" : [
         {
+          "name": "Rafraîchir",
+          "type": "action",
+          "subtype": "other",
+          "logicalId": "refresh"
+        },
+        {
           "name": "Couleur",
           "type": "info",
           "subtype": "string",

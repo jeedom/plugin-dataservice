@@ -68,8 +68,9 @@ class dataservice extends eqLogic {
     if ($this->getConfiguration('applyService') != $this->getConfiguration('service')) {
       $this->applyModuleConfiguration();
     }
-    if($this->getIsEnable() == 1){
-      $this->refreshData();
+    $refresh = $this->getCmd(null, 'refresh');
+    if (!is_object($refresh)) {
+      $refresh = new srouterCmd();
     }
   }
   
@@ -132,7 +133,10 @@ class dataserviceCmd extends cmd {
   
   
   public function execute($_options = array()) {
-    
+    $eqLogic = $this->getEqLogic();
+    if($this->getLogicalId() == 'refresh'){
+      $eqLogic->refreshData();
+    }
   }
   
   /*     * **********************Getteur Setteur*************************** */
