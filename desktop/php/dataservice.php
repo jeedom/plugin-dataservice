@@ -116,6 +116,9 @@ $services = dataservice::devicesParameters();
 						<?php
 						foreach ($services as $key => $service) {
 							echo '<div class="serviceConfig '.$key.'" style="display:none;">';
+							if(!is_array($service['configuration'])){
+								continue;
+							}
 							foreach ($service['configuration'] as $key => $value) {
 								if($value['type'] == 'input'){
 									echo '<div class="form-group">';

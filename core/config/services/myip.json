@@ -1,0 +1,29 @@
+{
+  "myip" : {
+    "name" : "Mon ip",
+    "configuration" : {
+      
+    },
+    "eqLogic" : {
+      "configuration" : {
+        "cron" : "*/30 * * * *"
+      },
+      "commands" : [
+        {
+          "name": "Rafraîchir",
+          "type": "action",
+          "subtype": "other",
+          "logicalId": "refresh"
+        },
+        {
+          "name": "IP",
+          "type": "info",
+          "subtype": "string",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "ip"
+        }
+      ]
+    }
+  }
+}
