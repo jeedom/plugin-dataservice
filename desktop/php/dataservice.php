@@ -127,6 +127,17 @@ $services = dataservice::devicesParameters();
 									echo '<input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="'.$key.'"/>';
 									echo '</div>';
 									echo '</div>';
+								}elseif($value['type'] == 'select'){
+									echo '<div class="form-group">';
+									echo '<label class="col-sm-3 control-label">'.$value['name'].'</label>';
+									echo '<div class="col-sm-3">';
+									echo '<select type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="'.$key.'">';
+									foreach ($value['options'] as $key => $name) {
+										echo '<option value="'.$key.'">'.$name.'</option>';
+									}
+									echo '</select>';
+									echo '</div>';
+									echo '</div>';
 								}
 							}
 							echo '</div>';
