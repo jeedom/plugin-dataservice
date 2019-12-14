@@ -27,20 +27,14 @@ class dataservice extends eqLogic {
   
   public static function devicesParameters($_device = '') {
     $return = array();
-    foreach (ls(dirname(__FILE__) . '/../config/services', '*') as $dir) {
-      $path = dirname(__FILE__) . '/../config/services/' . $dir;
-      if (!is_dir($path)) {
-        continue;
-      }
-      $files = ls($path, '*.json', false, array('files', 'quiet'));
-      foreach ($files as $file) {
-        try {
-          $content = file_get_contents($path . '/' . $file);
-          if (is_json($content)) {
-            $return += json_decode($content, true);
-          }
-        } catch (Exception $e) {
+    foreach (ls(dirname(__FILE__) . '/../config/services', '*') as $file) {
+      try {
+        $content = file_get_contents(dirname(__FILE__) . '/../config/services/' . $file);
+        if (is_json($content)) {
+          $return += json_decode($content, true);
         }
+      } catch (Exception $e) {
+        
       }
     }
     if (isset($_device) && $_device != '') {
@@ -53,6 +47,26 @@ class dataservice extends eqLogic {
   }
   
   /*     * *********************Méthodes d'instance************************* */
+  
+  public function postSave() {
+    if ($this->getConfiguration('applyService') != $this->getConfiguration('service')) {
+      $this->applyModuleConfiguration();
+    }
+  }
+  
+  public function applyModuleConfiguration() {
+    $this->setConfiguration('applyService', $this->getConfiguration('service'));
+    $this->save();
+    if ($this->getConfiguration('service') == '') {
+      return true;
+    }
+    $device = self::devicesParameters($this->getConfiguration('service'));
+    $device = $device['eqLogic'];
+    if (!is_array($device)) {
+      return true;
+    }
+    $this->import($device);
+  }
   
   
   /*     * **********************Getteur Setteur*************************** */

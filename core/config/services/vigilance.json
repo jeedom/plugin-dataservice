@@ -1,37 +1,39 @@
 {
-  "name" : "Vigilance",
-  "configuration" : {
-    "departement" : {
-      "name" : "Département",
-      "type" : "input"
-    }
-  },
-  "eqLogic" : {
-    "commands" : [
-      {
-        "name": "Couleur",
-        "type": "info",
-        "subtype": "string",
-        "isVisible": 1,
-        "isHistorized": 0,
-        "logicalId": "color"
-      },
-      {
-        "name": "Crue",
-        "type": "info",
-        "subtype": "numeric",
-        "isVisible": 1,
-        "isHistorized": 0,
-        "logicalId": "crue"
-      },
-      {
-        "name": "Risque",
-        "type": "info",
-        "subtype": "string",
-        "isVisible": 1,
-        "isHistorized": 0,
-        "logicalId": "risk"
+  "vigilance" : {
+    "name" : "Vigilance",
+    "configuration" : {
+      "departement" : {
+        "name" : "Département",
+        "type" : "input"
       }
-    ]
+    },
+    "eqLogic" : {
+      "commands" : [
+        {
+          "name": "Couleur",
+          "type": "info",
+          "subtype": "string",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "color"
+        },
+        {
+          "name": "Crue",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "crue"
+        },
+        {
+          "name": "Risque",
+          "type": "info",
+          "subtype": "string",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "risk"
+        }
+      ]
+    }
   }
 }
