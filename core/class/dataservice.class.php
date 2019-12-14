@@ -52,6 +52,9 @@ class dataservice extends eqLogic {
     if ($this->getConfiguration('applyService') != $this->getConfiguration('service')) {
       $this->applyModuleConfiguration();
     }
+    if($this->getIsEnable() == 1){
+      $this->refreshData();
+    }
   }
   
   public function applyModuleConfiguration() {
@@ -68,6 +71,33 @@ class dataservice extends eqLogic {
     $this->import($device);
   }
   
+  public function refreshData(){
+    $url = config::byKey('service_url','dataservice').'/user/';
+    $url .= sha512(config::byKey('market::username').':'.config::byKey('market::password'));
+    $url .= '/service/'.$this->getConfiguration('service');
+    $device = self::devicesParameters($this->getConfiguration('service'));
+    if(count($device['configuration']) > 0){
+      $url .= '?';
+      foreach ($device['configuration'] as $key => $value) {
+        $url .= $key.'='.urlencode($this->getConfiguration($key)).'&';
+      }
+    }
+    $request_http = new com_http(trim($url,'&'));
+    $datas = json_decode($request_http->exec(),true);
+    if($datas['state'] != 'ok'){
+      throw new \Exception(__('Erreur sur la récuperation des données : ',__FILE__).json_encode($datas));
+    }
+    foreach ($this->getCmd('info') as $cmd) {
+      $paths = explode('::',$cmd->getLogicalId());
+      $value = $datas['data'];
+      foreach ($paths as $path) {
+        if(isset($value[$path])){
+          $value = $value[$path];
+        }
+      }
+      $cmd->event($value);
+    }
+  }
   
   /*     * **********************Getteur Setteur*************************** */
 }
