@@ -112,8 +112,9 @@ class dataservice extends eqLogic {
       $value = $datas['data'];
       foreach ($paths as $path) {
         if(isset($value[$path])){
-          $value = $value[$path];
+          continue(2);
         }
+        $value = $value[$path];
       }
       $cmd->event($value);
     }
