@@ -68,10 +68,7 @@ class dataservice extends eqLogic {
     if ($this->getConfiguration('applyService') != $this->getConfiguration('service')) {
       $this->applyModuleConfiguration();
     }
-    $refresh = $this->getCmd(null, 'refresh');
-    if (!is_object($refresh)) {
-      $refresh = new srouterCmd();
-    }
+    $this->refreshData();
   }
   
   public function applyModuleConfiguration() {
