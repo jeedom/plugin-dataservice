@@ -119,19 +119,19 @@ $services = dataservice::devicesParameters();
 							if(!is_array($service['configuration'])){
 								continue;
 							}
-							foreach ($service['configuration'] as $key => $value) {
+							foreach ($service['configuration'] as $key2 => $value) {
 								if($value['type'] == 'input'){
 									echo '<div class="form-group">';
 									echo '<label class="col-sm-3 control-label">'.$value['name'].'</label>';
 									echo '<div class="col-sm-3">';
-									echo '<input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="'.$key.'"/>';
+									echo '<input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="'.$key.'::'.$key2.'"/>';
 									echo '</div>';
 									echo '</div>';
 								}elseif($value['type'] == 'select'){
 									echo '<div class="form-group">';
 									echo '<label class="col-sm-3 control-label">'.$value['name'].'</label>';
 									echo '<div class="col-sm-3">';
-									echo '<select type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="'.$key.'">';
+									echo '<select type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="'.$key.'::'.$key2.'">';
 									foreach ($value['options'] as $key => $name) {
 										echo '<option value="'.$key.'">'.$name.'</option>';
 									}

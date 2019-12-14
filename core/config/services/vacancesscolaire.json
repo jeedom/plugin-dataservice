@@ -1,0 +1,37 @@
+{
+  "vacancesscolaire" : {
+    "name" : "Vacances scolaire",
+    "configuration" : {
+      "zone" : {
+        "name" : "Zone",
+        "type" : "select",
+        "options" : {
+          "A" : "A",
+          "B" : "B",
+          "C" : "C"
+        }
+      }
+    },
+    "eqLogic" : {
+      "configuration" : {
+        "cron" : "01 00 * * *"
+      },
+      "commands" : [
+        {
+          "name": "Rafraîchir",
+          "type": "action",
+          "subtype": "other",
+          "logicalId": "refresh"
+        },
+        {
+          "name": "Nom",
+          "type": "info",
+          "subtype": "string",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "name"
+        }
+      ]
+    }
+  }
+}

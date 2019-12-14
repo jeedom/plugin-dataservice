@@ -96,7 +96,7 @@ class dataservice extends eqLogic {
     if(count($device['configuration']) > 0){
       $url .= '?';
       foreach ($device['configuration'] as $key => $value) {
-        $url .= $key.'='.urlencode($this->getConfiguration($key)).'&';
+        $url .= $key.'='.urlencode($this->getConfiguration($this->getConfiguration('service').'::'.$key)).'&';
       }
     }
     $request_http = new com_http(trim($url,'&'));
