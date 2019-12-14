@@ -1,0 +1,36 @@
+{
+  "tempo" : {
+    "name" : "Tempo",
+    "configuration" : {
+    },
+    "eqLogic" : {
+      "configuration" : {
+        "cron" : "01 00 * * *"
+      },
+      "commands" : [
+        {
+          "name": "Rafraîchir",
+          "type": "action",
+          "subtype": "other",
+          "logicalId": "refresh"
+        },
+        {
+          "name": "J",
+          "type": "info",
+          "subtype": "string",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "J"
+        },
+        {
+          "name": "J+1",
+          "type": "info",
+          "subtype": "string",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "J+1"
+        }
+      ]
+    }
+  }
+}

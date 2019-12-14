@@ -1,0 +1,48 @@
+{
+  "holidays" : {
+    "name" : "Jour ferié",
+    "configuration" : {
+      "country" : {
+        "name" : "Pays (FR,US...)",
+        "type" : "input"
+      },
+      "region" : {
+        "name" : "Région",
+        "type" : "input"
+      },
+      "state" : {
+        "name" : "Etat",
+        "type" : "input"
+      }
+    },
+    "eqLogic" : {
+      "configuration" : {
+        "cron" : "01 00 * * *"
+      },
+      "commands" : [
+        {
+          "name": "Rafraîchir",
+          "type": "action",
+          "subtype": "other",
+          "logicalId": "refresh"
+        },
+        {
+          "name": "Férié",
+          "type": "info",
+          "subtype": "binary",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "isHoliday"
+        },
+        {
+          "name": "Nom",
+          "type": "info",
+          "subtype": "string",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "name"
+        }
+      ]
+    }
+  }
+}
