@@ -85,7 +85,7 @@ class dataservice extends eqLogic {
     $request_http = new com_http(trim($url,'&'));
     $datas = json_decode($request_http->exec(),true);
     if($datas['state'] != 'ok'){
-      throw new \Exception(__('Erreur sur la récuperation des données : ',__FILE__).json_encode($datas));
+      throw new \Exception(__('Erreur sur la récuperation des données : ',__FILE__).$datas['error']);
     }
     foreach ($this->getCmd('info') as $cmd) {
       $paths = explode('::',$cmd->getLogicalId());
