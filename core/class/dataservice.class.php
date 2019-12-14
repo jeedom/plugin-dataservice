@@ -25,6 +25,22 @@ class dataservice extends eqLogic {
   
   /*     * ***********************Methode static*************************** */
   
+  public static function updateData(){
+    foreach (eqLogic::byType('dataservice',true) as $eqLogic) {
+      $cron = $eqLogic->getConfiguration('cron');
+      if ($cron != '') {
+        try {
+          $c = new Cron\CronExpression(checkAndFixCron($cron), new Cron\FieldFactory);
+          if ($c->isDue()) {
+            $eqLogic->refreshData();
+          }
+        } catch (Exception $exc) {
+          log::add('dataservice', 'error', __('Expression cron non valide pour ', __FILE__) . $eqLogic->getHumanName() . ' : ' . $cron);
+        }
+      }
+    }
+  }
+  
   public static function devicesParameters($_device = '') {
     $return = array();
     foreach (ls(dirname(__FILE__) . '/../config/services', '*') as $file) {
@@ -72,6 +88,9 @@ class dataservice extends eqLogic {
   }
   
   public function refreshData(){
+    if($this->getConfiguration('service') == ''){
+      return;
+    }
     $url = config::byKey('service_url','dataservice').'/user/';
     $url .= sha512(config::byKey('market::username').':'.config::byKey('market::password'));
     $url .= '/service/'.$this->getConfiguration('service');

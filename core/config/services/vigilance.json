@@ -8,6 +8,9 @@
       }
     },
     "eqLogic" : {
+      "configuration" : {
+        "cron" : "01 00 * * *"
+      },
       "commands" : [
         {
           "name": "Couleur",

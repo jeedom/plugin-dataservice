@@ -95,7 +95,13 @@ $services = dataservice::devicesParameters();
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-3 control-label">{{Type}}</label>
+							<label class="col-sm-3 control-label">{{Cron de mise à jour}}</label>
+							<div class="col-sm-3">
+								<input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="cron"/>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">{{Service}}</label>
 							<div class="col-sm-3">
 								<select class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="service">
 									<option value="">{{Aucun}}</option>
