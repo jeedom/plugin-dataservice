@@ -1,0 +1,116 @@
+{
+  "sunposition" : {
+    "name" : "Position du soleil",
+    "configuration" : {
+      "lat" : {
+        "name" : "Latitude",
+        "type" : "input"
+      },
+      "long" : {
+        "name" : "Longitude",
+        "type" : "input"
+      }
+    },
+    "eqLogic" : {
+      "configuration" : {
+        "cron" : "*/20 * * * *"
+      },
+      "commands" : [
+        {
+          "name": "Rafraîchir",
+          "type": "action",
+          "subtype": "other",
+          "logicalId": "refresh"
+        },
+        {
+          "name": "Levé du soleil",
+          "type": "info",
+          "subtype": "string",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "sun::rise"
+        },
+        {
+          "name": "Couché du soleil",
+          "type": "info",
+          "subtype": "string",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "sun::set"
+        },
+        {
+          "name": "Altitude soleil",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "sun::altitude"
+        },
+        {
+          "name": "Azimuth soleil",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "sun::azimuth"
+        },
+        {
+          "name": "Levé de la lune",
+          "type": "info",
+          "subtype": "string",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "moon::rise"
+        },
+        {
+          "name": "Couché de la lune",
+          "type": "info",
+          "subtype": "string",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "moon::set"
+        },
+        {
+          "name": "Fraction de la lune",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "moon::fraction"
+        },
+        {
+          "name": "Angle de la lune",
+          "type": "info",
+          "subtype": "numerci",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "moon::angle"
+        },
+        {
+          "name": "Phase de la lune",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "moon::phase"
+        },
+        {
+          "name": "Lune toujours présente",
+          "type": "info",
+          "subtype": "binary",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "moon::alwaysUp"
+        },
+        {
+          "name": "Lune toujours absente",
+          "type": "info",
+          "subtype": "binary",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "moon::alwaysDown"
+        }
+      ]
+    }
+  }
+}
