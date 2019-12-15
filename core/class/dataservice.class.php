@@ -90,7 +90,7 @@ class dataservice extends eqLogic {
       return;
     }
     $url = config::byKey('service_url','dataservice').'/user/';
-    $url .= sha512(config::byKey('market::username').':'.config::byKey('market::password'));
+    $url .= sha512(mb_strtolower(config::byKey('market::username')).':'.config::byKey('market::password'));
     $url .= '/service/'.$this->getConfiguration('service');
     $device = self::devicesParameters($this->getConfiguration('service'));
     if(count($device['configuration']) > 0){
