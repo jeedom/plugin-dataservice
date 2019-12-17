@@ -81,7 +81,7 @@
         {
           "name": "Angle de la lune",
           "type": "info",
-          "subtype": "numerci",
+          "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 0,
           "logicalId": "moon::angle"

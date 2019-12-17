@@ -1,0 +1,92 @@
+{
+  "pollution_fr" : {
+    "name" : "Prévision pollution France",
+    "configuration" : {
+      "lat" : {
+        "name" : "Latitude",
+        "type" : "input"
+      },
+      "long" : {
+        "name" : "Longitude",
+        "type" : "input"
+      }
+    },
+    "eqLogic" : {
+      "configuration" : {
+        "cron" : "05 03 * * *"
+      },
+      "commands" : [
+        {
+          "name": "Rafraîchir",
+          "type": "action",
+          "subtype": "other",
+          "logicalId": "refresh"
+        },
+        {
+          "name": "NO2 Maximum",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "NO2-MAXJ0"
+        },
+        {
+          "name": "NO2 Moyen",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "NO2-MOYJ0"
+        },
+        {
+          "name": "O3 Maximum",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "O3-MAXJ0"
+        },
+        {
+          "name": "O3 Moyen",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "O3-MOYJ0"
+        },
+        {
+          "name": "PM10 Maximum",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "PM10-MAXJ0"
+        },
+        {
+          "name": "PM10 Moyen",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "PM10-MOYJ0"
+        },
+        {
+          "name": "PM25 Maximum",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "PM25-MAXJ0"
+        },
+        {
+          "name": "PM25 Moyen",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "PM25-MOYJ0"
+        }
+      ]
+    }
+  }
+}
