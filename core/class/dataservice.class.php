@@ -22,8 +22,55 @@ require_once __DIR__  . '/../../../../core/php/core.inc.php';
 class dataservice extends eqLogic {
   /*     * *************************Attributs****************************** */
   
-  
   /*     * ***********************Methode static*************************** */
+  
+  public function getShareDataService(){
+    return array(
+      'temperature_ext' => array('name' => __('Température extérieure',__FILE__),'key' => 'sharedata::temperature_ext'),
+      'humidity_ext' => array('name' => __('Humidité extérieure',__FILE__),'key' => 'sharedata::humidity_ext'),
+      'luminosity_ext' => array('name' => __('Luminosité exterieure',__FILE__),'key' => 'sharedata::luminosity_ext'),
+      'consumption_electricity' => array('name' => __('Consommation éléectrique',__FILE__),'key' => 'sharedata::consumption_electricity'),
+      'consumption_gaz' => array('name' => __('Consommation gaz',__FILE__),'key' => 'sharedata::consumption_gaz'),
+      'consumption_water' => array('name' => __('Consommation eau',__FILE__),'key' => 'sharedata::consumption_water')
+    );
+  }
+  
+  public function cron15(){
+    $data = array(
+      'lat' => config::byKey('sharedata::lat','dataservice'),
+      'long' => config::byKey('sharedata::long','dataservice'),
+      'datas' => array()
+    );
+    if($data['lat'] == '' || $data['long'] == ''){
+      return;
+    }
+    $shareDataService = dataservice::getShareDataService();
+    foreach ($shareDataService as $key => $value) {
+      $cmd = config::byKey($value['key'],'dataservice');
+      if($cmd == ''){
+        continue;
+      }
+      $data['datas'][$key] = array(
+        'value' => $cmd
+      );
+    }
+    if(count($data['datas']) == 0){
+      return;
+    }
+    sleep(rand(0,60));
+    $data['datas'] = cmd::cmdToValue($data['datas']);
+    $url = config::byKey('service_url','dataservice').'/user/';
+    $url .= sha512(mb_strtolower(config::byKey('market::username')).':'.config::byKey('market::password'));
+    $url .= '/service/sharedata';
+    $request_http = new com_http($url);
+    $request_http->setHeader(array('Content-Type: application/json'));
+    $request_http->setPost(json_encode($data));
+    try {
+      $request_http->exec(10,1);
+    } catch (\Exception $e) {
+      
+    }
+  }
   
   public static function tts($_text) {
     try {
@@ -107,14 +154,15 @@ class dataservice extends eqLogic {
     if($this->getConfiguration('service') == ''){
       return;
     }
+    $service = $this->getConfiguration('service');
     $url = config::byKey('service_url','dataservice').'/user/';
     $url .= sha512(mb_strtolower(config::byKey('market::username')).':'.config::byKey('market::password'));
     $url .= '/service/'.$this->getConfiguration('service');
-    $device = self::devicesParameters($this->getConfiguration('service'));
+    $device = self::devicesParameters($service);
     if(count($device['configuration']) > 0){
       $url .= '?';
       foreach ($device['configuration'] as $key => $value) {
-        $url .= $key.'='.urlencode($this->getConfiguration($this->getConfiguration('service').'::'.$key)).'&';
+        $url .= $key.'='.urlencode($this->getConfiguration($service.'::'.$key)).'&';
       }
     }
     $request_http = new com_http(trim($url,'&'));

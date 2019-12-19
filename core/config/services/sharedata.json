@@ -1,0 +1,84 @@
+{
+  "sharedata" : {
+    "name" : "Donnée communautaire",
+    "configuration" : {
+      "radius" : {
+        "name" : "Rayon",
+        "type" : "select",
+        "options" : {
+          "0.01" : "1km",
+          "0.05" : "5km",
+          "0.1" : "10km",
+          "0.25" : "25km",
+          "0.5" : "50km",
+          "1" : "100km"
+        }
+      },
+      "lat" : {
+        "name" : "Latitude",
+        "type" : "input"
+      },
+      "long" : {
+        "name" : "Longitude",
+        "type" : "input"
+      },
+      "timeframe" : {
+        "name" : "Sur la periode (en minute, minimum 15)",
+        "type" : "input"
+      }
+    },
+    "eqLogic" : {
+      "configuration" : {
+        "cron" : "*/15 * * * *"
+      },
+      "commands" : [
+        {
+          "name": "Rafraîchir",
+          "type": "action",
+          "subtype": "other",
+          "logicalId": "refresh"
+        },
+        {
+          "name": "Humidité extérieure",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "logicalId": "humidity_ext"
+        },
+        {
+          "name": "Luminosité extérieure",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "logicalId": "luminosity_ext"
+        },
+        {
+          "name": "Consommation éléctrique",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "logicalId": "consumption_electricity"
+        },
+        {
+          "name": "Consommation gaz",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "logicalId": "consumption_gaz"
+        },
+        {
+          "name": "Consommation eau",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "logicalId": "consumption_water"
+        }
+      ]
+    }
+  }
+}
