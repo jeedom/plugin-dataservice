@@ -39,6 +39,14 @@
           "logicalId": "refresh"
         },
         {
+          "name": "Température extérieure",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "logicalId": "temperature_ext"
+        },
+        {
           "name": "Humidité extérieure",
           "type": "info",
           "subtype": "numeric",
