@@ -63,6 +63,30 @@
           "logicalId": "luminosity_ext"
         },
         {
+          "name": "Pression extérieure",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "logicalId": "pressure_ext"
+        },
+        {
+          "name": "Pluie",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "logicalId": "rain"
+        },
+        {
+          "name": "Vent",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "logicalId": "wind"
+        },
+        {
           "name": "Consommation éléctrique",
           "type": "info",
           "subtype": "numeric",

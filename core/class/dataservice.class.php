@@ -29,6 +29,9 @@ class dataservice extends eqLogic {
       'temperature_ext' => array('name' => __('Température extérieure',__FILE__),'key' => 'sharedata::temperature_ext'),
       'humidity_ext' => array('name' => __('Humidité extérieure',__FILE__),'key' => 'sharedata::humidity_ext'),
       'luminosity_ext' => array('name' => __('Luminosité exterieure',__FILE__),'key' => 'sharedata::luminosity_ext'),
+      'pressure_ext' => array('name' => __('Pression extérieure',__FILE__),'key' => 'sharedata::pressure_ext'),
+      'rain' => array('name' => __('Pluie',__FILE__),'key' => 'sharedata::rain'),
+      'wind' => array('name' => __('Vend',__FILE__),'key' => 'sharedata::wind'),
       'consumption_electricity' => array('name' => __('Consommation éléectrique',__FILE__),'key' => 'sharedata::consumption_electricity'),
       'consumption_gaz' => array('name' => __('Consommation gaz',__FILE__),'key' => 'sharedata::consumption_gaz'),
       'consumption_water' => array('name' => __('Consommation eau',__FILE__),'key' => 'sharedata::consumption_water')
@@ -133,7 +136,6 @@ class dataservice extends eqLogic {
     if ($this->getConfiguration('applyService') != $this->getConfiguration('service')) {
       $this->applyModuleConfiguration();
     }
-    $this->refreshData();
   }
   
   public function applyModuleConfiguration() {
