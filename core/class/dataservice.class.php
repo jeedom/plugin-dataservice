@@ -31,7 +31,7 @@ class dataservice extends eqLogic {
       'luminosity_ext' => array('name' => __('Luminosité exterieure',__FILE__),'key' => 'sharedata::luminosity_ext'),
       'pressure_ext' => array('name' => __('Pression extérieure',__FILE__),'key' => 'sharedata::pressure_ext'),
       'rain' => array('name' => __('Pluie',__FILE__),'key' => 'sharedata::rain'),
-      'wind' => array('name' => __('Vend',__FILE__),'key' => 'sharedata::wind'),
+      'wind' => array('name' => __('Vent',__FILE__),'key' => 'sharedata::wind'),
       'consumption_electricity' => array('name' => __('Consommation éléectrique',__FILE__),'key' => 'sharedata::consumption_electricity'),
       'consumption_gaz' => array('name' => __('Consommation gaz',__FILE__),'key' => 'sharedata::consumption_gaz'),
       'consumption_water' => array('name' => __('Consommation eau',__FILE__),'key' => 'sharedata::consumption_water')
