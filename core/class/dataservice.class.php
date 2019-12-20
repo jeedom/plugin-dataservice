@@ -49,19 +49,21 @@ class dataservice extends eqLogic {
     }
     $shareDataService = dataservice::getShareDataService();
     foreach ($shareDataService as $key => $value) {
-      $cmd = config::byKey($value['key'],'dataservice');
-      if($cmd == ''){
+      $cmd = cmd::byId(str_replace('#','',config::byKey($value['key'],'dataservice')));
+      if(!is_object($cmd)){
+        continue;
+      }
+      if(in_array($cmd->getEqType(),array('dataservice','weather'))){
         continue;
       }
       $data['datas'][$key] = array(
-        'value' => $cmd
+        'value' => $cmd->execCmd()
       );
     }
     if(count($data['datas']) == 0){
       return;
     }
     sleep(rand(0,60));
-    $data['datas'] = cmd::cmdToValue($data['datas']);
     $url = config::byKey('service_url','dataservice').'/user/';
     $url .= sha512(mb_strtolower(config::byKey('market::username')).':'.config::byKey('market::password'));
     $url .= '/service/sharedata';
