@@ -150,7 +150,11 @@ $services = dataservice::devicesParameters();
 				<table id="table_cmd" class="table table-bordered table-condensed">
 					<thead>
 						<tr>
-							<th>{{Nom}}</th><th>{{Type}}</th><th>{{Action}}</th>
+							<th>{{Nom}}</th>
+							<th>{{Type}}</th>
+							<th>{{Options}}</th>
+							<th style="width: 300px;">{{Paramètres}}</th>
+							<th>{{Action}}</th>
 						</tr>
 					</thead>
 					<tbody>
