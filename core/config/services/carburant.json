@@ -1,0 +1,76 @@
+{
+  "carburant" : {
+    "name" : "Carburant France",
+    "configuration" : {
+      "lat" : {
+        "name" : "Latitude",
+        "type" : "input"
+      },
+      "long" : {
+        "name" : "Longitude",
+        "type" : "input"
+      }
+    },
+    "eqLogic" : {
+      "configuration" : {
+        "cron" : "11 * * * *"
+      },
+      "commands" : [
+        {
+          "name": "Rafraîchir",
+          "type": "action",
+          "subtype": "other",
+          "logicalId": "refresh"
+        },
+        {
+          "name": "SP95 - Prix",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "SP95::cost"
+        },
+        {
+          "name": "SP98 - Prix",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "SP98::cost"
+        },
+        {
+          "name": "Gazole - Prix",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "Gazole::cost"
+        },
+        {
+          "name": "24/24",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "24/24"
+        },
+        {
+          "name": "Adresse",
+          "type": "info",
+          "subtype": "string",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "address"
+        },
+        {
+          "name": "Ville",
+          "type": "info",
+          "subtype": "string",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "city"
+        }
+      ]
+    }
+  }
+}
