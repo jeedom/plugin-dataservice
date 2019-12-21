@@ -32,8 +32,8 @@ class dataservice extends eqLogic {
       'pressure_ext' => array('name' => __('Pression extérieure',__FILE__),'key' => 'sharedata::pressure_ext'),
       'rain' => array('name' => __('Pluie',__FILE__),'key' => 'sharedata::rain','unit' => array('mm')),
       'wind' => array('name' => __('Vent',__FILE__),'key' => 'sharedata::wind','unit' => array('km/h')),
-      'consumption_electricity' => array('name' => __('Consommation éléectrique',__FILE__),'key' => 'sharedata::consumption_electricity','unit' => array('kWh')),
-      'consumption_gaz' => array('name' => __('Consommation gaz',__FILE__),'key' => 'sharedata::consumption_gaz','unit' => array('kWh')),
+      'consumption_electricity' => array('name' => __('Consommation éléctrique',__FILE__),'key' => 'sharedata::consumption_electricity','unit' => array('kWh')),
+      'consumption_gaz' => array('name' => __('Consommation gaz',__FILE__),'key' => 'sharedata::consumption_gaz','unit' => array('kWh'),'convert' => array('m3' => '#value#*10.91')),
       'consumption_water' => array('name' => __('Consommation eau',__FILE__),'key' => 'sharedata::consumption_water','unit' => array('m3'))
     );
   }
@@ -49,28 +49,27 @@ class dataservice extends eqLogic {
     }
     $shareDataService = dataservice::getShareDataService();
     foreach ($shareDataService as $key => $value) {
-      preg_match_all("/#([0-9]*)#/",config::byKey($value['key'],'dataservice'), $matches);
-      if (count($matches[1]) == 0) {
+      $cmd = cmd::byId(str_replace('#','',config::byKey($value['key'],'dataservice')));
+      if(!is_object($cmd)){
         continue;
       }
-      $cmds = cmd::byIds($matches[1]);
-      if(!is_array($cmds) || count($cmds) == 0){
+      $value = $cmd->execCmd();
+      if(in_array($cmd->getEqType(),array('dataservice','weather'))){
         continue;
       }
-      foreach ($cmds as $cmd) {
-        if(!is_object($cmd)){
+      if(isset($value['unit']) && !in_array($cmd->getUnite(),$value['unit'])){
+        $convert = false;
+        if(isset($value['convert'])){
+          foreach ($value['convert'] as $unit => $calcul) {
+            if($unit == $cmd->getUnite()){
+              $value = jeedom::evaluate(str_replace('#value#',$value,$calcul));
+              $convert = true;
+            }
+          }
+        }
+        if(!$convert){
           continue;
         }
-        if(in_array($cmd->getEqType(),array('dataservice','weather'))){
-          continue(2);
-        }
-        if(isset($value['unit']) && !in_array($cmd->getUnite(),$value['unit'])){
-          continue(2);
-        }
-      }
-      $value = jeedom::evaluateExpression(config::byKey($value['key'],'dataservice'));
-      if($value === '' || is_nan($value)){
-        continue;
       }
       $data['datas'][$key] = array(
         'value' => $value
@@ -79,7 +78,7 @@ class dataservice extends eqLogic {
     if(count($data['datas']) == 0){
       return;
     }
-    //  sleep(rand(0,60));
+    sleep(rand(0,60));
     $url = config::byKey('service_url','dataservice').'/user/';
     $url .= sha512(mb_strtolower(config::byKey('market::username')).':'.config::byKey('market::password'));
     $url .= '/service/sharedata';
