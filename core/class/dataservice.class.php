@@ -26,15 +26,15 @@ class dataservice extends eqLogic {
   
   public function getShareDataService(){
     return array(
-      'temperature_ext' => array('name' => __('Température extérieure',__FILE__),'key' => 'sharedata::temperature_ext'),
-      'humidity_ext' => array('name' => __('Humidité extérieure',__FILE__),'key' => 'sharedata::humidity_ext'),
+      'temperature_ext' => array('name' => __('Température extérieure',__FILE__),'key' => 'sharedata::temperature_ext','unit' => array('°C')),
+      'humidity_ext' => array('name' => __('Humidité extérieure',__FILE__),'key' => 'sharedata::humidity_ext','unit' => array('%')),
       'luminosity_ext' => array('name' => __('Luminosité exterieure',__FILE__),'key' => 'sharedata::luminosity_ext'),
       'pressure_ext' => array('name' => __('Pression extérieure',__FILE__),'key' => 'sharedata::pressure_ext'),
-      'rain' => array('name' => __('Pluie',__FILE__),'key' => 'sharedata::rain'),
-      'wind' => array('name' => __('Vent',__FILE__),'key' => 'sharedata::wind'),
-      'consumption_electricity' => array('name' => __('Consommation éléectrique',__FILE__),'key' => 'sharedata::consumption_electricity'),
-      'consumption_gaz' => array('name' => __('Consommation gaz',__FILE__),'key' => 'sharedata::consumption_gaz'),
-      'consumption_water' => array('name' => __('Consommation eau',__FILE__),'key' => 'sharedata::consumption_water')
+      'rain' => array('name' => __('Pluie',__FILE__),'key' => 'sharedata::rain','unit' => array('mm')),
+      'wind' => array('name' => __('Vent',__FILE__),'key' => 'sharedata::wind','unit' => array('km/h')),
+      'consumption_electricity' => array('name' => __('Consommation éléectrique',__FILE__),'key' => 'sharedata::consumption_electricity','unit' => array('kWh')),
+      'consumption_gaz' => array('name' => __('Consommation gaz',__FILE__),'key' => 'sharedata::consumption_gaz','unit' => array('kWh')),
+      'consumption_water' => array('name' => __('Consommation eau',__FILE__),'key' => 'sharedata::consumption_water','unit' => array('m3'))
     );
   }
   
@@ -49,27 +49,44 @@ class dataservice extends eqLogic {
     }
     $shareDataService = dataservice::getShareDataService();
     foreach ($shareDataService as $key => $value) {
-      $cmd = cmd::byId(str_replace('#','',config::byKey($value['key'],'dataservice')));
-      if(!is_object($cmd)){
+      preg_match_all("/#([0-9]*)#/",config::byKey($value['key'],'dataservice'), $matches);
+      if (count($matches[1]) == 0) {
         continue;
       }
-      if(in_array($cmd->getEqType(),array('dataservice','weather'))){
+      $cmds = cmd::byIds($matches[1]);
+      if(!is_array($cmds) || count($cmds) == 0){
+        continue;
+      }
+      foreach ($cmds as $cmd) {
+        if(!is_object($cmd)){
+          continue;
+        }
+        if(in_array($cmd->getEqType(),array('dataservice','weather'))){
+          continue(2);
+        }
+        if(isset($value['unit']) && !in_array($cmd->getUnite(),$value['unit'])){
+          continue(2);
+        }
+      }
+      $value = jeedom::evaluateExpression(config::byKey($value['key'],'dataservice'));
+      if($value === '' || is_nan($value)){
         continue;
       }
       $data['datas'][$key] = array(
-        'value' => $cmd->execCmd()
+        'value' => $value
       );
     }
     if(count($data['datas']) == 0){
       return;
     }
-    sleep(rand(0,60));
+    //  sleep(rand(0,60));
     $url = config::byKey('service_url','dataservice').'/user/';
     $url .= sha512(mb_strtolower(config::byKey('market::username')).':'.config::byKey('market::password'));
     $url .= '/service/sharedata';
     $request_http = new com_http($url);
     $request_http->setHeader(array('Content-Type: application/json'));
     $request_http->setPost(json_encode($data));
+    var_dump($data);
     try {
       $request_http->exec(10,1);
     } catch (\Exception $e) {
