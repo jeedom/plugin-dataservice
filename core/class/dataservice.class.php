@@ -150,6 +150,25 @@ class dataservice extends eqLogic {
   
   /*     * *********************Méthodes d'instance************************* */
   
+  public function preInsert(){
+    $services = dataservice::devicesParameters();
+    foreach ($services as $key => $service) {
+      foreach ($service['configuration'] as $key2 => $value) {
+        if(isset($value['default'])){
+          $this->setConfiguration($key.'::'.$key2,$value['default']);
+        }else if($key2 == 'lat'){
+          $this->setConfiguration($key.'::'.$key2,config::byKey('info::latitude'));
+        }else if($key2 == 'long'){
+          $this->setConfiguration($key.'::'.$key2,config::byKey('info::longitude'));
+        }else if($key2 == 'departement'){
+          $this->setConfiguration($key.'::'.$key2,substr(config::byKey('info::postalCode'),0,2));
+        }else if($key2 == 'country'){
+          $this->setConfiguration($key.'::'.$key2,config::byKey('info::stateCode'));
+        }
+      }
+    }
+  }
+  
   public function postSave() {
     if ($this->getConfiguration('applyService') != $this->getConfiguration('service')) {
       $this->applyModuleConfiguration();

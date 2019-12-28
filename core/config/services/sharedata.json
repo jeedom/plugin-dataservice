@@ -24,7 +24,8 @@
       },
       "timeframe" : {
         "name" : "Sur la periode (en minute, minimum 15)",
-        "type" : "input"
+        "type" : "input",
+        "default" : "15"
       }
     },
     "eqLogic" : {
