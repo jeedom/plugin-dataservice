@@ -120,8 +120,8 @@ class dataservice extends eqLogic {
           if ($c->isDue()) {
             $eqLogic->refreshData();
           }
-        } catch (Exception $exc) {
-          log::add('dataservice', 'error', __('Expression cron non valide pour ', __FILE__) . $eqLogic->getHumanName() . ' : ' . $cron);
+        } catch (Exception $e) {
+          log::add('dataservice', 'error', __('Erreur sur ', __FILE__) . $eqLogic->getHumanName() . ' : ' . $e->getMessage());
         }
       }
     }
