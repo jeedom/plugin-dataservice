@@ -19,11 +19,11 @@
 require_once dirname(__FILE__) . '/../../../core/php/core.inc.php';
 
 function dataservice_install() {
-  if(config::byKey('info::lat') != ''){
-    config::save('sharedata::lat',config::byKey('info::lat'),'dataservice');
+  if(config::byKey('info::latitude') != ''){
+    config::save('sharedata::lat',config::byKey('info::latitude'),'dataservice');
   }
-  if(config::byKey('info::long') != ''){
-    config::save('sharedata::long',config::byKey('info::long'),'dataservice');
+  if(config::byKey('info::longitude') != ''){
+    config::save('sharedata::long',config::byKey('info::longitude'),'dataservice');
   }
 }
 
