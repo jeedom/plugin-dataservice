@@ -1,0 +1,179 @@
+{
+  "weather" : {
+    "name" : "Météo",
+    "translation" : 1,
+    "configuration" : {
+      "lat" : {
+        "name" : "Latitude",
+        "type" : "input"
+      },
+      "long" : {
+        "name" : "Longitude",
+        "type" : "input"
+      },
+      "day" : {
+        "name" : "Jour",
+        "type" : "select",
+        "options" : {
+          "0" : "J",
+          "1" : "J+1",
+          "2" : "J+2",
+          "3" : "J+3",
+          "4" : "J+4"
+        }
+      }
+    },
+    "eqLogic" : {
+      "configuration" : {
+        "cron" : "10 00 * * *"
+      },
+      "commands" : [
+        {
+          "name": "Rafraîchir",
+          "type": "action",
+          "subtype": "other",
+          "logicalId": "refresh"
+        },
+        {
+          "name": "Description chiffre",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 0,
+          "isHistorized": 1,
+          "logicalId": "summary_id"
+        },
+        {
+          "name": "Description",
+          "type": "info",
+          "subtype": "string",
+          "isVisible": 1,
+          "logicalId": "description"
+        },
+        {
+          "name": "Température",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "logicalId": "temperature::value",
+          "unite" : "°C",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
+        },
+        {
+          "name": "Température min",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "logicalId": "temperature::min",
+          "unite" : "°C",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
+        },
+        {
+          "name": "Température max",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "logicalId": "temperature::max",
+          "unite" : "°C",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
+        },
+        {
+          "name": "Température ressentie",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 0,
+          "isHistorized": 1,
+          "logicalId": "temperature::feels",
+          "unite" : "°C"
+        },
+        {
+          "name": "Humidité",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "logicalId": "humidity::value",
+          "unite" : "%",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
+        },
+        {
+          "name": "Pression",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 0,
+          "isHistorized": 1,
+          "logicalId": "pressure::value",
+          "unite" : "Pa",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
+        },
+        {
+          "name": "Vent degrés",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "logicalId": "wind::deg",
+          "unite" : "°",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
+        },
+        {
+          "name": "Vent vitesse",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "logicalId": "wind::speed",
+          "unite" : "km/h",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
+        },
+        {
+          "name": "Nuage",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 0,
+          "isHistorized": 1,
+          "logicalId": "clouds::all",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
+        },
+        {
+          "name": "UV",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "logicalId": "uv::all",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
+        }
+      ]
+    }
+  }
+}

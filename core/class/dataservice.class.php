@@ -204,6 +204,9 @@ class dataservice extends eqLogic {
         $url .= $key.'='.urlencode($this->getConfiguration($service.'::'.$key)).'&';
       }
     }
+    if(isset($device['translation']) && $device['translation']){
+      $url .= 'lang='.substr(config::byKey('language'),0,2);
+    }
     $request_http = new com_http(trim($url,'&'));
     $datas = json_decode($request_http->exec(10),true);
     if($datas['state'] != 'ok'){
