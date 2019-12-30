@@ -27,16 +27,6 @@ if (!isConnect()) {
   <fieldset>
     <legend>{{Partage de données}}</legend>
     <div class="alert alert-info">{{Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data}}</div>
-    <div class="form-group">
-      <label class="col-lg-2 control-label">{{Latitude}}</label>
-      <div class="col-lg-1">
-        <input class="configKey form-control" data-l1key="sharedata::lat"/>
-      </div>
-      <label class="col-lg-1 control-label">{{Longitude}}</label>
-      <div class="col-lg-1">
-        <input class="configKey form-control" data-l1key="sharedata::long"/>
-      </div>
-    </div>
     <?php
     $shareDataService = dataservice::getShareDataService();
     foreach ($shareDataService as $key => $value) {

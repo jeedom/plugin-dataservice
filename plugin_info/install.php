@@ -25,6 +25,11 @@ function dataservice_install() {
   if(config::byKey('info::longitude') != ''){
     config::save('sharedata::long',config::byKey('info::longitude'),'dataservice');
   }
+  if(config::byKey('info::nbOccupants') != ''){
+    config::save('sharedata::nbOccupant',config::byKey('info::nbOccupant'),'dataservice');
+  }
+  
+  
 }
 
 function dataservice_update() {
