@@ -1,6 +1,6 @@
 {
   "sharedata" : {
-    "name" : "Donnée communautaire",
+    "name" : "Données communautaire",
     "configuration" : {
       "radius" : {
         "name" : "Rayon",
@@ -45,7 +45,8 @@
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 1,
-          "logicalId": "temperature_ext"
+          "logicalId": "temperature_ext",
+          "unite" : "°C"
         },
         {
           "name": "Humidité extérieure",
@@ -53,7 +54,8 @@
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 1,
-          "logicalId": "humidity_ext"
+          "logicalId": "humidity_ext",
+          "unite" : "%"
         },
         {
           "name": "Luminosité extérieure",
@@ -69,7 +71,8 @@
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 1,
-          "logicalId": "pressure_ext"
+          "logicalId": "pressure_ext",
+          "unite" : "Pa"
         },
         {
           "name": "Pluie",
@@ -77,7 +80,8 @@
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 1,
-          "logicalId": "rain"
+          "logicalId": "rain",
+          "unite" : "mm"
         },
         {
           "name": "Vent",
@@ -85,7 +89,8 @@
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 1,
-          "logicalId": "wind"
+          "logicalId": "wind",
+          "unite" : "km/h"
         },
         {
           "name": "Consommation éléctrique",
@@ -93,7 +98,8 @@
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 1,
-          "logicalId": "consumption_electricity"
+          "logicalId": "consumption_electricity",
+          "unite" : "kWh"
         },
         {
           "name": "Consommation gaz",
@@ -101,7 +107,8 @@
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 1,
-          "logicalId": "consumption_gaz"
+          "logicalId": "consumption_gaz",
+          "unite" : "kWh"
         },
         {
           "name": "Consommation eau",
@@ -109,7 +116,8 @@
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 1,
-          "logicalId": "consumption_water"
+          "logicalId": "consumption_water",
+          "unite" : "m3"
         }
       ]
     }
