@@ -91,33 +91,6 @@
           "isHistorized": 1,
           "logicalId": "wind",
           "unite" : "km/h"
-        },
-        {
-          "name": "Consommation éléctrique",
-          "type": "info",
-          "subtype": "numeric",
-          "isVisible": 1,
-          "isHistorized": 1,
-          "logicalId": "consumption_electricity",
-          "unite" : "kWh"
-        },
-        {
-          "name": "Consommation gaz",
-          "type": "info",
-          "subtype": "numeric",
-          "isVisible": 1,
-          "isHistorized": 1,
-          "logicalId": "consumption_gaz",
-          "unite" : "kWh"
-        },
-        {
-          "name": "Consommation eau",
-          "type": "info",
-          "subtype": "numeric",
-          "isVisible": 1,
-          "isHistorized": 1,
-          "logicalId": "consumption_water",
-          "unite" : "m3"
         }
       ]
     }
