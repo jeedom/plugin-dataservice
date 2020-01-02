@@ -8,6 +8,7 @@
 	"category" : "programming",
 	"hasDependency" : false,
 	"hasOwnDeamon" : false,
+	"display" : "panel",
 	"maxDependancyInstallTime" : 0,
 	"changelog" : "https://jeedom.github.io/plugin-dataservice/#language#/changelog",
 	"documentation" : "https://jeedom.github.io/plugin-dataservice/#language#/",

@@ -24,7 +24,11 @@ try {
     throw new Exception(__('401 - Accès non autorisé', __FILE__));
   }
   
-  ajax::init();  
+  ajax::init();
+  
+  if(init('action') == 'getShareHistory') {
+    ajax::success(dataservice::getShareHistory(init('history'),init('radius'),init('dateStart'),init('dateEnd')));
+  }
   
   throw new Exception(__('Aucune méthode correspondante à : ', __FILE__) . init('action'));
   /*     * *********Catch exeption*************** */

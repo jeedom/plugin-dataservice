@@ -32,9 +32,9 @@ class dataservice extends eqLogic {
       'pressure_ext' => array('name' => __('Pression extérieure',__FILE__),'key' => 'sharedata::pressure_ext'),
       'rain' => array('name' => __('Pluie',__FILE__),'key' => 'sharedata::rain','unit' => array('mm')),
       'wind' => array('name' => __('Vent',__FILE__),'key' => 'sharedata::wind','unit' => array('km/h'),'convert' => array('m/s' => '#value#*3.6')),
-      'consumption_electricity' => array('name' => __('Consommation éléctrique',__FILE__),'key' => 'sharedata::consumption_electricity','unit' => array('kWh'),'occupantDepend' => true),
-      'consumption_gaz' => array('name' => __('Consommation gaz',__FILE__),'key' => 'sharedata::consumption_gaz','unit' => array('kWh'),'convert' => array('m3' => '#value#*10.91'),'occupantDepend' => true),
-      'consumption_water' => array('name' => __('Consommation eau',__FILE__),'key' => 'sharedata::consumption_water','unit' => array('m3'),'occupantDepend' => true)
+      'consumption_electricity' => array('name' => __('Consommation éléctrique',__FILE__),'key' => 'sharedata::consumption_electricity','unit' => array('kWh'),'occupantDepend' => true,'history' => 'electricity'),
+      'consumption_gaz' => array('name' => __('Consommation gaz',__FILE__),'key' => 'sharedata::consumption_gaz','unit' => array('kWh'),'convert' => array('m3' => '#value#*10.91'),'occupantDepend' => true,'history' => 'gaz'),
+      'consumption_water' => array('name' => __('Consommation eau',__FILE__),'key' => 'sharedata::consumption_water','unit' => array('m3'),'occupantDepend' => true,'history' => 'water')
     );
   }
   
@@ -92,13 +92,35 @@ class dataservice extends eqLogic {
     $request_http = new com_http($url);
     $request_http->setHeader(array('Content-Type: application/json'));
     $request_http->setPost(json_encode($data));
-    var_dump($data);
     try {
       $request_http->exec(10,1);
     } catch (\Exception $e) {
       
     }
   }
+  
+  public static function getShareHistory($_history,$_radius,$_startDate,$_endDate){
+    $url = config::byKey('service_url','dataservice').'/user/';
+    $url .= sha512(mb_strtolower(config::byKey('market::username')).':'.config::byKey('market::password'));
+    $url .= '/service/sharedata';
+    $url .='?history='.$_history;
+    $url .='&radius='.$_radius;
+    $url .='&startTime='.strtotime($_startDate);
+    $url .='&endTime='.strtotime($_endDate);
+    $url .='&lat='.config::byKey('info::latitude');
+    $url .='&long='.config::byKey('info::longitude');
+    $request_http = new com_http($url);
+    $datas = json_decode($request_http->exec(30,1),true);
+    if($datas['state'] != 'ok'){
+      throw new \Exception(__('Erreur sur la récuperation des données : ',__FILE__).json_encode($datas));
+    }
+    $return = array();
+    foreach ($datas['data'] as $value) {
+      $return[] = array(strtotime($value['time'])*1000,$value[$_history]);
+    }
+    return $return;
+  }
+  
   
   public static function tts($_text) {
     try {
