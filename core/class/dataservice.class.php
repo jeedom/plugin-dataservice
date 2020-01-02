@@ -49,8 +49,8 @@ class dataservice extends eqLogic {
     }
     $occupant = config::byKey('info::nbOccupant');
     $shareDataService = dataservice::getShareDataService();
-    foreach ($shareDataService as $key => $value) {
-      $cmd = cmd::byId(str_replace('#','',config::byKey($value['key'],'dataservice')));
+    foreach ($shareDataService as $key => $service) {
+      $cmd = cmd::byId(str_replace('#','',config::byKey($service['key'],'dataservice')));
       if(!is_object($cmd)){
         continue;
       }
@@ -58,12 +58,12 @@ class dataservice extends eqLogic {
       if(in_array($cmd->getEqType(),array('dataservice','weather'))){
         continue;
       }
-      if(isset($value['unit']) && !in_array($cmd->getUnite(),$value['unit'])){
+      if(isset($service['unit']) && !in_array($cmd->getUnite(),$service['unit'])){
         $convert = false;
-        if(isset($value['convert'])){
-          foreach ($value['convert'] as $unit => $calcul) {
+        if(isset($service['convert'])){
+          foreach ($service['convert'] as $unit => $calcul) {
             if($unit == $cmd->getUnite()){
-              $value = jeedom::evaluate(str_replace('#value#',$value,$calcul));
+              $value = evaluate(str_replace('#value#',$value,$calcul));
               $convert = true;
             }
           }
@@ -72,8 +72,8 @@ class dataservice extends eqLogic {
           continue;
         }
       }
-      if(isset($value['occupantDepend']) && $value['occupantDepend']){
-        if($occupant == '' || $occupant < 1 || is_nan($occupant)){
+      if(isset($service['occupantDepend']) && $service['occupantDepend']){
+        if($occupant == '' || $occupant < 1){
           continue;
         }
         $value = $value / $occupant;
