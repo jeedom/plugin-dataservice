@@ -58,7 +58,6 @@ $('#bt_validateCompareData').off('click').on('click',function(){
           handleAjaxError(request, status, error);
         },
         success: function (data) {
-          console.log(data);
           if (data.state != 'ok') {
             $('#div_alert').showAlert({message: data.result, level: 'danger'});
             return;
