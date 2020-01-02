@@ -22,6 +22,7 @@ $date = array(
     <legend>{{Je veux comparer ma}}</legend>
     <ul class="nav nav-list bs-sidenav">
       <?php
+      $active = 'active';
       foreach ($shareDataService as $key => $value) {
         if(!isset($value['history'])){
           continue;
@@ -49,18 +50,21 @@ $date = array(
           }
         }
         $history_calcul = '('.$history_calcul.')/'.$occupant;
-        echo '<li class="cursor li_myhistorydata" ><a data-calcul="' . $history_calcul . '">' . $value['name'] . '</a></li>';
+        echo '<li class="cursor li_myhistorydata '.$active.'" ><a data-calcul="' . $history_calcul . '">' . $value['name'] . '</a></li>';
+        $active = '';
       }
       ?>
     </ul>
     <legend>{{Avec}}</legend>
     <ul class="nav nav-list bs-sidenav">
       <?php
+      $active = 'active';
       foreach ($shareDataService as $key => $value) {
         if(!isset($value['history'])){
           continue;
         }
-        echo '<li class="cursor li_sharehistorydata" ><a data-history="' . $value['history'] . '">' . $value['name'] . '</a></li>';
+        echo '<li class="cursor li_sharehistorydata '.$active.'" ><a data-history="' . $value['history'] . '">' . $value['name'] . '</a></li>';
+        $active = '';
       }
       ?>
     </ul>
