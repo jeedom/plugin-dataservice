@@ -18,6 +18,7 @@
 
 /* * ***************************Includes********************************* */
 require_once __DIR__  . '/../../../../core/php/core.inc.php';
+include_file('core', 'dataservice_mail', 'class', 'dataservice');
 
 class dataservice extends eqLogic {
   /*     * *************************Attributs****************************** */
@@ -223,10 +224,13 @@ class dataservice extends eqLogic {
       return;
     }
     $service = $this->getConfiguration('service');
+    $device = self::devicesParameters($service);
+    if(isset($device['noRefreshData'])){
+      return;
+    }
     $url = config::byKey('service_url','dataservice').'/user/';
     $url .= sha512(mb_strtolower(config::byKey('market::username')).':'.config::byKey('market::password'));
     $url .= '/service/'.$this->getConfiguration('service');
-    $device = self::devicesParameters($service);
     if(count($device['configuration']) > 0){
       $url .= '?';
       foreach ($device['configuration'] as $key => $value) {
@@ -271,7 +275,13 @@ class dataserviceCmd extends cmd {
   public function execute($_options = array()) {
     $eqLogic = $this->getEqLogic();
     if($this->getLogicalId() == 'refresh'){
-      $eqLogic->refreshData();
+      return $eqLogic->refreshData();
+    }
+    $service = $eqLogic->getConfiguration('service');
+    $class='dataservice_'.$service;
+    $function = 'cmd_execute';
+    if(class_exists($class) && method_exists($class,$function)){
+      return $class::$function($this,$_options);
     }
   }
   

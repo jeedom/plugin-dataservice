@@ -6,6 +6,7 @@ $plugin = plugin::byId('dataservice');
 sendVarToJS('eqType', $plugin->getId());
 $eqLogics = eqLogic::byType($plugin->getId());
 $services = dataservice::devicesParameters();
+sendVarToJS('dataservice_services',$services);
 ?>
 
 <div class="row row-overflow">
@@ -147,6 +148,7 @@ $services = dataservice::devicesParameters();
 				</form>
 			</div>
 			<div role="tabpanel" class="tab-pane" id="commandtab">
+				<a class="btn btn-success btn-sm cmdAction pull-right" data-action="add" style="margin-top:5px;"><i class="fas fa-plus-circle"></i> {{Ajouter une commande}}</a><br/><br/>
 				<table id="table_cmd" class="table table-bordered table-condensed">
 					<thead>
 						<tr>

@@ -20,13 +20,25 @@ $('.eqLogicAttr[data-l1key=configuration][data-l2key=service]').off('change').on
   if($(this).value() != ''){
     $('.serviceConfig.'+$(this).value()).show();
   }
+  $('.cmdAction[data-action=add]').hide();
+  $('.eqLogicAttr[data-l2key=cron]').closest('.form-group').show();
+  if(dataservice_services[$(this).value()]){
+    if(dataservice_services[$(this).value()].canAddCmd){
+      $('.cmdAction[data-action=add]').show();
+    }
+    if(dataservice_services[$(this).value()].noRefreshData){
+      $('.eqLogicAttr[data-l2key=cron]').closest('.form-group').hide();
+    }
+  }
 });
 
 $("#table_cmd").sortable({axis: "y", cursor: "move", items: ".cmd", placeholder: "ui-state-highlight", tolerance: "intersect", forcePlaceholderSize: true});
-/*
-* Fonction pour l'ajout de commande, appellé automatiquement par plugin.template
-*/
+
 function addCmdToTable(_cmd) {
+  var addSpecificCmd = 'dataservice_'+$('.eqLogicAttr[data-l1key=configuration][data-l2key=service]').value()+'_addCmdToTable';
+  if(typeof window[addSpecificCmd] == 'function'){
+    return window[addSpecificCmd](_cmd);
+  }
   if (!isset(_cmd)) {
     var _cmd = {configuration: {}};
   }
@@ -66,4 +78,38 @@ function addCmdToTable(_cmd) {
     $('#table_cmd tbody tr:last .cmdAttr[data-l1key=type]').value(init(_cmd.type));
   }
   jeedom.cmd.changeType($('#table_cmd tbody tr:last'), init(_cmd.subType));
+}
+
+function dataservice_mail_addCmdToTable(_cmd){
+  if (!isset(_cmd)) {
+    var _cmd = {configuration: {}};
+  }
+  if (!isset(_cmd.configuration)) {
+    _cmd.configuration = {};
+  }
+  var tr = '<tr class="cmd" data-cmd_id="' + init(_cmd.id) + '">';
+  tr += '<td>';
+  tr += '<span class="cmdAttr" data-l1key="id" style="display:none;"></span>';
+  tr += '<span class="cmdAttr" data-l1key="type" style="display:none;">action</span>';
+  tr += '<span class="cmdAttr" data-l1key="subType" style="display:none;">message</span>';
+  tr += '<input class="cmdAttr form-control input-sm" data-l1key="name" style="width : 140px;" placeholder="{{Nom}}">';
+  tr += '</td>';
+  tr += '<td>';
+  tr += '</td>';
+  tr += '<td>';
+  tr += '<label class="checkbox-inline"><input type="checkbox" class="cmdAttr" data-l1key="isVisible" />{{Afficher}}</label>';
+  tr += '</td>';
+  tr += '<td>';
+  tr += '<input class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="to" placeholder="{{Enboyer à}}">';
+  tr += '</td>';
+  tr += '<td>';
+  if (is_numeric(_cmd.id)) {
+    tr += '<a class="btn btn-default btn-xs cmdAction" data-action="configure"><i class="fa fa-cogs"></i></a> ';
+    tr += '<a class="btn btn-default btn-xs cmdAction" data-action="test"><i class="fa fa-rss"></i> {{Tester}}</a>';
+  }
+  tr += '<i class="fa fa-minus-circle pull-right cmdAction cursor" data-action="remove"></i>';
+  tr += '</td>';
+  tr += '</tr>';
+  $('#table_cmd tbody').append(tr);
+  $('#table_cmd tbody tr:last').setValues(_cmd, '.cmdAttr');
 }

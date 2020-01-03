@@ -1,0 +1,12 @@
+{
+  "mail" : {
+    "name" : "E-mail",
+    "noRefreshData" : true,
+    "canAddCmd" : true,
+    "eqLogic" : {
+      "commands" : [
+        
+      ]
+    }
+  }
+}
