@@ -28,7 +28,6 @@ class dataservice_mail {
       'text' => $_options['message'],
       'html' => $_options['message']
     );
-    log::add('dataservice','error',json_encode($data));
     if (isset($_options['files']) && is_array($_options['files'])) {
       $data['attachments'] = array();
       foreach ($_options['files'] as $file) {
@@ -38,7 +37,6 @@ class dataservice_mail {
         );
       }
     }
-    log::add('dataservice','error',print_r($data,true));
     $url = config::byKey('service_url','dataservice').'/user/';
     $url .= sha512(mb_strtolower(config::byKey('market::username')).':'.config::byKey('market::password'));
     $url .= '/service/mail';
