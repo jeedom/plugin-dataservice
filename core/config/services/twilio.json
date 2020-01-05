@@ -1,0 +1,12 @@
+{
+  "twilio" : {
+    "name" : "SMS",
+    "noRefreshData" : true,
+    "canAddCmd" : true,
+    "eqLogic" : {
+      "commands" : [
+        
+      ]
+    }
+  }
+}

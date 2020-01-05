@@ -19,6 +19,7 @@
 /* * ***************************Includes********************************* */
 require_once __DIR__  . '/../../../../core/php/core.inc.php';
 include_file('core', 'dataservice_mail', 'class', 'dataservice');
+include_file('core', 'dataservice_twilio', 'class', 'dataservice');
 
 class dataservice extends eqLogic {
   /*     * *************************Attributs****************************** */
