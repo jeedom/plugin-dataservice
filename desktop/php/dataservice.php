@@ -117,7 +117,7 @@ sendVarToJS('dataservice_services',$services);
 						<?php
 						foreach ($services as $key => $service) {
 							echo '<div class="serviceConfig '.$key.'" style="display:none;">';
-							if(!is_array($service['configuration'])){
+							if(!isset($service['configuration']) || !is_array($service['configuration'])){
 								continue;
 							}
 							foreach ($service['configuration'] as $key2 => $value) {
