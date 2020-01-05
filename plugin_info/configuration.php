@@ -25,6 +25,12 @@ if (!isConnect()) {
 ?>
 <form class="form-horizontal" id="configureShareData">
   <fieldset>
+    <div class="form-group gshmode jeedom">
+      <label class="col-lg-3 control-label">{{Envoyer configuration au market}}</label>
+      <div class="col-lg-2">
+        <a class="btn btn-default" id="bt_sendConfigToMarket"><i class="fa fa-paper-plane" aria-hidden="true"></i> {{Envoyer}}</a>
+      </div>
+    </div>
     <legend>{{Partage de données}}</legend>
     <div class="alert alert-info">{{Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data}}</div>
     <?php
@@ -51,6 +57,27 @@ $("#configureShareData").off('click','.listCmdInfo').on('click','.listCmdInfo', 
   var el = $(this).closest('.form-group').find('.configKey');
   jeedom.cmd.getSelectModal({cmd: {type: 'info'}}, function (result) {
     el.value(result.human);
+  });
+});
+
+$('#bt_sendConfigToMarket').on('click', function () {
+  $.ajax({
+    type: "POST",
+    url: "plugins/dataservice/core/ajax/dataservice.ajax.php",
+    data: {
+      action: "sendConfig",
+    },
+    dataType: 'json',
+    error: function (request, status, error) {
+      handleAjaxError(request, status, error);
+    },
+    success: function (data) {
+      if (data.state != 'ok') {
+        $('#div_alert').showAlert({message: data.result, level: 'danger'});
+        return;
+      }
+      $('#div_alert').showAlert({message: '{{Configuration envoyée avec succès}}', level: 'success'});
+    }
   });
 });
 </script>

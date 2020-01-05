@@ -30,6 +30,11 @@ try {
     ajax::success(dataservice::getShareHistory(init('history'),init('radius'),init('dateStart'),init('dateEnd')));
   }
   
+  if (init('action') == 'sendConfig') {
+    dataservice::sendJeedomConfig();
+    ajax::success();
+  }
+  
   throw new Exception(__('Aucune méthode correspondante à : ', __FILE__) . init('action'));
   /*     * *********Catch exeption*************** */
 } catch (Exception $e) {

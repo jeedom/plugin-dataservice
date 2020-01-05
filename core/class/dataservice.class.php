@@ -26,6 +26,13 @@ class dataservice extends eqLogic {
   
   /*     * ***********************Methode static*************************** */
   
+  public static function sendJeedomConfig() {
+    $market = repo_market::getJsonRpc();
+    if (!$market->sendRequest('dataservice::configCallback', array('dataservice::apikey' => jeedom::getApiKey('dataservice'),'dataservice::url' => network::getNetworkAccess('external')))) {
+      throw new Exception($market->getError(), $market->getErrorCode());
+    }
+  }
+  
   public function getShareDataService(){
     return array(
       'temperature_ext' => array('name' => __('Température extérieure',__FILE__),'key' => 'sharedata::temperature_ext','unit' => array('°C')),
