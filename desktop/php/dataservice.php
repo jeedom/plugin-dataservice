@@ -116,10 +116,10 @@ sendVarToJS('dataservice_services',$services);
 						</div>
 						<?php
 						foreach ($services as $key => $service) {
-							echo '<div class="serviceConfig '.$key.'" style="display:none;">';
 							if(!isset($service['configuration']) || !is_array($service['configuration'])){
 								continue;
 							}
+							echo '<div class="serviceConfig '.$key.'" style="display:none;">';
 							foreach ($service['configuration'] as $key2 => $value) {
 								if($value['type'] == 'input'){
 									echo '<div class="form-group">';
@@ -137,6 +137,13 @@ sendVarToJS('dataservice_services',$services);
 										echo '<option value="'.$key3.'">'.$name.'</option>';
 									}
 									echo '</select>';
+									echo '</div>';
+									echo '</div>';
+								}elseif($value['type'] == 'checkbox'){
+									echo '<div class="form-group">';
+									echo '<label class="col-sm-3 control-label">'.$value['name'].'</label>';
+									echo '<div class="col-sm-3">';
+									echo '<input type="checkbox" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="'.$key.'::'.$key2.'"/>';
 									echo '</div>';
 									echo '</div>';
 								}

@@ -3,6 +3,12 @@
     "name" : "SMS",
     "noRefreshData" : true,
     "canAddCmd" : true,
+    "configuration" : {
+      "allowInteract" : {
+        "name" : "Autorisé les interactions",
+        "type" : "checkbox"
+      }
+    },
     "eqLogic" : {
       "commands" : [
         
