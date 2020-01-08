@@ -41,9 +41,9 @@ class dataservice extends eqLogic {
       'pressure_ext' => array('name' => __('Pression extérieure',__FILE__),'key' => 'sharedata::pressure_ext'),
       'rain' => array('name' => __('Pluie',__FILE__),'key' => 'sharedata::rain','unit' => array('mm')),
       'wind' => array('name' => __('Vent',__FILE__),'key' => 'sharedata::wind','unit' => array('km/h'),'convert' => array('m/s' => '#value#*3.6')),
-      'consumption_electricity' => array('name' => __('Consommation éléctrique',__FILE__),'key' => 'sharedata::consumption_electricity','unit' => array('kWh'),'occupantDepend' => true,'history' => 'electricity'),
-      'consumption_gaz' => array('name' => __('Consommation gaz',__FILE__),'key' => 'sharedata::consumption_gaz','unit' => array('kWh'),'convert' => array('m3' => '#value#*10.91'),'occupantDepend' => true,'history' => 'gaz'),
-      'consumption_water' => array('name' => __('Consommation eau',__FILE__),'key' => 'sharedata::consumption_water','unit' => array('m3'),'occupantDepend' => true,'history' => 'water')
+      'consumption_electricity' => array('name' => __('Consommation journaliere éléctrique',__FILE__),'key' => 'sharedata::consumption_electricity','unit' => array('kWh'),'occupantDepend' => true,'history' => 'electricity'),
+      'consumption_gaz' => array('name' => __('Consommation journaliere gaz',__FILE__),'key' => 'sharedata::consumption_gaz','unit' => array('kWh'),'convert' => array('m3' => '#value#*10.91'),'occupantDepend' => true,'history' => 'gaz'),
+      'consumption_water' => array('name' => __('Consommation journaliere eau',__FILE__),'key' => 'sharedata::consumption_water','unit' => array('m3'),'occupantDepend' => true,'history' => 'water')
     );
   }
   
