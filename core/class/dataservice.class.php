@@ -95,11 +95,12 @@ class dataservice extends eqLogic {
       return;
     }
     sleep(rand(0,60));
-    $url = config::byKey('service_url','dataservice').'/user/';
-    $url .= sha512(mb_strtolower(config::byKey('market::username')).':'.config::byKey('market::password'));
-    $url .= '/service/sharedata';
+    $url = config::byKey('service_url','dataservice').'/service/sharedata';
     $request_http = new com_http($url);
-    $request_http->setHeader(array('Content-Type: application/json'));
+    $request_http->setHeader(array(
+      'Content-Type: application/json',
+      'Autorization: '.sha512(mb_strtolower(config::byKey('market::username')).':'.config::byKey('market::password'))
+    ));
     $request_http->setPost(json_encode($data));
     try {
       $request_http->exec(10,1);
@@ -236,9 +237,7 @@ class dataservice extends eqLogic {
     if(isset($device['noRefreshData'])){
       return;
     }
-    $url = config::byKey('service_url','dataservice').'/user/';
-    $url .= sha512(mb_strtolower(config::byKey('market::username')).':'.config::byKey('market::password'));
-    $url .= '/service/'.$this->getConfiguration('service');
+    $url = config::byKey('service_url','dataservice').'/service/'.$this->getConfiguration('service');
     if(count($device['configuration']) > 0){
       $url .= '?';
       foreach ($device['configuration'] as $key => $value) {
@@ -249,6 +248,7 @@ class dataservice extends eqLogic {
       $url .= 'lang='.substr(config::byKey('language'),0,2);
     }
     $request_http = new com_http(trim($url,'&'));
+    $request_http->setHeader(array('Autorization: '.sha512(mb_strtolower(config::byKey('market::username')).':'.config::byKey('market::password'))));
     $datas = json_decode($request_http->exec(10),true);
     if($datas['state'] != 'ok'){
       throw new \Exception(__('Erreur sur la récuperation des données : ',__FILE__).json_encode($datas));
