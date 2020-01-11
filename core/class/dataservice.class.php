@@ -110,9 +110,7 @@ class dataservice extends eqLogic {
   }
   
   public static function getShareHistory($_history,$_radius,$_startDate,$_endDate){
-    $url = config::byKey('service_url','dataservice').'/user/';
-    $url .= sha512(mb_strtolower(config::byKey('market::username')).':'.config::byKey('market::password'));
-    $url .= '/service/sharedata';
+    $url = config::byKey('service_url','dataservice').'/service/sharedata';
     $url .='?history='.$_history;
     $url .='&radius='.$_radius;
     $url .='&startTime='.strtotime($_startDate);
@@ -120,6 +118,9 @@ class dataservice extends eqLogic {
     $url .='&lat='.config::byKey('info::latitude');
     $url .='&long='.config::byKey('info::longitude');
     $request_http = new com_http($url);
+    $request_http->setHeader(array(
+      'Autorization: '.sha512(mb_strtolower(config::byKey('market::username')).':'.config::byKey('market::password'))
+    ));
     $datas = json_decode($request_http->exec(30,1),true);
     if($datas['state'] != 'ok'){
       throw new \Exception(__('Erreur sur la récuperation des données : ',__FILE__).json_encode($datas));
