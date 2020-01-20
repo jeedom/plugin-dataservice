@@ -36,8 +36,15 @@ if (!isConnect()) {
     <?php
     $shareDataService = dataservice::getShareDataService();
     foreach ($shareDataService as $key => $value) {
+      $name = $value['name'].' ('.$value['unit'];
+      if(isset($value['convert'])){
+        foreach ($value['convert'] as $key => $value) {
+          $name .=','.$key;
+        }
+      }
+      $name .= ')'
       echo '<div class="form-group">';
-      echo '<label class="col-lg-2 control-label">'.$value['name'].'</label>';
+      echo '<label class="col-lg-2 control-label">'.$name.'</label>';
       echo '<div class="col-lg-3">';
       echo '<div class="input-group">';
       echo '<input class="configKey form-control" data-l1key="'.$value['key'].'"/>';

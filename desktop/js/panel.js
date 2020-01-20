@@ -41,7 +41,7 @@ $('#bt_validateCompareData').off('click').on('click',function(){
     dateStart : $('#in_startDate').value(),
     dateEnd :  $('#in_endDate').value(),
     height : $('#div_graphCompareHistory').height(),
-    option : {groupingType : 'high::day',graphType:'column'},
+    option : {groupingType : 'high::day',graphType:'area'},
     success : function(){
       $.ajax({
         type: "POST",
@@ -64,7 +64,7 @@ $('#bt_validateCompareData').off('click').on('click',function(){
           }
           var series = {
             dataGrouping: 'high::day',
-            type: 'column',
+            type: 'area',
             id:'sahreData',
             cursor: 'pointer',
             name :$('.li_sharehistorydata.active a').text(),
