@@ -63,7 +63,12 @@ $('#bt_validateCompareData').off('click').on('click',function(){
             return;
           }
           var series = {
-            dataGrouping: 'high::day',
+            dataGrouping: {
+              approximation: 'high',
+              enabled: true,
+              forced: true,
+              units: [['day',[1]]]
+            },
             type: 'area',
             id:'sahreData',
             cursor: 'pointer',

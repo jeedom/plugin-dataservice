@@ -127,7 +127,7 @@ class dataservice extends eqLogic {
     }
     $return = array();
     foreach ($datas['data'] as $value) {
-      $return[] = array(strtotime($value['time'])*1000,$value[$_history]);
+      $return[] = array((strtotime($value['time']) - 86400)*1000,$value[$_history]);
     }
     return $return;
   }
