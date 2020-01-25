@@ -48,7 +48,7 @@ class dataservice extends eqLogic {
   }
   
   public function cron15(){
-    if(date('H') == 0 && datet('i')  < 10){
+    if(date('H') == 0 && datet('i') < 15){
       return;
     }
     $data = array(
