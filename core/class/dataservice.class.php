@@ -48,6 +48,9 @@ class dataservice extends eqLogic {
   }
   
   public function cron15(){
+    if(date('H') == 0 && datet('i')  < 10){
+      return;
+    }
     $data = array(
       'lat' => config::byKey('info::latitude'),
       'long' => config::byKey('info::longitude'),
@@ -56,6 +59,7 @@ class dataservice extends eqLogic {
     if($data['lat'] == '' || $data['long'] == ''){
       return;
     }
+    sleep(rand(0,60));
     $occupant = config::byKey('info::nbOccupant');
     $shareDataService = dataservice::getShareDataService();
     foreach ($shareDataService as $key => $service) {
@@ -94,7 +98,6 @@ class dataservice extends eqLogic {
     if(count($data['datas']) == 0){
       return;
     }
-    sleep(rand(0,60));
     $url = config::byKey('service_url','dataservice').'/service/sharedata';
     $request_http = new com_http($url);
     $request_http->setHeader(array(
