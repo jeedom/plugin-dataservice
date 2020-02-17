@@ -1,84 +1,84 @@
 {
+    "plugin_info\/configuration.php": {
+        "Envoyer configuration au market": "構成を市場に送信する",
+        "Envoyer": "送信",
+        "Partage de données": "データ共有",
+        "Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data": "データ共有により、特定のデータ（選択したデータ）をJeedomに送信できます。Jeedomは匿名化されており、このデータを相互に比較できます。このデータ共有と引き換えに、Jeedomはデータサービスへのリクエストクォータを増やします",
+        "Configuration envoyée avec succès": "構成が正常に送信されました"
+    },
     "desktop\/js\/dataservice.js": {
-        "Nom": "Nom",
-        "Afficher": "Afficher",
-        "Historiser": "Historiser",
-        "Inverser": "Inverser",
-        "Unité": "Unité",
-        "Min": "Min",
-        "Max": "Max",
-        "Tester": "Tester",
-        "Envoyer à": "Envoyer à"
+        "Nom": "名前",
+        "Afficher": "ディスプレイ",
+        "Historiser": "historicize",
+        "Inverser": "逆",
+        "Unité": "団結",
+        "Min": "低いです",
+        "Max": "マックス",
+        "Tester": "テスト",
+        "Envoyer à": "に送る"
     },
     "desktop\/php\/dataservice.php": {
-        "401 - Accès non autorisé": "401 - Accès non autorisé",
-        "Gestion": "Gestion",
-        "Ajouter": "Ajouter",
-        "Configuration": "Configuration",
-        "Mes datas": "Mes datas",
-        "Rechercher": "Rechercher",
-        "Configuration avancée": "Configuration avancée",
-        "Dupliquer": "Dupliquer",
-        "Sauvegarder": "Sauvegarder",
-        "Supprimer": "Supprimer",
-        "Equipement": "Equipement",
-        "Commandes": "Commandes",
-        "Avancée": "Avancée",
-        "Nom de l'équipement": "Nom de l'équipement",
-        "Objet parent": "Objet parent",
-        "Aucun": "Aucun",
-        "Catégorie": "Catégorie",
-        "Activer": "Activer",
-        "Visible": "Visible",
-        "Service": "Service",
-        "Ajouter une commande": "Ajouter une commande",
-        "Nom": "Nom",
-        "Type": "Type",
-        "Options": "Options",
-        "Paramètres": "Paramètres",
-        "Action": "Action",
-        "Cron de mise à jour": "Cron de mise à jour"
+        "401 - Accès non autorisé": "401-不正アクセス",
+        "Gestion": "管理",
+        "Ajouter": "加えます",
+        "Configuration": "コンフィギュレーション",
+        "Mes datas": "私のデータ",
+        "Rechercher": "検索",
+        "Configuration avancée": "高度な構成",
+        "Dupliquer": "重複",
+        "Sauvegarder": "保存",
+        "Supprimer": "削除",
+        "Equipement": "設備",
+        "Commandes": "コマンド",
+        "Avancée": "進捗",
+        "Nom de l'équipement": "機器名",
+        "Objet parent": "親オブジェクト",
+        "Aucun": "いいえ",
+        "Catégorie": "カテゴリ",
+        "Activer": "アクティブ",
+        "Visible": "目に見えます",
+        "Service": "サービス",
+        "Ajouter une commande": "注文を追加",
+        "Nom": "名前",
+        "Type": "タイプ",
+        "Options": "オプション",
+        "Paramètres": "設定",
+        "Action": "アクション",
+        "Cron de mise à jour": "Cronを更新"
     },
     "desktop\/php\/panel.php": {
-        "401 - Accès non autorisé": "401 - Accès non autorisé",
-        "Je veux comparer ma": "Je veux comparer ma",
-        "Avec": "Avec",
-        "Dans un rayon de": "Dans un rayon de",
-        "Période": "Période",
-        "Valider": "Valider"
-    },
-    "plugin_info\/configuration.php": {
-        "Envoyer configuration au market": "Envoyer configuration au market",
-        "Envoyer": "Envoyer",
-        "Partage de données": "Partage de données",
-        "Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data": "Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data",
-        "Configuration envoyée avec succès": "Configuration envoyée avec succès"
-    },
-    "core\/class\/dataservice_twilio.class.php": {
-        "Erreur sur la récuperation des données : ": "Erreur sur la récuperation des données : ",
-        "Message de ": "Message de "
-    },
-    "core\/class\/dataservice.class.php": {
-        "Température extérieure": "Température extérieure",
-        "Humidité extérieure": "Humidité extérieure",
-        "Luminosité exterieure": "Luminosité exterieure",
-        "Pression extérieure": "Pression extérieure",
-        "Pluie": "Pluie",
-        "Vent": "Vent",
-        "Consommation journaliere éléctrique": "Consommation journaliere éléctrique",
-        "Consommation journaliere gaz": "Consommation journaliere gaz",
-        "Consommation journaliere eau": "Consommation journaliere eau",
-        "Erreur sur la récuperation des données : ": "Erreur sur la récuperation des données : ",
-        "Erreur sur ": "Erreur sur "
-    },
-    "core\/class\/dataservice_mail.class.php": {
-        "Erreur sur la récuperation des données : ": "Erreur sur la récuperation des données : "
-    },
-    "core\/php\/jeeDataservice.php": {
-        "Vous n\\'etes pas autorisé à effectuer cette action": "Vous n\\'etes pas autorisé à effectuer cette action"
+        "401 - Accès non autorisé": "401-不正アクセス",
+        "Je veux comparer ma": "私を比較したい",
+        "Avec": "とともに",
+        "Dans un rayon de": "半径内",
+        "Période": "期間",
+        "Valider": "検証"
     },
     "core\/ajax\/dataservice.ajax.php": {
-        "401 - Accès non autorisé": "401 - Accès non autorisé",
-        "Aucune méthode correspondante à : ": "Aucune méthode correspondante à : "
+        "401 - Accès non autorisé": "401-不正アクセス",
+        "Aucune méthode correspondante à : ": "以下に対応するメソッドはありません："
+    },
+    "core\/php\/jeeDataservice.php": {
+        "Vous n\\'etes pas autorisé à effectuer cette action": "このアクションを実行する権限がありません"
+    },
+    "core\/class\/dataservice_mail.class.php": {
+        "Erreur sur la récuperation des données : ": "データ復旧エラー："
+    },
+    "core\/class\/dataservice.class.php": {
+        "Température extérieure": "外気温",
+        "Humidité extérieure": "屋外湿度",
+        "Luminosité exterieure": "外部の明るさ",
+        "Pression extérieure": "外圧",
+        "Pluie": "雨",
+        "Vent": "風",
+        "Consommation journaliere éléctrique": "毎日の電力消費",
+        "Consommation journaliere gaz": "毎日のガス消費量",
+        "Consommation journaliere eau": "毎日の水消費",
+        "Erreur sur la récuperation des données : ": "データ復旧エラー：",
+        "Erreur sur ": "エラーオン"
+    },
+    "core\/class\/dataservice_twilio.class.php": {
+        "401 - Accès non autorisé": "401-不正アクセス",
+        "Aucune méthode correspondante à : ": "以下に対応するメソッドはありません："
     }
 }

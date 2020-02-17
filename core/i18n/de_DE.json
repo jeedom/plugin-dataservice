@@ -1,84 +1,84 @@
 {
+    "plugin_info\/configuration.php": {
+        "Envoyer configuration au market": "Konfiguration an den Markt senden",
+        "Envoyer": "send",
+        "Partage de données": "Datenaustausch",
+        "Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data": "Durch die gemeinsame Nutzung von Daten können Sie bestimmte Daten (die Sie auswählen) an Jeedom senden, das anonymisiert ist und es Ihnen ermöglicht, diese Daten miteinander zu vergleichen. Im Gegenzug für diese gemeinsame Nutzung von Daten erhöht Jeedom Ihr Anforderungskontingent für den Datendienst",
+        "Configuration envoyée avec succès": "Konfiguration erfolgreich gesendet"
+    },
     "desktop\/js\/dataservice.js": {
-        "Nom": "Nom",
-        "Afficher": "Afficher",
-        "Historiser": "Historiser",
-        "Inverser": "Inverser",
-        "Unité": "Unité",
-        "Min": "Min",
+        "Nom": "Name",
+        "Afficher": "Anzeige",
+        "Historiser": "historisieren",
+        "Inverser": "umkehren",
+        "Unité": "Einheit",
+        "Min": "niedrig",
         "Max": "Max",
-        "Tester": "Tester",
-        "Envoyer à": "Envoyer à"
+        "Tester": "Test",
+        "Envoyer à": "Senden an"
     },
     "desktop\/php\/dataservice.php": {
-        "401 - Accès non autorisé": "401 - Accès non autorisé",
-        "Gestion": "Gestion",
-        "Ajouter": "Ajouter",
-        "Configuration": "Configuration",
-        "Mes datas": "Mes datas",
-        "Rechercher": "Rechercher",
-        "Configuration avancée": "Configuration avancée",
-        "Dupliquer": "Dupliquer",
-        "Sauvegarder": "Sauvegarder",
-        "Supprimer": "Supprimer",
-        "Equipement": "Equipement",
-        "Commandes": "Commandes",
-        "Avancée": "Avancée",
-        "Nom de l'équipement": "Nom de l'équipement",
-        "Objet parent": "Objet parent",
-        "Aucun": "Aucun",
-        "Catégorie": "Catégorie",
-        "Activer": "Activer",
-        "Visible": "Visible",
+        "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
+        "Gestion": "Management",
+        "Ajouter": "hinzufügen",
+        "Configuration": "Konfiguration",
+        "Mes datas": "Meine Daten",
+        "Rechercher": "Suche",
+        "Configuration avancée": "Erweiterte Konfiguration",
+        "Dupliquer": "Duplikat",
+        "Sauvegarder": "speichern",
+        "Supprimer": "Entfernen",
+        "Equipement": "Ausrüstung",
+        "Commandes": "Befehle",
+        "Avancée": "Fortschritte",
+        "Nom de l'équipement": "Name der Ausrüstung",
+        "Objet parent": "Übergeordnetes Objekt",
+        "Aucun": "keine",
+        "Catégorie": "Kategorie",
+        "Activer": "activate",
+        "Visible": "sichtbar",
         "Service": "Service",
-        "Ajouter une commande": "Ajouter une commande",
-        "Nom": "Nom",
-        "Type": "Type",
-        "Options": "Options",
-        "Paramètres": "Paramètres",
-        "Action": "Action",
-        "Cron de mise à jour": "Cron de mise à jour"
+        "Ajouter une commande": "Bestellung hinzufügen",
+        "Nom": "Name",
+        "Type": "Typ",
+        "Options": "Optionen",
+        "Paramètres": "Einstellungen",
+        "Action": "Aktion",
+        "Cron de mise à jour": "Aktualisieren Sie Cron"
     },
     "desktop\/php\/panel.php": {
-        "401 - Accès non autorisé": "401 - Accès non autorisé",
-        "Je veux comparer ma": "Je veux comparer ma",
-        "Avec": "Avec",
-        "Dans un rayon de": "Dans un rayon de",
-        "Période": "Période",
-        "Valider": "Valider"
-    },
-    "plugin_info\/configuration.php": {
-        "Envoyer configuration au market": "Envoyer configuration au market",
-        "Envoyer": "Envoyer",
-        "Partage de données": "Partage de données",
-        "Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data": "Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data",
-        "Configuration envoyée avec succès": "Configuration envoyée avec succès"
-    },
-    "core\/class\/dataservice_twilio.class.php": {
-        "Erreur sur la récuperation des données : ": "Erreur sur la récuperation des données : ",
-        "Message de ": "Message de "
-    },
-    "core\/class\/dataservice.class.php": {
-        "Température extérieure": "Température extérieure",
-        "Humidité extérieure": "Humidité extérieure",
-        "Luminosité exterieure": "Luminosité exterieure",
-        "Pression extérieure": "Pression extérieure",
-        "Pluie": "Pluie",
-        "Vent": "Vent",
-        "Consommation journaliere éléctrique": "Consommation journaliere éléctrique",
-        "Consommation journaliere gaz": "Consommation journaliere gaz",
-        "Consommation journaliere eau": "Consommation journaliere eau",
-        "Erreur sur la récuperation des données : ": "Erreur sur la récuperation des données : ",
-        "Erreur sur ": "Erreur sur "
-    },
-    "core\/class\/dataservice_mail.class.php": {
-        "Erreur sur la récuperation des données : ": "Erreur sur la récuperation des données : "
-    },
-    "core\/php\/jeeDataservice.php": {
-        "Vous n\\'etes pas autorisé à effectuer cette action": "Vous n\\'etes pas autorisé à effectuer cette action"
+        "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
+        "Je veux comparer ma": "Ich möchte meine vergleichen",
+        "Avec": "mit",
+        "Dans un rayon de": "Innerhalb eines Radius von",
+        "Période": "Zeit",
+        "Valider": "validate"
     },
     "core\/ajax\/dataservice.ajax.php": {
-        "401 - Accès non autorisé": "401 - Accès non autorisé",
-        "Aucune méthode correspondante à : ": "Aucune méthode correspondante à : "
+        "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
+        "Aucune méthode correspondante à : ": "Keine Methode entsprechend:"
+    },
+    "core\/php\/jeeDataservice.php": {
+        "Vous n\\'etes pas autorisé à effectuer cette action": "Sie sind nicht berechtigt, diese Aktion auszuführen"
+    },
+    "core\/class\/dataservice_mail.class.php": {
+        "Erreur sur la récuperation des données : ": "Datenwiederherstellungsfehler:"
+    },
+    "core\/class\/dataservice.class.php": {
+        "Température extérieure": "Außentemperatur",
+        "Humidité extérieure": "Luftfeuchtigkeit im Freien",
+        "Luminosité exterieure": "Außenhelligkeit",
+        "Pression extérieure": "Äußerer Druck",
+        "Pluie": "regen",
+        "Vent": "Wind",
+        "Consommation journaliere éléctrique": "Täglicher Stromverbrauch",
+        "Consommation journaliere gaz": "Täglicher Gasverbrauch",
+        "Consommation journaliere eau": "Täglicher Wasserverbrauch",
+        "Erreur sur la récuperation des données : ": "Datenwiederherstellungsfehler:",
+        "Erreur sur ": "Fehler ein"
+    },
+    "core\/class\/dataservice_twilio.class.php": {
+        "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
+        "Aucune méthode correspondante à : ": "Keine Methode entsprechend:"
     }
 }
