@@ -1,0 +1,73 @@
+{
+  "enedis" : {
+    "name" : "Enedis",
+    "oauth" : true,
+    "configuration" : {
+      "usage_point_id" : {
+        "name" : "Point de livraison",
+        "type" : "input"
+      }
+    },
+    "eqLogic" : {
+      "configuration" : {
+        "cron" : "01 * * * *"
+      },
+      "commands" : [
+        {
+          "name": "Rafraîchir",
+          "type": "action",
+          "subtype": "other",
+          "logicalId": "refresh"
+        },
+        {
+          "name": "Consommation",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "logicalId": "consumption_load_curve"
+        },
+        {
+          "name": "Consommation Jour",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "logicalId": "daily_consumption"
+        },
+        {
+          "name": "Consommation Jour Max",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "logicalId": "consumption_max_power"
+        },
+        {
+          "name": "Production",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "logicalId": "production_load_curve"
+        },
+        {
+          "name": "Production Jour",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "logicalId": "daily_production"
+        },
+        {
+          "name": "Production Jour Max",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "logicalId": "production_max_power"
+        }
+      ]
+    }
+  }
+}

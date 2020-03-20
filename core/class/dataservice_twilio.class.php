@@ -26,11 +26,9 @@ class dataservice_twilio {
       'to' => $_cmd->getConfiguration('to'),
       'text' => $_options['message']
     );
-    $url = config::byKey('service_url','dataservice').'/user/';
-    $url .= sha512(mb_strtolower(config::byKey('market::username')).':'.config::byKey('market::password'));
-    $url .= '/service/twilio';
+    $url = config::byKey('service::cloud::url').'/service/twilio';
     $request_http = new com_http($url);
-    $request_http->setHeader(array('Content-Type: application/json'));
+    $request_http->setHeader(array('Content-Type: application/json','Autorization: '.sha512(mb_strtolower(config::byKey('market::username')).':'.config::byKey('market::password'))));
     $request_http->setPost(json_encode($data));
     $datas = json_decode($request_http->exec(30,1),true);
     if($datas['state'] != 'ok'){

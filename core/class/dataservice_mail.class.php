@@ -37,11 +37,9 @@ class dataservice_mail {
         );
       }
     }
-    $url = config::byKey('service_url','dataservice').'/user/';
-    $url .= sha512(mb_strtolower(config::byKey('market::username')).':'.config::byKey('market::password'));
-    $url .= '/service/mail';
+    $url = config::byKey('service::cloud::url').'/service/mail';
     $request_http = new com_http($url);
-    $request_http->setHeader(array('Content-Type: application/json'));
+    $request_http->setHeader(array('Content-Type: application/json','Autorization: '.sha512(mb_strtolower(config::byKey('market::username')).':'.config::byKey('market::password'))));
     $request_http->setPost(json_encode($data));
     $datas = json_decode($request_http->exec(30,1),true);
     if($datas['state'] != 'ok'){

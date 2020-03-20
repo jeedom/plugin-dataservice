@@ -20,6 +20,7 @@
 require_once __DIR__  . '/../../../../core/php/core.inc.php';
 include_file('core', 'dataservice_mail', 'class', 'dataservice');
 include_file('core', 'dataservice_twilio', 'class', 'dataservice');
+include_file('core', 'dataservice_enedis', 'class', 'dataservice');
 
 class dataservice extends eqLogic {
   /*     * *************************Attributs****************************** */
@@ -98,7 +99,7 @@ class dataservice extends eqLogic {
     if(count($data['datas']) == 0){
       return;
     }
-    $url = config::byKey('service_url','dataservice').'/service/sharedata';
+    $url = config::byKey('service::cloud::url').'/service/sharedata';
     $request_http = new com_http($url);
     $request_http->setHeader(array(
       'Content-Type: application/json',
@@ -113,7 +114,7 @@ class dataservice extends eqLogic {
   }
   
   public static function getShareHistory($_history,$_radius,$_startDate,$_endDate){
-    $url = config::byKey('service_url','dataservice').'/service/sharedata';
+    $url = config::byKey('service::cloud::url').'/service/sharedata';
     $url .='?history='.$_history;
     $url .='&radius='.$_radius;
     $url .='&startTime='.strtotime($_startDate);
@@ -138,7 +139,7 @@ class dataservice extends eqLogic {
   
   public static function tts($_text) {
     try {
-      $url = config::byKey('service_url','dataservice').'/user/';
+      $url = config::byKey('service::cloud::url').'/user/';
       $url .= sha512(mb_strtolower(config::byKey('market::username')).':'.config::byKey('market::password'));
       $url .= '/service/tts';
       $url .= '?lang='.config::byKey('language', 'core', 'fr_FR');
@@ -241,7 +242,12 @@ class dataservice extends eqLogic {
     if(isset($device['noRefreshData'])){
       return;
     }
-    $url = config::byKey('service_url','dataservice').'/service/'.$this->getConfiguration('service');
+    $class='dataservice_'.$service;
+    $function = 'refreshData';
+    if(class_exists($class) && method_exists($class,$function)){
+      return $class::$function($this);
+    }
+    $url = config::byKey('service::cloud::url').'/service/'.$this->getConfiguration('service');
     if(count($device['configuration']) > 0){
       $url .= '?';
       foreach ($device['configuration'] as $key => $value) {

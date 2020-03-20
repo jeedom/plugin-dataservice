@@ -111,36 +111,43 @@ sendVarToJS('dataservice_services',$services);
 						</div>
 						<?php
 						foreach ($services as $key => $service) {
-							if(!isset($service['configuration']) || !is_array($service['configuration'])){
-								continue;
-							}
 							echo '<div class="serviceConfig '.$key.'" style="display:none;">';
-							foreach ($service['configuration'] as $key2 => $value) {
-								if($value['type'] == 'input'){
-									echo '<div class="form-group">';
-									echo '<label class="col-sm-3 control-label">'.$value['name'].'</label>';
-									echo '<div class="col-sm-3">';
-									echo '<input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="'.$key.'::'.$key2.'"/>';
-									echo '</div>';
-									echo '</div>';
-								}elseif($value['type'] == 'select'){
-									echo '<div class="form-group">';
-									echo '<label class="col-sm-3 control-label">'.$value['name'].'</label>';
-									echo '<div class="col-sm-3">';
-									echo '<select type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="'.$key.'::'.$key2.'">';
-									foreach ($value['options'] as $key3 => $name) {
-										echo '<option value="'.$key3.'">'.$name.'</option>';
+							if(isset($service['oauth']) && $service['oauth']){
+								echo '<div class="form-group">';
+								echo '<label class="col-sm-3 control-label">{{Lier}} '.$service['name'].' {{avec Jeedom}}</label>';
+								echo '<div class="col-sm-3">';
+								echo '<a class="btn btn-default" href="'.config::byKey('service::cloud::url').'/frontend/login.html?service='.$key.'" target="_blank">{{Lier}}</a>';
+								echo '</div>';
+								echo '</div>';
+							}
+							if(isset($service['configuration']) && is_array($service['configuration'])){
+								foreach ($service['configuration'] as $key2 => $value) {
+									if($value['type'] == 'input'){
+										echo '<div class="form-group">';
+										echo '<label class="col-sm-3 control-label">'.$value['name'].'</label>';
+										echo '<div class="col-sm-3">';
+										echo '<input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="'.$key.'::'.$key2.'"/>';
+										echo '</div>';
+										echo '</div>';
+									}elseif($value['type'] == 'select'){
+										echo '<div class="form-group">';
+										echo '<label class="col-sm-3 control-label">'.$value['name'].'</label>';
+										echo '<div class="col-sm-3">';
+										echo '<select type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="'.$key.'::'.$key2.'">';
+										foreach ($value['options'] as $key3 => $name) {
+											echo '<option value="'.$key3.'">'.$name.'</option>';
+										}
+										echo '</select>';
+										echo '</div>';
+										echo '</div>';
+									}elseif($value['type'] == 'checkbox'){
+										echo '<div class="form-group">';
+										echo '<label class="col-sm-3 control-label">'.$value['name'].'</label>';
+										echo '<div class="col-sm-3">';
+										echo '<input type="checkbox" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="'.$key.'::'.$key2.'"/>';
+										echo '</div>';
+										echo '</div>';
 									}
-									echo '</select>';
-									echo '</div>';
-									echo '</div>';
-								}elseif($value['type'] == 'checkbox'){
-									echo '<div class="form-group">';
-									echo '<label class="col-sm-3 control-label">'.$value['name'].'</label>';
-									echo '<div class="col-sm-3">';
-									echo '<input type="checkbox" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="'.$key.'::'.$key2.'"/>';
-									echo '</div>';
-									echo '</div>';
 								}
 							}
 							echo '</div>';
