@@ -1,84 +1,86 @@
 {
-    "plugin_info\/configuration.php": {
-        "Envoyer configuration au market": "Kirim konfigurasi ke pasar",
-        "Envoyer": "send",
-        "Partage de données": "Berbagi data",
-        "Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data": "Berbagi data memungkinkan Anda untuk mengirim data tertentu (yang Anda pilih) ke Jeedom, yang dianonimkan dan memungkinkan Anda untuk membandingkan data ini satu sama lain. Sebagai imbalan untuk berbagi data ini, Jeedom akan meningkatkan kuota permintaan Anda ke layanan data",
-        "Configuration envoyée avec succès": "Konfigurasi berhasil dikirim"
+    "plugins\/dataservice\/plugin_info\/configuration.php": {
+        "Envoyer configuration au market": "",
+        "Envoyer": "Kirim",
+        "Partage de données": "",
+        "Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data": "",
+        "Configuration envoyée avec succès": ""
     },
-    "desktop\/js\/dataservice.js": {
-        "Nom": "nama",
-        "Afficher": "pameran",
-        "Historiser": "historicize",
-        "Inverser": "membalikkan",
-        "Unité": "kesatuan",
-        "Min": "rendah",
-        "Max": "Max",
-        "Tester": "uji",
-        "Envoyer à": "Kirim ke"
-    },
-    "desktop\/php\/dataservice.php": {
+    "plugins\/dataservice\/desktop\/php\/panel.php": {
         "401 - Accès non autorisé": "401 - Akses tidak sah",
-        "Gestion": "pengelolaan",
-        "Ajouter": "menambahkan",
-        "Configuration": "konfigurasi",
-        "Mes datas": "Data saya",
-        "Rechercher": "mencari",
+        "Je veux comparer ma": "",
+        "Avec": "",
+        "Dans un rayon de": "",
+        "Période": "Periode",
+        "Valider": "Mengesahkan"
+    },
+    "plugins\/dataservice\/desktop\/php\/dataservice.php": {
+        "401 - Accès non autorisé": "401 - Akses tidak sah",
+        "Gestion": "Manajemen",
+        "Ajouter": "Tambahan",
+        "Configuration": "Konfigurasi",
+        "Mes datas": "",
+        "Rechercher": "Pencarian",
         "Configuration avancée": "Konfigurasi lanjutan",
-        "Dupliquer": "duplikat",
-        "Sauvegarder": "Hemat",
-        "Supprimer": "hapus",
-        "Equipement": "peralatan",
-        "Commandes": "perintah",
-        "Avancée": "kemajuan",
-        "Nom de l'équipement": "Nama peralatan",
+        "Dupliquer": "Duplikat",
+        "Sauvegarder": "Menyimpan",
+        "Supprimer": "Menghapus",
+        "Equipement": "Peralatan",
+        "Commandes": "Perintah",
+        "Avancée": "Lanjutan",
+        "Nom de l'équipement": "",
         "Objet parent": "Objek induk",
-        "Aucun": "tidak",
-        "Catégorie": "kategori",
-        "Activer": "mengaktifkan",
-        "Visible": "terlihat",
-        "Service": "layanan",
-        "Ajouter une commande": "Tambahkan pesanan",
-        "Nom": "nama",
-        "Type": "jenis",
+        "Aucun": "Tak ada",
+        "Catégorie": "Kategori",
+        "Activer": "Mengaktifkan",
+        "Visible": "Terlihat",
+        "Service": "",
+        "Lier": "",
+        "avec Jeedom": "",
+        "Ajouter une commande": "Tambahan pesanan",
+        "Nom": "Nama",
+        "Type": "Jenis",
         "Options": "Pilihan",
-        "Paramètres": "pengaturan",
-        "Action": "tindakan",
-        "Cron de mise à jour": "Perbarui Cron"
+        "Paramètres": "Parameter²",
+        "Action": "Tindakan",
+        "Cron de mise à jour": ""
     },
-    "desktop\/php\/panel.php": {
+    "plugins\/dataservice\/desktop\/js\/dataservice.js": {
+        "Nom": "Nama",
+        "Afficher": "Memenitikan",
+        "Historiser": "Historicize",
+        "Inverser": "Membalikkan",
+        "Unité": "Satuan",
+        "Min": "",
+        "Max": "",
+        "Tester": "Coba",
+        "Envoyer à": ""
+    },
+    "plugins\/dataservice\/core\/php\/jeeDataservice.php": {
+        "Vous n\\'etes pas autorisé à effectuer cette action": ""
+    },
+    "plugins\/dataservice\/core\/ajax\/dataservice.ajax.php": {
         "401 - Accès non autorisé": "401 - Akses tidak sah",
-        "Je veux comparer ma": "Saya ingin membandingkan",
-        "Avec": "dengan",
-        "Dans un rayon de": "Dalam radius",
-        "Période": "periode",
-        "Valider": "validate"
+        "Aucune méthode correspondante à : ": "Aucune methode correspondante à : "
     },
-    "core\/ajax\/dataservice.ajax.php": {
-        "401 - Accès non autorisé": "401 - Akses tidak sah",
-        "Aucune méthode correspondante à : ": "Tidak ada metode yang sesuai dengan:"
+    "plugins\/dataservice\/core\/class\/dataservice_twilio.class.php": {
+        "Erreur sur la récuperation des données : ": "",
+        "Message de ": "Pesan dari"
     },
-    "core\/php\/jeeDataservice.php": {
-        "Vous n\\'etes pas autorisé à effectuer cette action": "Anda tidak berwenang untuk melakukan tindakan ini"
+    "plugins\/dataservice\/core\/class\/dataservice_mail.class.php": {
+        "Erreur sur la récuperation des données : ": ""
     },
-    "core\/class\/dataservice_mail.class.php": {
-        "Erreur sur la récuperation des données : ": "Kesalahan pemulihan data:"
-    },
-    "core\/class\/dataservice.class.php": {
-        "Température extérieure": "Suhu di luar",
-        "Humidité extérieure": "Kelembaban luar ruangan",
-        "Luminosité exterieure": "Kecerahan eksterior",
-        "Pression extérieure": "Tekanan eksternal",
-        "Pluie": "hujan",
-        "Vent": "angin",
-        "Consommation journaliere éléctrique": "Konsumsi listrik harian",
-        "Consommation journaliere gaz": "Konsumsi gas harian",
-        "Consommation journaliere eau": "Konsumsi air harian",
-        "Erreur sur la récuperation des données : ": "Kesalahan pemulihan data:",
-        "Erreur sur ": "Kesalahan aktif"
-    },
-    "core\/class\/dataservice_twilio.class.php": {
-        "401 - Accès non autorisé": "401 - Akses tidak sah",
-        "Aucune méthode correspondante à : ": "Tidak ada metode yang sesuai dengan:"
+    "plugins\/dataservice\/core\/class\/dataservice.class.php": {
+        "Température extérieure": "Suhu di luar ruangan",
+        "Humidité extérieure": "",
+        "Luminosité exterieure": "",
+        "Pression extérieure": "",
+        "Pluie": "",
+        "Vent": "",
+        "Consommation journaliere éléctrique": "",
+        "Consommation journaliere gaz": "",
+        "Consommation journaliere eau": "",
+        "Erreur sur la récuperation des données : ": "",
+        "Erreur sur ": "Error"
     }
 }

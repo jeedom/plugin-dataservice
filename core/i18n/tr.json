@@ -1,84 +1,86 @@
 {
-    "plugin_info\/configuration.php": {
-        "Envoyer configuration au market": "Yapılandırmayı pazara gönder",
-        "Envoyer": "gönderme",
-        "Partage de données": "Veri paylaşımı",
-        "Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data": "Veri paylaşımı, belirli verileri (seçtiğiniz) anonimleştirilmiş Jeedom&#39;a göndermenizi sağlar ve bu verileri birbiriyle karşılaştırmanıza olanak tanır. Bu veri paylaşımı karşılığında Jeedom veri hizmetine talep kotanızı artıracaktır",
-        "Configuration envoyée avec succès": "Yapılandırma başarıyla gönderildi"
+    "plugins\/dataservice\/plugin_info\/configuration.php": {
+        "Envoyer configuration au market": "",
+        "Envoyer": "Gönder",
+        "Partage de données": "",
+        "Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data": "",
+        "Configuration envoyée avec succès": ""
     },
-    "desktop\/js\/dataservice.js": {
-        "Nom": "isim",
-        "Afficher": "ekran",
-        "Historiser": "tarihe mal",
-        "Inverser": "ters",
-        "Unité": "birlik",
-        "Min": "düşük",
-        "Max": "maksimum",
-        "Tester": "test",
-        "Envoyer à": "Gönder"
-    },
-    "desktop\/php\/dataservice.php": {
+    "plugins\/dataservice\/desktop\/php\/panel.php": {
         "401 - Accès non autorisé": "401 - Yetkisiz erişim",
-        "Gestion": "yönetim",
-        "Ajouter": "eklemek",
-        "Configuration": "yapılandırma",
-        "Mes datas": "Verilerim",
-        "Rechercher": "arama",
-        "Configuration avancée": "Gelişmiş yapılandırma",
-        "Dupliquer": "yinelenen",
-        "Sauvegarder": "kaydet",
-        "Supprimer": "kaldır",
-        "Equipement": "ekipman",
-        "Commandes": "komutlar",
-        "Avancée": "ilerleme",
-        "Nom de l'équipement": "Ekipmanın adı",
+        "Je veux comparer ma": "",
+        "Avec": "",
+        "Dans un rayon de": "",
+        "Période": "Period",
+        "Valider": "Onaylayın"
+    },
+    "plugins\/dataservice\/desktop\/php\/dataservice.php": {
+        "401 - Accès non autorisé": "401 - Yetkisiz erişim",
+        "Gestion": "Idare",
+        "Ajouter": "Ekle",
+        "Configuration": "Ayar",
+        "Mes datas": "",
+        "Rechercher": "Arayın",
+        "Configuration avancée": "Gelişmiş ayarlar",
+        "Dupliquer": "Kopyala",
+        "Sauvegarder": "Kaydet",
+        "Supprimer": "Sil",
+        "Equipement": "Cihaz",
+        "Commandes": "Komutalar",
+        "Avancée": "Gelişmiş",
+        "Nom de l'équipement": "",
         "Objet parent": "Üst nesne",
-        "Aucun": "hayır",
-        "Catégorie": "kategori",
-        "Activer": "etkinleştirme",
-        "Visible": "görünür",
-        "Service": "hizmet",
-        "Ajouter une commande": "Sipariş ekleyin",
-        "Nom": "isim",
-        "Type": "tip",
-        "Options": "seçenekleri",
-        "Paramètres": "ayarlar",
-        "Action": "eylem",
-        "Cron de mise à jour": "Cron&#39;u Güncelle"
+        "Aucun": "Hiçbir",
+        "Catégorie": "Kategori",
+        "Activer": "Etkinleştir",
+        "Visible": "Görülebilir",
+        "Service": "",
+        "Lier": "",
+        "avec Jeedom": "",
+        "Ajouter une commande": "Komuta ekle",
+        "Nom": "İsim",
+        "Type": "Çeşit",
+        "Options": "Opsiyonlar",
+        "Paramètres": "Ayarlar ( Séçenekler )",
+        "Action": "Eylem",
+        "Cron de mise à jour": ""
     },
-    "desktop\/php\/panel.php": {
-        "401 - Accès non autorisé": "401 - Yetkisiz erişim",
-        "Je veux comparer ma": "Karşılaştırmak istiyorum",
-        "Avec": "ile",
-        "Dans un rayon de": "Yarıçapı içinde",
-        "Période": "dönem",
-        "Valider": "doğrulamak"
+    "plugins\/dataservice\/desktop\/js\/dataservice.js": {
+        "Nom": "İsim",
+        "Afficher": "Göster",
+        "Historiser": "Tarihe göre sırala",
+        "Inverser": "Ters çevir",
+        "Unité": "Ünite",
+        "Min": "Minimum",
+        "Max": "Maximum",
+        "Tester": "Test et",
+        "Envoyer à": ""
     },
-    "core\/ajax\/dataservice.ajax.php": {
-        "401 - Accès non autorisé": "401 - Yetkisiz erişim",
-        "Aucune méthode correspondante à : ": "Aşağıdakilere karşılık gelen bir yöntem yok:"
-    },
-    "core\/php\/jeeDataservice.php": {
+    "plugins\/dataservice\/core\/php\/jeeDataservice.php": {
         "Vous n\\'etes pas autorisé à effectuer cette action": "Bu işlemi gerçekleştirme yetkiniz yok"
     },
-    "core\/class\/dataservice_mail.class.php": {
-        "Erreur sur la récuperation des données : ": "Veri kurtarma hatası:"
-    },
-    "core\/class\/dataservice.class.php": {
-        "Température extérieure": "Dış sıcaklık",
-        "Humidité extérieure": "Dış ortam nemi",
-        "Luminosité exterieure": "Dış parlaklık",
-        "Pression extérieure": "Harici basınç",
-        "Pluie": "yağmur",
-        "Vent": "rüzgar",
-        "Consommation journaliere éléctrique": "Günlük elektrik tüketimi",
-        "Consommation journaliere gaz": "Günlük gaz tüketimi",
-        "Consommation journaliere eau": "Günlük su tüketimi",
-        "Erreur sur la récuperation des données : ": "Veri kurtarma hatası:",
-        "Erreur sur ": "Hata"
-    },
-    "core\/class\/dataservice_twilio.class.php": {
+    "plugins\/dataservice\/core\/ajax\/dataservice.ajax.php": {
         "401 - Accès non autorisé": "401 - Yetkisiz erişim",
         "Aucune méthode correspondante à : ": "Aşağıdakilere karşılık gelen bir yöntem yok:"
+    },
+    "plugins\/dataservice\/core\/class\/dataservice_twilio.class.php": {
+        "Erreur sur la récuperation des données : ": "",
+        "Message de ": "Dan mesaj"
+    },
+    "plugins\/dataservice\/core\/class\/dataservice_mail.class.php": {
+        "Erreur sur la récuperation des données : ": ""
+    },
+    "plugins\/dataservice\/core\/class\/dataservice.class.php": {
+        "Température extérieure": "Dış hava sıcaklığı",
+        "Humidité extérieure": "",
+        "Luminosité exterieure": "",
+        "Pression extérieure": "",
+        "Pluie": "",
+        "Vent": "",
+        "Consommation journaliere éléctrique": "",
+        "Consommation journaliere gaz": "",
+        "Consommation journaliere eau": "",
+        "Erreur sur la récuperation des données : ": "",
+        "Erreur sur ": "Hata"
     }
 }

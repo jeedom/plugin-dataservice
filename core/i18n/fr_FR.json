@@ -1,23 +1,20 @@
 {
-    "plugin_info\/configuration.php": {
+    "plugins\/dataservice\/plugin_info\/configuration.php": {
         "Envoyer configuration au market": "Envoyer configuration au market",
         "Envoyer": "Envoyer",
         "Partage de données": "Partage de données",
         "Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data": "Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data",
         "Configuration envoyée avec succès": "Configuration envoyée avec succès"
     },
-    "desktop\/js\/dataservice.js": {
-        "Nom": "Nom",
-        "Afficher": "Afficher",
-        "Historiser": "Historiser",
-        "Inverser": "Inverser",
-        "Unité": "Unité",
-        "Min": "Min",
-        "Max": "Max",
-        "Tester": "Tester",
-        "Envoyer à": "Envoyer à"
+    "plugins\/dataservice\/desktop\/php\/panel.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Je veux comparer ma": "Je veux comparer ma",
+        "Avec": "Avec",
+        "Dans un rayon de": "Dans un rayon de",
+        "Période": "Période",
+        "Valider": "Valider"
     },
-    "desktop\/php\/dataservice.php": {
+    "plugins\/dataservice\/desktop\/php\/dataservice.php": {
         "401 - Accès non autorisé": "401 - Accès non autorisé",
         "Gestion": "Gestion",
         "Ajouter": "Ajouter",
@@ -38,6 +35,8 @@
         "Activer": "Activer",
         "Visible": "Visible",
         "Service": "Service",
+        "Lier": "Lier",
+        "avec Jeedom": "avec Jeedom",
         "Ajouter une commande": "Ajouter une commande",
         "Nom": "Nom",
         "Type": "Type",
@@ -46,25 +45,32 @@
         "Action": "Action",
         "Cron de mise à jour": "Cron de mise à jour"
     },
-    "desktop\/php\/panel.php": {
-        "401 - Accès non autorisé": "401 - Accès non autorisé",
-        "Je veux comparer ma": "Je veux comparer ma",
-        "Avec": "Avec",
-        "Dans un rayon de": "Dans un rayon de",
-        "Période": "Période",
-        "Valider": "Valider"
+    "plugins\/dataservice\/desktop\/js\/dataservice.js": {
+        "Nom": "Nom",
+        "Afficher": "Afficher",
+        "Historiser": "Historiser",
+        "Inverser": "Inverser",
+        "Unité": "Unité",
+        "Min": "Min",
+        "Max": "Max",
+        "Tester": "Tester",
+        "Envoyer à": "Envoyer à"
     },
-    "core\/ajax\/dataservice.ajax.php": {
+    "plugins\/dataservice\/core\/php\/jeeDataservice.php": {
+        "Vous n\\'etes pas autorisé à effectuer cette action": "Vous n\\'etes pas autorisé à effectuer cette action"
+    },
+    "plugins\/dataservice\/core\/ajax\/dataservice.ajax.php": {
         "401 - Accès non autorisé": "401 - Accès non autorisé",
         "Aucune méthode correspondante à : ": "Aucune méthode correspondante à : "
     },
-    "core\/php\/jeeDataservice.php": {
-        "Vous n\\'etes pas autorisé à effectuer cette action": "Vous n\\'etes pas autorisé à effectuer cette action"
+    "plugins\/dataservice\/core\/class\/dataservice_twilio.class.php": {
+        "Erreur sur la récuperation des données : ": "Erreur sur la récuperation des données : ",
+        "Message de ": "Message de "
     },
-    "core\/class\/dataservice_mail.class.php": {
+    "plugins\/dataservice\/core\/class\/dataservice_mail.class.php": {
         "Erreur sur la récuperation des données : ": "Erreur sur la récuperation des données : "
     },
-    "core\/class\/dataservice.class.php": {
+    "plugins\/dataservice\/core\/class\/dataservice.class.php": {
         "Température extérieure": "Température extérieure",
         "Humidité extérieure": "Humidité extérieure",
         "Luminosité exterieure": "Luminosité exterieure",
@@ -76,9 +82,5 @@
         "Consommation journaliere eau": "Consommation journaliere eau",
         "Erreur sur la récuperation des données : ": "Erreur sur la récuperation des données : ",
         "Erreur sur ": "Erreur sur "
-    },
-    "core\/class\/dataservice_twilio.class.php": {
-        "Erreur sur la récuperation des données : ": "Erreur sur la récuperation des données : ",
-        "Message de ": "Message de "
     }
 }

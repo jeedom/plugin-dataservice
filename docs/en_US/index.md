@@ -2,11 +2,11 @@
 
 Le plugin permet de récuperer diverses data depuis un service Jeedom SAS (le service data). Il permet aussi de partager certaine données anonymisé avec des utilisateurs
 
->**IMPORTANT**
+>**Important**
 >
 > Le service est 100% gratuit en phase beta puis une fois en phase stable celui-ci aura un systeme de quota qui sera augmenter en échange d'un abonnement ou de partage de données
 
->**IMPORTANT**
+>**Important**
 >
 >Chaque données partagées permet d'augmenter votre quota de 5%
 
@@ -38,7 +38,7 @@ Le plugin permet de récuperer diverses data depuis un service Jeedom SAS (le se
 - Description : permet de connaitre votre adresse ip
 - Quota : 1/1min
 
-## Météo
+## Weather
 
 - Description : permet de connaitre la météo pour le J,J+1,J+2,J+3 ou J+4 (contient le temps, les températures, les uvs, le vent,l'humidité, la pression, la quantité de nuage...)
 - Quota : 10/1h
@@ -78,6 +78,6 @@ Le plugin permet de récuperer diverses data depuis un service Jeedom SAS (le se
 - Description : permet de recuperer des données d'utilisateurs environ (de 1km à 100km), pour soit completer votre installation avec des données plus fiable si vous n'avez pas le matériel (température,humidité...) ou de comparer ses données avec d'autre utilisateurs. Les données sont moyennées sur la periode et le périmetre choisi
 - Quota : 30/15min
 
->**IMPORTANT**
+>**Important**
 >
 >Ce service étant communautaire il faut que les utilisateurs partages leurs données (celle-ci son anonymisé et mise sur une base de données séparée) pour que vous puissiez les recuperer. Ne pas oublier plus vous partagez plus votre quota augmente (5% de quota en plus pour chaque données partagées)

@@ -1,84 +1,86 @@
 {
-    "plugin_info\/configuration.php": {
-        "Envoyer configuration au market": "Invia configurazione al mercato",
-        "Envoyer": "mandare",
-        "Partage de données": "Condivisione dei dati",
-        "Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data": "La condivisione dei dati ti consente di inviare determinati dati (che scegli) a Jeedom, che è anonimizzato e ti consente di confrontare questi dati tra loro. In cambio di questa condivisione dei dati, Jeedom aumenterà la quota di richiesta al servizio dati",
-        "Configuration envoyée avec succès": "Configurazione inviata con successo"
+    "plugins\/dataservice\/plugin_info\/configuration.php": {
+        "Envoyer configuration au market": "",
+        "Envoyer": "Invia",
+        "Partage de données": "",
+        "Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data": "",
+        "Configuration envoyée avec succès": ""
     },
-    "desktop\/js\/dataservice.js": {
-        "Nom": "Nome",
-        "Afficher": "Affiggere",
-        "Historiser": "storicizzare",
-        "Inverser": "retromarcia",
-        "Unité": "unità",
-        "Min": "basso",
-        "Max": "Max",
-        "Tester": "prova",
-        "Envoyer à": "Invia a"
-    },
-    "desktop\/php\/dataservice.php": {
+    "plugins\/dataservice\/desktop\/php\/panel.php": {
         "401 - Accès non autorisé": "401 - Accesso non autorizzato",
-        "Gestion": "gestione",
-        "Ajouter": "aggiungere",
-        "Configuration": "configurazione",
-        "Mes datas": "I miei dati",
-        "Rechercher": "ricercare",
+        "Je veux comparer ma": "",
+        "Avec": "",
+        "Dans un rayon de": "",
+        "Période": "Periodo",
+        "Valider": "Convalidare"
+    },
+    "plugins\/dataservice\/desktop\/php\/dataservice.php": {
+        "401 - Accès non autorisé": "401 - Accesso non autorizzato",
+        "Gestion": "Gestione",
+        "Ajouter": "Aggiungi",
+        "Configuration": "Configurazione",
+        "Mes datas": "",
+        "Rechercher": "Ricercare",
         "Configuration avancée": "Configurazione avanzata",
-        "Dupliquer": "duplicato",
+        "Dupliquer": "Duplicato",
         "Sauvegarder": "Salva",
-        "Supprimer": "remove",
-        "Equipement": "attrezzatura",
-        "Commandes": "comandi",
-        "Avancée": "progresso",
-        "Nom de l'équipement": "Nome dell&#39;attrezzatura",
+        "Supprimer": "Rimuovere",
+        "Equipement": "Dispositivo",
+        "Commandes": "Comandi",
+        "Avancée": "Avanzata",
+        "Nom de l'équipement": "",
         "Objet parent": "Oggetto padre",
-        "Aucun": "no",
-        "Catégorie": "categoria",
-        "Activer": "Attiva",
-        "Visible": "visibile",
-        "Service": "servizio",
-        "Ajouter une commande": "Aggiungi un ordine",
+        "Aucun": "Nessuno",
+        "Catégorie": "Categoria",
+        "Activer": "Attivare",
+        "Visible": "Visibile",
+        "Service": "",
+        "Lier": "",
+        "avec Jeedom": "",
+        "Ajouter une commande": "Aggiungi un comando",
         "Nom": "Nome",
-        "Type": "tipo",
-        "Options": "opzioni",
-        "Paramètres": "impostazioni",
-        "Action": "azione",
-        "Cron de mise à jour": "Aggiorna cron"
+        "Type": "Tipo",
+        "Options": "Opzioni",
+        "Paramètres": "Impostazioni",
+        "Action": "Azione",
+        "Cron de mise à jour": ""
     },
-    "desktop\/php\/panel.php": {
-        "401 - Accès non autorisé": "401 - Accesso non autorizzato",
-        "Je veux comparer ma": "Voglio confrontare il mio",
-        "Avec": "con",
-        "Dans un rayon de": "Nel raggio di",
-        "Période": "periodo",
-        "Valider": "convalidare"
+    "plugins\/dataservice\/desktop\/js\/dataservice.js": {
+        "Nom": "Nome",
+        "Afficher": "Mostra",
+        "Historiser": "Storicizza",
+        "Inverser": "Inverti",
+        "Unité": "Unità",
+        "Min": "",
+        "Max": "",
+        "Tester": "Prova",
+        "Envoyer à": ""
     },
-    "core\/ajax\/dataservice.ajax.php": {
-        "401 - Accès non autorisé": "401 - Accesso non autorizzato",
-        "Aucune méthode correspondante à : ": "Nessun metodo corrispondente a:"
-    },
-    "core\/php\/jeeDataservice.php": {
+    "plugins\/dataservice\/core\/php\/jeeDataservice.php": {
         "Vous n\\'etes pas autorisé à effectuer cette action": "Non sei autorizzato a eseguire questa azione"
     },
-    "core\/class\/dataservice_mail.class.php": {
-        "Erreur sur la récuperation des données : ": "Errore di recupero dati:"
-    },
-    "core\/class\/dataservice.class.php": {
-        "Température extérieure": "Temperatura esterna",
-        "Humidité extérieure": "Umidità esterna",
-        "Luminosité exterieure": "Luminosità esterna",
-        "Pression extérieure": "Pressione esterna",
-        "Pluie": "pioggia",
-        "Vent": "vento",
-        "Consommation journaliere éléctrique": "Consumo elettrico giornaliero",
-        "Consommation journaliere gaz": "Consumo giornaliero di gas",
-        "Consommation journaliere eau": "Consumo giornaliero di acqua",
-        "Erreur sur la récuperation des données : ": "Errore di recupero dati:",
-        "Erreur sur ": "Errore acceso"
-    },
-    "core\/class\/dataservice_twilio.class.php": {
+    "plugins\/dataservice\/core\/ajax\/dataservice.ajax.php": {
         "401 - Accès non autorisé": "401 - Accesso non autorizzato",
         "Aucune méthode correspondante à : ": "Nessun metodo corrispondente a:"
+    },
+    "plugins\/dataservice\/core\/class\/dataservice_twilio.class.php": {
+        "Erreur sur la récuperation des données : ": "",
+        "Message de ": "Messaggio da"
+    },
+    "plugins\/dataservice\/core\/class\/dataservice_mail.class.php": {
+        "Erreur sur la récuperation des données : ": ""
+    },
+    "plugins\/dataservice\/core\/class\/dataservice.class.php": {
+        "Température extérieure": "Temperatura esterna",
+        "Humidité extérieure": "",
+        "Luminosité exterieure": "",
+        "Pression extérieure": "",
+        "Pluie": "",
+        "Vent": "",
+        "Consommation journaliere éléctrique": "",
+        "Consommation journaliere gaz": "",
+        "Consommation journaliere eau": "",
+        "Erreur sur la récuperation des données : ": "",
+        "Erreur sur ": "Errore acceso"
     }
 }

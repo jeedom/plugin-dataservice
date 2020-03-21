@@ -1,84 +1,86 @@
 {
-    "plugin_info\/configuration.php": {
-        "Envoyer configuration au market": "構成を市場に送信する",
-        "Envoyer": "送信",
-        "Partage de données": "データ共有",
-        "Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data": "データ共有により、特定のデータ（選択したデータ）をJeedomに送信できます。Jeedomは匿名化されており、このデータを相互に比較できます。このデータ共有と引き換えに、Jeedomはデータサービスへのリクエストクォータを増やします",
-        "Configuration envoyée avec succès": "構成が正常に送信されました"
+    "plugins\/dataservice\/plugin_info\/configuration.php": {
+        "Envoyer configuration au market": "",
+        "Envoyer": "送ります",
+        "Partage de données": "",
+        "Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data": "",
+        "Configuration envoyée avec succès": ""
     },
-    "desktop\/js\/dataservice.js": {
-        "Nom": "名前",
+    "plugins\/dataservice\/desktop\/php\/panel.php": {
+        "401 - Accès non autorisé": "401-不正アクセス",
+        "Je veux comparer ma": "",
+        "Avec": "",
+        "Dans un rayon de": "",
+        "Période": "期間",
+        "Valider": "検証"
+    },
+    "plugins\/dataservice\/desktop\/php\/dataservice.php": {
+        "401 - Accès non autorisé": "401-不正アクセス",
+        "Gestion": "管理",
+        "Ajouter": "加えます",
+        "Configuration": "コンフィギュレーション",
+        "Mes datas": "",
+        "Rechercher": "検索",
+        "Configuration avancée": "高度な構成",
+        "Dupliquer": "重複",
+        "Sauvegarder": "セーブ",
+        "Supprimer": "取り除きます",
+        "Equipement": "設備",
+        "Commandes": "コマンド",
+        "Avancée": "進捗",
+        "Nom de l'équipement": "",
+        "Objet parent": "親オブジェクト",
+        "Aucun": "何でもありません",
+        "Catégorie": "カテゴリ",
+        "Activer": "アクティブ",
+        "Visible": "目に見えます",
+        "Service": "",
+        "Lier": "",
+        "avec Jeedom": "",
+        "Ajouter une commande": "コマンドの追加",
+        "Nom": "表題",
+        "Type": "タイプ",
+        "Options": "オプション",
+        "Paramètres": "設定",
+        "Action": "アクション",
+        "Cron de mise à jour": ""
+    },
+    "plugins\/dataservice\/desktop\/js\/dataservice.js": {
+        "Nom": "表題",
         "Afficher": "ディスプレイ",
-        "Historiser": "historicize",
+        "Historiser": "Historicize",
         "Inverser": "逆",
         "Unité": "団結",
         "Min": "低いです",
         "Max": "マックス",
         "Tester": "テスト",
-        "Envoyer à": "に送る"
+        "Envoyer à": ""
     },
-    "desktop\/php\/dataservice.php": {
-        "401 - Accès non autorisé": "401-不正アクセス",
-        "Gestion": "管理",
-        "Ajouter": "加えます",
-        "Configuration": "コンフィギュレーション",
-        "Mes datas": "私のデータ",
-        "Rechercher": "検索",
-        "Configuration avancée": "高度な構成",
-        "Dupliquer": "重複",
-        "Sauvegarder": "保存",
-        "Supprimer": "削除",
-        "Equipement": "設備",
-        "Commandes": "コマンド",
-        "Avancée": "進捗",
-        "Nom de l'équipement": "機器名",
-        "Objet parent": "親オブジェクト",
-        "Aucun": "いいえ",
-        "Catégorie": "カテゴリ",
-        "Activer": "アクティブ",
-        "Visible": "目に見えます",
-        "Service": "サービス",
-        "Ajouter une commande": "注文を追加",
-        "Nom": "名前",
-        "Type": "タイプ",
-        "Options": "オプション",
-        "Paramètres": "設定",
-        "Action": "アクション",
-        "Cron de mise à jour": "Cronを更新"
-    },
-    "desktop\/php\/panel.php": {
-        "401 - Accès non autorisé": "401-不正アクセス",
-        "Je veux comparer ma": "私を比較したい",
-        "Avec": "とともに",
-        "Dans un rayon de": "半径内",
-        "Période": "期間",
-        "Valider": "検証"
-    },
-    "core\/ajax\/dataservice.ajax.php": {
-        "401 - Accès non autorisé": "401-不正アクセス",
-        "Aucune méthode correspondante à : ": "以下に対応するメソッドはありません："
-    },
-    "core\/php\/jeeDataservice.php": {
+    "plugins\/dataservice\/core\/php\/jeeDataservice.php": {
         "Vous n\\'etes pas autorisé à effectuer cette action": "このアクションを実行する権限がありません"
     },
-    "core\/class\/dataservice_mail.class.php": {
-        "Erreur sur la récuperation des données : ": "データ復旧エラー："
-    },
-    "core\/class\/dataservice.class.php": {
-        "Température extérieure": "外気温",
-        "Humidité extérieure": "屋外湿度",
-        "Luminosité exterieure": "外部の明るさ",
-        "Pression extérieure": "外圧",
-        "Pluie": "雨",
-        "Vent": "風",
-        "Consommation journaliere éléctrique": "毎日の電力消費",
-        "Consommation journaliere gaz": "毎日のガス消費量",
-        "Consommation journaliere eau": "毎日の水消費",
-        "Erreur sur la récuperation des données : ": "データ復旧エラー：",
-        "Erreur sur ": "エラーオン"
-    },
-    "core\/class\/dataservice_twilio.class.php": {
+    "plugins\/dataservice\/core\/ajax\/dataservice.ajax.php": {
         "401 - Accès non autorisé": "401-不正アクセス",
         "Aucune méthode correspondante à : ": "以下に対応するメソッドはありません："
+    },
+    "plugins\/dataservice\/core\/class\/dataservice_twilio.class.php": {
+        "Erreur sur la récuperation des données : ": "",
+        "Message de ": "メッセージ"
+    },
+    "plugins\/dataservice\/core\/class\/dataservice_mail.class.php": {
+        "Erreur sur la récuperation des données : ": ""
+    },
+    "plugins\/dataservice\/core\/class\/dataservice.class.php": {
+        "Température extérieure": "屋外の気温",
+        "Humidité extérieure": "",
+        "Luminosité exterieure": "",
+        "Pression extérieure": "",
+        "Pluie": "",
+        "Vent": "",
+        "Consommation journaliere éléctrique": "",
+        "Consommation journaliere gaz": "",
+        "Consommation journaliere eau": "",
+        "Erreur sur la récuperation des données : ": "",
+        "Erreur sur ": "エラーオン"
     }
 }

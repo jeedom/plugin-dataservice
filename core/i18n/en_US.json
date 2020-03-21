@@ -1,52 +1,12 @@
 {
-    "plugin_info\/configuration.php": {
+    "plugins\/dataservice\/plugin_info\/configuration.php": {
         "Envoyer configuration au market": "Send configuration to market",
-        "Envoyer": "To send",
+        "Envoyer": "Send",
         "Partage de données": "Data sharing",
         "Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data": "Data sharing allows you to send certain data (which you choose) to Jeedom, which is anonymized and allows you to compare this data with one another. In exchange for this data sharing Jeedom will increase your request quota to the data service",
         "Configuration envoyée avec succès": "Configuration successfully sent"
     },
-    "desktop\/js\/dataservice.js": {
-        "Nom": "Last name",
-        "Afficher": "Pin up",
-        "Historiser": "historicize",
-        "Inverser": "Reverse",
-        "Unité": "Unit",
-        "Min": "Low",
-        "Max": "Max",
-        "Tester": "Test",
-        "Envoyer à": "Send to"
-    },
-    "desktop\/php\/dataservice.php": {
-        "401 - Accès non autorisé": "401 - Unauthorized access",
-        "Gestion": "Management",
-        "Ajouter": "Add",
-        "Configuration": "Configuration",
-        "Mes datas": "My data",
-        "Rechercher": "Search",
-        "Configuration avancée": "Advanced configuration",
-        "Dupliquer": "Duplicate",
-        "Sauvegarder": "Save",
-        "Supprimer": "Remove",
-        "Equipement": "Equipment",
-        "Commandes": "Orders",
-        "Avancée": "Advanced",
-        "Nom de l'équipement": "Name of equipment",
-        "Objet parent": "Parent object",
-        "Aucun": "No",
-        "Catégorie": "Category",
-        "Activer": "Activate",
-        "Visible": "Visible",
-        "Service": "Service",
-        "Ajouter une commande": "Add an order",
-        "Nom": "Last name",
-        "Type": "Type",
-        "Options": "options",
-        "Paramètres": "Settings",
-        "Action": "Action",
-        "Cron de mise à jour": "Update Cron"
-    },
-    "desktop\/php\/panel.php": {
+    "plugins\/dataservice\/desktop\/php\/panel.php": {
         "401 - Accès non autorisé": "401 - Unauthorized access",
         "Je veux comparer ma": "I want to compare my",
         "Avec": "With",
@@ -54,17 +14,63 @@
         "Période": "Period",
         "Valider": "Validate"
     },
-    "core\/ajax\/dataservice.ajax.php": {
+    "plugins\/dataservice\/desktop\/php\/dataservice.php": {
+        "401 - Accès non autorisé": "401 - Unauthorized access",
+        "Gestion": "Management",
+        "Ajouter": "Add",
+        "Configuration": "Setup",
+        "Mes datas": "My data",
+        "Rechercher": "Search",
+        "Configuration avancée": "Advanced configuration",
+        "Dupliquer": "Duplicate",
+        "Sauvegarder": "Save",
+        "Supprimer": "Delete",
+        "Equipement": "Device",
+        "Commandes": "Commands",
+        "Avancée": "Advanced",
+        "Nom de l'équipement": "Name of equipment",
+        "Objet parent": "Parent object",
+        "Aucun": "None",
+        "Catégorie": "Category",
+        "Activer": "Activate",
+        "Visible": "Visible",
+        "Service": "Service",
+        "Lier": "Bind",
+        "avec Jeedom": "with Jeedom",
+        "Ajouter une commande": "Add a command",
+        "Nom": "Name",
+        "Type": "Type",
+        "Options": "Options",
+        "Paramètres": "Settings",
+        "Action": "Action",
+        "Cron de mise à jour": "Update Cron"
+    },
+    "plugins\/dataservice\/desktop\/js\/dataservice.js": {
+        "Nom": "Name",
+        "Afficher": "Pin up",
+        "Historiser": "Historize",
+        "Inverser": "Invert",
+        "Unité": "Unit",
+        "Min": "Min",
+        "Max": "Max",
+        "Tester": "Test",
+        "Envoyer à": "Send to"
+    },
+    "plugins\/dataservice\/core\/php\/jeeDataservice.php": {
+        "Vous n\\'etes pas autorisé à effectuer cette action": "You are not authorized to perform this action"
+    },
+    "plugins\/dataservice\/core\/ajax\/dataservice.ajax.php": {
         "401 - Accès non autorisé": "401 - Unauthorized access",
         "Aucune méthode correspondante à : ": "No method corresponding to:"
     },
-    "core\/php\/jeeDataservice.php": {
-        "Vous n\\'etes pas autorisé à effectuer cette action": "You are not authorized to perform this action"
+    "plugins\/dataservice\/core\/class\/dataservice_twilio.class.php": {
+        "Erreur sur la récuperation des données : ": "Data recovery error:",
+        "Message de ": "Message from"
     },
-    "core\/class\/dataservice_mail.class.php": {
+    "plugins\/dataservice\/core\/class\/dataservice_mail.class.php": {
         "Erreur sur la récuperation des données : ": "Data recovery error:"
     },
-    "core\/class\/dataservice.class.php": {
+    "plugins\/dataservice\/core\/class\/dataservice.class.php": {
         "Température extérieure": "Outside temperature",
         "Humidité extérieure": "Outdoor humidity",
         "Luminosité exterieure": "Exterior brightness",
@@ -76,9 +82,5 @@
         "Consommation journaliere eau": "Daily water consumption",
         "Erreur sur la récuperation des données : ": "Data recovery error:",
         "Erreur sur ": "Error on"
-    },
-    "core\/class\/dataservice_twilio.class.php": {
-        "Erreur sur la récuperation des données : ": "Data recovery error:",
-        "Message de ": "Message from"
     }
 }

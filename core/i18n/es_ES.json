@@ -1,84 +1,86 @@
 {
-    "plugin_info\/configuration.php": {
+    "plugins\/dataservice\/plugin_info\/configuration.php": {
         "Envoyer configuration au market": "Enviar configuración al mercado",
-        "Envoyer": "enviar a",
+        "Envoyer": "Enviar",
         "Partage de données": "Intercambio de datos",
         "Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data": "El intercambio de datos le permite enviar ciertos datos (que usted elija) a Jeedom, que es anónimo y le permite comparar estos datos entre sí. A cambio de este intercambio de datos, Jeedom aumentará su cuota de solicitud para el servicio de datos",
         "Configuration envoyée avec succès": "Configuración enviada con éxito"
     },
-    "desktop\/js\/dataservice.js": {
-        "Nom": "apellido",
-        "Afficher": "visualización",
-        "Historiser": "historizar",
-        "Inverser": "marcha atrás",
-        "Unité": "unidad",
-        "Min": "bajo",
-        "Max": "Max",
-        "Tester": "prueba",
-        "Envoyer à": "Enviar a"
-    },
-    "desktop\/php\/dataservice.php": {
-        "401 - Accès non autorisé": "401 - Acceso no autorizado",
-        "Gestion": "administración",
-        "Ajouter": "añadir",
-        "Configuration": "configuración",
-        "Mes datas": "Mis datos",
-        "Rechercher": "Buscar",
-        "Configuration avancée": "Configuración avanzada",
-        "Dupliquer": "duplicado",
-        "Sauvegarder": "Guardar",
-        "Supprimer": "remove",
-        "Equipement": "equipo",
-        "Commandes": "comandos",
-        "Avancée": "progreso",
-        "Nom de l'équipement": "Nombre del equipo",
-        "Objet parent": "Objeto padre",
-        "Aucun": "no",
-        "Catégorie": "categoría",
-        "Activer": "Activar",
-        "Visible": "visible",
-        "Service": "servicio",
-        "Ajouter une commande": "Agregar un pedido",
-        "Nom": "apellido",
-        "Type": "tipo",
-        "Options": "opciones",
-        "Paramètres": "configuraciones",
-        "Action": "acción",
-        "Cron de mise à jour": "Actualizar Cron"
-    },
-    "desktop\/php\/panel.php": {
+    "plugins\/dataservice\/desktop\/php\/panel.php": {
         "401 - Accès non autorisé": "401 - Acceso no autorizado",
         "Je veux comparer ma": "Quiero comparar mi",
         "Avec": "Con",
         "Dans un rayon de": "Dentro de un radio de",
-        "Période": "período",
+        "Période": "Período",
         "Valider": "Validar"
     },
-    "core\/ajax\/dataservice.ajax.php": {
+    "plugins\/dataservice\/desktop\/php\/dataservice.php": {
+        "401 - Accès non autorisé": "401 - Acceso no autorizado",
+        "Gestion": "Gestión",
+        "Ajouter": "Añadir",
+        "Configuration": "Configuración",
+        "Mes datas": "Mis datos",
+        "Rechercher": "Buscar",
+        "Configuration avancée": "Configuración avanzada",
+        "Dupliquer": "Duplicar",
+        "Sauvegarder": "Guardar",
+        "Supprimer": "Borrar",
+        "Equipement": "Dispositivos",
+        "Commandes": "Comandos",
+        "Avancée": "Avanzada",
+        "Nom de l'équipement": "Nombre del equipo",
+        "Objet parent": "Objeto padre",
+        "Aucun": "Ninguna",
+        "Catégorie": "Categoría",
+        "Activer": "Activar",
+        "Visible": "Visible",
+        "Service": "Servicio",
+        "Lier": "Enlazar",
+        "avec Jeedom": "con Jeedom",
+        "Ajouter une commande": "Añadir una orden",
+        "Nom": "Nombre",
+        "Type": "Tipo",
+        "Options": "Opciones",
+        "Paramètres": "Configuraciones",
+        "Action": "Acción",
+        "Cron de mise à jour": "Actualizar Cron"
+    },
+    "plugins\/dataservice\/desktop\/js\/dataservice.js": {
+        "Nom": "Nombre",
+        "Afficher": "Mostrar",
+        "Historiser": "Guardar historial",
+        "Inverser": "Invertir",
+        "Unité": "Unidad",
+        "Min": "Min",
+        "Max": "Max",
+        "Tester": "Probar",
+        "Envoyer à": "Enviar a"
+    },
+    "plugins\/dataservice\/core\/php\/jeeDataservice.php": {
+        "Vous n\\'etes pas autorisé à effectuer cette action": "No tiene autorización para realizar esta acción."
+    },
+    "plugins\/dataservice\/core\/ajax\/dataservice.ajax.php": {
         "401 - Accès non autorisé": "401 - Acceso no autorizado",
         "Aucune méthode correspondante à : ": "Ningún método correspondiente a:"
     },
-    "core\/php\/jeeDataservice.php": {
-        "Vous n\\'etes pas autorisé à effectuer cette action": "No tiene autorización para realizar esta acción."
+    "plugins\/dataservice\/core\/class\/dataservice_twilio.class.php": {
+        "Erreur sur la récuperation des données : ": "Error de recuperación de datos:",
+        "Message de ": "Mensaje de"
     },
-    "core\/class\/dataservice_mail.class.php": {
+    "plugins\/dataservice\/core\/class\/dataservice_mail.class.php": {
         "Erreur sur la récuperation des données : ": "Error de recuperación de datos:"
     },
-    "core\/class\/dataservice.class.php": {
+    "plugins\/dataservice\/core\/class\/dataservice.class.php": {
         "Température extérieure": "Temperatura exterior",
         "Humidité extérieure": "Humedad exterior",
         "Luminosité exterieure": "Brillo exterior",
         "Pression extérieure": "Presión externa",
-        "Pluie": "lluvia",
-        "Vent": "viento",
+        "Pluie": "Lluvia",
+        "Vent": "Viento",
         "Consommation journaliere éléctrique": "Consumo electrico diario",
         "Consommation journaliere gaz": "Consumo diario de gas.",
         "Consommation journaliere eau": "Consumo diario de agua.",
         "Erreur sur la récuperation des données : ": "Error de recuperación de datos:",
         "Erreur sur ": "Error en"
-    },
-    "core\/class\/dataservice_twilio.class.php": {
-        "401 - Accès non autorisé": "401 - Acceso no autorizado",
-        "Aucune méthode correspondante à : ": "Ningún método correspondiente a:"
     }
 }

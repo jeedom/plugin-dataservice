@@ -1,84 +1,86 @@
 {
-    "plugin_info\/configuration.php": {
-        "Envoyer configuration au market": "Отправить конфигурацию на рынок",
-        "Envoyer": "отправить",
-        "Partage de données": "Обмен данными",
-        "Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data": "Обмен данными позволяет отправлять определенные данные (которые вы выбираете) в Jeedom, который является анонимным и позволяет сравнивать эти данные друг с другом. В обмен на обмен данными Jeedom увеличит вашу квоту запросов к службе данных.",
-        "Configuration envoyée avec succès": "Конфигурация успешно отправлена"
+    "plugins\/dataservice\/plugin_info\/configuration.php": {
+        "Envoyer configuration au market": "",
+        "Envoyer": "Отправить",
+        "Partage de données": "",
+        "Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data": "",
+        "Configuration envoyée avec succès": ""
     },
-    "desktop\/js\/dataservice.js": {
-        "Nom": "имя",
-        "Afficher": "дисплей",
-        "Historiser": "историзировать",
-        "Inverser": "обратный",
-        "Unité": "единство",
-        "Min": "низкий",
-        "Max": "Макс",
-        "Tester": "тест",
-        "Envoyer à": "Отправить на"
-    },
-    "desktop\/php\/dataservice.php": {
+    "plugins\/dataservice\/desktop\/php\/panel.php": {
         "401 - Accès non autorisé": "401 - Несанкционированный доступ",
-        "Gestion": "управление",
-        "Ajouter": "добавлять",
-        "Configuration": "конфигурация",
-        "Mes datas": "Мои данные",
-        "Rechercher": "поиск",
-        "Configuration avancée": "Расширенная конфигурация",
-        "Dupliquer": "дубликат",
-        "Sauvegarder": "сохранить",
-        "Supprimer": "удалить",
-        "Equipement": "оборудование",
-        "Commandes": "команды",
-        "Avancée": "прогресс",
-        "Nom de l'équipement": "Наименование оборудования",
-        "Objet parent": "Родительский объект",
-        "Aucun": "нет",
-        "Catégorie": "категория",
-        "Activer": "Активизировать",
-        "Visible": "видимый",
-        "Service": "обслуживание",
-        "Ajouter une commande": "Добавить заказ",
-        "Nom": "имя",
-        "Type": "тип",
-        "Options": "опции",
-        "Paramètres": "настройки",
-        "Action": "действие",
-        "Cron de mise à jour": "Обновление Cron"
-    },
-    "desktop\/php\/panel.php": {
-        "401 - Accès non autorisé": "401 - Несанкционированный доступ",
-        "Je veux comparer ma": "Я хочу сравнить мои",
-        "Avec": "с",
-        "Dans un rayon de": "В радиусе",
+        "Je veux comparer ma": "",
+        "Avec": "",
+        "Dans un rayon de": "",
         "Période": "период",
         "Valider": "Validate"
     },
-    "core\/ajax\/dataservice.ajax.php": {
+    "plugins\/dataservice\/desktop\/php\/dataservice.php": {
         "401 - Accès non autorisé": "401 - Несанкционированный доступ",
-        "Aucune méthode correspondante à : ": "Нет метода, соответствующего:"
+        "Gestion": "Управление",
+        "Ajouter": "Добавить",
+        "Configuration": "Конфигурация",
+        "Mes datas": "",
+        "Rechercher": "поиск",
+        "Configuration avancée": "Расширенные настройки",
+        "Dupliquer": "дубликат",
+        "Sauvegarder": "Сохранить",
+        "Supprimer": "удаление",
+        "Equipement": "Оборудование",
+        "Commandes": "Команды",
+        "Avancée": "Прогресс",
+        "Nom de l'équipement": "",
+        "Objet parent": "Родительский объект",
+        "Aucun": "Нет",
+        "Catégorie": "категория",
+        "Activer": "активировать",
+        "Visible": "Видимый",
+        "Service": "",
+        "Lier": "",
+        "avec Jeedom": "",
+        "Ajouter une commande": "Добавить команду",
+        "Nom": "Имя",
+        "Type": "Тип",
+        "Options": "Опции",
+        "Paramètres": "настройки",
+        "Action": "Действие",
+        "Cron de mise à jour": ""
     },
-    "core\/php\/jeeDataservice.php": {
-        "Vous n\\'etes pas autorisé à effectuer cette action": "Вы не авторизованы для выполнения этого действия"
+    "plugins\/dataservice\/desktop\/js\/dataservice.js": {
+        "Nom": "Имя",
+        "Afficher": "дисплей",
+        "Historiser": "История",
+        "Inverser": "Обратный",
+        "Unité": "Устройство",
+        "Min": "Мин",
+        "Max": "Макс",
+        "Tester": "Тест",
+        "Envoyer à": ""
     },
-    "core\/class\/dataservice_mail.class.php": {
-        "Erreur sur la récuperation des données : ": "Ошибка восстановления данных:"
+    "plugins\/dataservice\/core\/php\/jeeDataservice.php": {
+        "Vous n\\'etes pas autorisé à effectuer cette action": ""
     },
-    "core\/class\/dataservice.class.php": {
+    "plugins\/dataservice\/core\/ajax\/dataservice.ajax.php": {
+        "401 - Accès non autorisé": "401 - Несанкционированный доступ",
+        "Aucune méthode correspondante à : ": "Aucune methode correspondante à : "
+    },
+    "plugins\/dataservice\/core\/class\/dataservice_twilio.class.php": {
+        "Erreur sur la récuperation des données : ": "",
+        "Message de ": "Сообщение"
+    },
+    "plugins\/dataservice\/core\/class\/dataservice_mail.class.php": {
+        "Erreur sur la récuperation des données : ": ""
+    },
+    "plugins\/dataservice\/core\/class\/dataservice.class.php": {
         "Température extérieure": "Наружная температура",
-        "Humidité extérieure": "Наружная влажность",
-        "Luminosité exterieure": "Внешняя яркость",
-        "Pression extérieure": "Внешнее давление",
-        "Pluie": "дождь",
-        "Vent": "ветер",
-        "Consommation journaliere éléctrique": "Ежедневное потребление электроэнергии",
-        "Consommation journaliere gaz": "Суточное потребление газа",
-        "Consommation journaliere eau": "Ежедневное потребление воды",
-        "Erreur sur la récuperation des données : ": "Ошибка восстановления данных:",
-        "Erreur sur ": "Ошибка на"
-    },
-    "core\/class\/dataservice_twilio.class.php": {
-        "401 - Accès non autorisé": "401 - Несанкционированный доступ",
-        "Aucune méthode correspondante à : ": "Нет метода, соответствующего:"
+        "Humidité extérieure": "",
+        "Luminosité exterieure": "",
+        "Pression extérieure": "",
+        "Pluie": "",
+        "Vent": "",
+        "Consommation journaliere éléctrique": "",
+        "Consommation journaliere gaz": "",
+        "Consommation journaliere eau": "",
+        "Erreur sur la récuperation des données : ": "",
+        "Erreur sur ": "Ошибка"
     }
 }
