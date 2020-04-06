@@ -164,8 +164,12 @@ class dataservice extends eqLogic {
           if ($c->isDue()) {
             $eqLogic->refreshData();
           }
+          $eqLogic->setCache('refresh_error',0);
         } catch (Exception $e) {
-          log::add('dataservice', 'error', __('Erreur sur ', __FILE__) . $eqLogic->getHumanName() . ' : ' . $e->getMessage());
+          $eqLogic->setCache('refresh_error',$eqLogic->getCache('refresh_error',0) + 1);
+          if($eqLogic->getCache('refresh_error',0) > 3){
+            log::add('dataservice', 'error', __('Erreur sur ', __FILE__) . $eqLogic->getHumanName() . ' : ' . $e->getMessage());
+          }
         }
       }
     }
