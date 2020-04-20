@@ -1,5 +1,5 @@
 {
-  "weather" : {
+  "openweathermap" : {
     "name" : "Météo",
     "translation" : 1,
     "configuration" : {
