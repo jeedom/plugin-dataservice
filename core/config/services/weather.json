@@ -167,7 +167,7 @@
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 1,
-          "logicalId": "uv::all",
+          "logicalId": "uv::value",
           "template" : {
             "dashboard" : "core::line",
             "mobile" : "core::line"
