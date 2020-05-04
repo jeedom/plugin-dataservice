@@ -34,7 +34,7 @@
         "Catégorie": "Kategorie",
         "Activer": "Aktivieren",
         "Visible": "Sichtbar",
-        "Service": "",
+        "Service": "Service",
         "Lier": "Binden",
         "avec Jeedom": "mit Jeedom",
         "Ajouter une commande": "Kommando hinzufügen",
@@ -52,7 +52,7 @@
         "Inverser": "Umgekehrt",
         "Unité": "Unit",
         "Min": "Niedrig",
-        "Max": "",
+        "Max": "Max",
         "Tester": "Test",
         "Envoyer à": "Senden an"
     },

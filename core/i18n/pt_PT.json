@@ -1,16 +1,16 @@
 {
     "plugins\/dataservice\/plugin_info\/configuration.php": {
-        "Envoyer configuration au market": "",
+        "Envoyer configuration au market": "Enviar configuração ao mercado",
         "Envoyer": "Enviar",
-        "Partage de données": "",
-        "Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data": "",
-        "Configuration envoyée avec succès": ""
+        "Partage de données": "Partilha de dados",
+        "Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data": "O compartilhamento de dados permite enviar certos dados (que você escolhe) para o Jeedom, que é anonimizado e permite comparar esses dados entre si. Em troca desse compartilhamento de dados, o Jeedom aumentará sua cota de solicitações para o serviço de dados",
+        "Configuration envoyée avec succès": "Configuração enviada com sucesso"
     },
     "plugins\/dataservice\/desktop\/php\/panel.php": {
         "401 - Accès non autorisé": "401 - Acesso não autorizado",
-        "Je veux comparer ma": "",
-        "Avec": "",
-        "Dans un rayon de": "",
+        "Je veux comparer ma": "Eu quero comparar meu",
+        "Avec": "Com",
+        "Dans un rayon de": "Dentro de um raio de",
         "Période": "Período",
         "Valider": "Validar"
     },
@@ -19,7 +19,7 @@
         "Gestion": "Gestão",
         "Ajouter": "Adicionar",
         "Configuration": "Configuração",
-        "Mes datas": "",
+        "Mes datas": "Meus dados",
         "Rechercher": "Pesquisa",
         "Configuration avancée": "Configuração avançada",
         "Dupliquer": "Duplicar",
@@ -34,16 +34,16 @@
         "Catégorie": "Categoria",
         "Activer": "Ativar",
         "Visible": "Visivél",
-        "Service": "",
-        "Lier": "",
-        "avec Jeedom": "",
+        "Service": "Serviço",
+        "Lier": "Vincular",
+        "avec Jeedom": "com Jeedom",
         "Ajouter une commande": "Adicionar comando",
         "Nom": "Nome",
         "Type": "Tipo",
         "Options": "Opções",
         "Paramètres": "Configurações",
         "Action": "Ação",
-        "Cron de mise à jour": ""
+        "Cron de mise à jour": "Update Cron"
     },
     "plugins\/dataservice\/desktop\/js\/dataservice.js": {
         "Nom": "Nome",
@@ -52,35 +52,35 @@
         "Inverser": "Inverter",
         "Unité": "Unidade",
         "Min": "Baixo",
-        "Max": "",
+        "Max": "Máx.",
         "Tester": "Teste",
-        "Envoyer à": ""
+        "Envoyer à": "Enviar para"
     },
     "plugins\/dataservice\/core\/php\/jeeDataservice.php": {
-        "Vous n\\'etes pas autorisé à effectuer cette action": ""
+        "Vous n\\'etes pas autorisé à effectuer cette action": "Não está autorizado a executar esta ação"
     },
     "plugins\/dataservice\/core\/ajax\/dataservice.ajax.php": {
         "401 - Accès non autorisé": "401 - Acesso não autorizado",
         "Aucune méthode correspondante à : ": "Aucune methode correspondante à : "
     },
     "plugins\/dataservice\/core\/class\/dataservice_twilio.class.php": {
-        "Erreur sur la récuperation des données : ": "",
+        "Erreur sur la récuperation des données : ": "Erro de recuperação de dados:",
         "Message de ": "Mensagem do"
     },
     "plugins\/dataservice\/core\/class\/dataservice_mail.class.php": {
-        "Erreur sur la récuperation des données : ": ""
+        "Erreur sur la récuperation des données : ": "Erro de recuperação de dados:"
     },
     "plugins\/dataservice\/core\/class\/dataservice.class.php": {
         "Température extérieure": "Temperatura exterior",
-        "Humidité extérieure": "",
-        "Luminosité exterieure": "",
-        "Pression extérieure": "",
-        "Pluie": "",
-        "Vent": "",
-        "Consommation journaliere éléctrique": "",
-        "Consommation journaliere gaz": "",
-        "Consommation journaliere eau": "",
-        "Erreur sur la récuperation des données : ": "",
+        "Humidité extérieure": "Umidade ao ar livre",
+        "Luminosité exterieure": "Brilho exterior",
+        "Pression extérieure": "Pressão externa",
+        "Pluie": "Chuva",
+        "Vent": "Vento",
+        "Consommation journaliere éléctrique": "Consumo elétrico diário",
+        "Consommation journaliere gaz": "Consumo diário de gás",
+        "Consommation journaliere eau": "Consumo diário de água",
+        "Erreur sur la récuperation des données : ": "Erro de recuperação de dados:",
         "Erreur sur ": "Erro"
     }
 }
