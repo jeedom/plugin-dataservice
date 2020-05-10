@@ -1,4 +1,4 @@
-# Description
+# Dataservice
 
 Das Plugin ermöglicht die Wiederherstellung verschiedener Daten von einem Jeedom SAS-Dienst (dem Datendienst).. Außerdem können bestimmte anonymisierte Daten mit Benutzern geteilt werden
 
@@ -9,7 +9,6 @@ Das Plugin ermöglicht die Wiederherstellung verschiedener Daten von einem Jeedo
 >**IMPORTANT**
 >
 >Jede gemeinsame Datenmenge erhöht Ihr Kontingent um 5%
-
 
 # Service
 
