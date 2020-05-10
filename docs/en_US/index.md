@@ -1,4 +1,4 @@
-# Description
+# Dataservice
 
 The plugin makes it possible to recover various data from a Jeedom SAS service (the data service). It also allows to share certain anonymized data with users
 
@@ -9,7 +9,6 @@ The plugin makes it possible to recover various data from a Jeedom SAS service (
 >**IMPORTANT**
 >
 >Each shared data increases your quota by 5%
-
 
 # Service
 

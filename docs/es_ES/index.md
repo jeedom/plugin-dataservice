@@ -1,4 +1,4 @@
-# Description
+# Dataservice
 
 El complemento permite recuperar varios datos de un servicio Jeedom SAS (el servicio de datos). También permite compartir ciertos datos anónimos con los usuarios.
 
@@ -9,7 +9,6 @@ El complemento permite recuperar varios datos de un servicio Jeedom SAS (el serv
 >**IMPORTANT**
 >
 >Cada dato compartido aumenta su cuota en un 5%
-
 
 # Service
 

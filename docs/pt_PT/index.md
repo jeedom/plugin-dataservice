@@ -1,4 +1,4 @@
-# Description
+# Dataservice
 
 O plug-in possibilita recuperar vários dados de um serviço Jeedom SAS (o serviço de dados). Também permite compartilhar certos dados anônimos com os usuários
 
@@ -9,7 +9,6 @@ O plug-in possibilita recuperar vários dados de um serviço Jeedom SAS (o servi
 >**IMPORTANT**
 >
 >Cada dado compartilhado aumenta sua cota em 5%
-
 
 # Service
 

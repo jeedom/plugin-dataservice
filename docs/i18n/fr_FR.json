@@ -1,6 +1,10 @@
 {
+    "changelog.md": {
+        "IMPORTANT": "IMPORTANT",
+        "Pour rappel s'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte": "Pour rappel s'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte"
+    },
     "index.md": {
-        "Description": "Description",
+        "Dataservice": "Dataservice",
         "Le plugin permet de récuperer diverses data depuis un service Jeedom SAS (le service data)": "Le plugin permet de récuperer diverses data depuis un service Jeedom SAS (le service data)",
         "Il permet aussi de partager certaine données anonymisé avec des utilisateurs": "Il permet aussi de partager certaine données anonymisé avec des utilisateurs",
         "IMPORTANT": "IMPORTANT",
@@ -8,6 +12,7 @@
         "Chaque données partagées permet d'augmenter votre quota de 5%": "Chaque données partagées permet d'augmenter votre quota de 5%",
         "Service": "Service",
         "Carburant": "Carburant",
+        "Description": "Description",
         "permet de recuperer les prix des carburant de la station d'essence la plus proche": "permet de recuperer les prix des carburant de la station d'essence la plus proche",
         "Quota": "Quota",
         "10\/1h": "10\/1h",
