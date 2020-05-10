@@ -1,4 +1,4 @@
-# Description
+# Dataservice
 
 Le plugin permet de récuperer diverses data depuis un service Jeedom SAS (le service data). Il permet aussi de partager certaine données anonymisé avec des utilisateurs
 
@@ -9,7 +9,6 @@ Le plugin permet de récuperer diverses data depuis un service Jeedom SAS (le se
 >**IMPORTANT**
 >
 >Chaque données partagées permet d'augmenter votre quota de 5%
-
 
 # Service
 
