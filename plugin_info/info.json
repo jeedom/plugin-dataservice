@@ -1,33 +1,33 @@
 {
-    "id": "dataservice",
-    "name": "DataService",
-    "description": "Plugin pour la récuperation de diverse données",
-    "licence": "AGPL",
-    "author": "Jeedom SAS",
-    "require": "3.3",
-    "category": "programming",
-    "hasDependency": false,
-    "hasOwnDeamon": false,
-    "hasTtsEngine": true,
-    "display": "panel",
-    "maxDependancyInstallTime": 0,
-    "changelog": "https:\/\/doc.jeedom.com\/#language#\/plugins\/programming\/dataservice\/changelog",
-    "documentation": "https:\/\/doc.jeedom.com\/#language#\/plugins\/programming\/dataservice\/",
-    "language": [
-        "fr_FR",
-        "en_US",
-        "de_DE",
-        "sp_SP",
-        "ru_RU",
-        "id_ID",
-        "it_IT"
-    ],
-    "compatibility": [
-        "miniplus",
-        "smart",
-        "rpi",
-        "docker",
-        "diy",
-        "mobile"
-    ]
+  "id": "dataservice",
+  "name": "DataService",
+  "description": "Plugin pour la récupération de diverse données (ejp, vacance, saint du jour...) et l'envoi de diverse données (sms, mail) ainsi que le partage communautaire de données (température, humidité...)",
+  "licence": "AGPL",
+  "author": "Jeedom SAS",
+  "require": "3.3",
+  "category": "programming",
+  "hasDependency": false,
+  "hasOwnDeamon": false,
+  "hasTtsEngine": true,
+  "display": "panel",
+  "maxDependancyInstallTime": 0,
+  "changelog": "https:\/\/doc.jeedom.com\/#language#\/plugins\/programming\/dataservice\/changelog",
+  "documentation": "https:\/\/doc.jeedom.com\/#language#\/plugins\/programming\/dataservice\/",
+  "language": [
+    "fr_FR",
+    "en_US",
+    "de_DE",
+    "sp_SP",
+    "ru_RU",
+    "id_ID",
+    "it_IT"
+  ],
+  "compatibility": [
+    "miniplus",
+    "smart",
+    "rpi",
+    "docker",
+    "diy",
+    "mobile"
+  ]
 }
