@@ -57,7 +57,7 @@
         "Envoyer à": "Enviar a"
     },
     "plugins\/dataservice\/core\/php\/jeeDataservice.php": {
-        "Vous n\\'etes pas autorisé à effectuer cette action": "No tiene autorización para realizar esta acción."
+        "Vous n\\'etes pas autorisé à effectuer cette action": "No tiene autorización para realizar esta acción"
     },
     "plugins\/dataservice\/core\/ajax\/dataservice.ajax.php": {
         "401 - Accès non autorisé": "401 - Acceso no autorizado",
@@ -78,8 +78,8 @@
         "Pluie": "Lluvia",
         "Vent": "Viento",
         "Consommation journaliere éléctrique": "Consumo electrico diario",
-        "Consommation journaliere gaz": "Consumo diario de gas.",
-        "Consommation journaliere eau": "Consumo diario de agua.",
+        "Consommation journaliere gaz": "Consumo diario de gas",
+        "Consommation journaliere eau": "Consumo diario de agua",
         "Erreur sur la récuperation des données : ": "Error de recuperación de datos:",
         "Erreur sur ": "Error en"
     }

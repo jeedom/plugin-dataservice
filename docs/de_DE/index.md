@@ -1,6 +1,6 @@
 # Dataservice
 
-Das Plugin ermöglicht die Wiederherstellung verschiedener Daten von einem Jeedom SAS-Dienst (dem Datendienst).. Außerdem können bestimmte anonymisierte Daten mit Benutzern geteilt werden
+Das Plugin ermöglicht die Wiederherstellung verschiedener Daten von einem Jeedom SAS-Dienst (dem Datendienst). Außerdem können bestimmte anonymisierte Daten mit Benutzern geteilt werden
 
 >**Wichtig**
 >
@@ -12,40 +12,40 @@ Das Plugin ermöglicht die Wiederherstellung verschiedener Daten von einem Jeedo
 
 # Service
 
-## Kraftstoff
+## Carburant
 
 - Beschreibung : Kraftstoffpreise an der nächsten Tankstelle abrufen
-- Quote : 10 / 1h
+- Quote : 10/1h
 
-## Kraftstoff
+## Carburant
 
 - Beschreibung : Kraftstoffpreise an der nächsten Tankstelle abrufen
-- Quote : 10 / 1h
+- Quote : 10/1h
 
 ## EJP
 
 - Beschreibung : Mit dieser Option können Sie den Status des EJP entsprechend Ihrer Region wiederherstellen
-- Quote : 10 / 1h
+- Quote : 10/1h
 
 ## Urlaub
 
 - Beschreibung : Lass es uns wissen, wenn es ein Feiertag ist
-- Quote : 10 / 1h
+- Quote : 10/1h
 
 ## Meine IP
 
 - Beschreibung : ermöglicht es, Ihre IP-Adresse zu kennen
-- Quote : 1 / 1min
+- Quote : 1/1min
 
 ## Wetter
 
 - Beschreibung : informiert Sie über das Wetter für D, D + 1, D + 2, D + 3 oder D + 4 (enthält Wetter, Temperaturen, UV, Wind, Luftfeuchtigkeit, Druck und Wolkenmenge. ..)
-- Quote : 10 / 1h
+- Quote : 10/1h
 
 ## Verschmutzung Frankreich
 
 - Beschreibung : ermöglicht es, die Verschmutzung eines geografischen Punktes in Frankreich zu kennen
-- Quote : 10 / 1h
+- Quote : 10/1h
 
 ## Sonnenstand
 
@@ -55,27 +55,27 @@ Das Plugin ermöglicht die Wiederherstellung verschiedener Daten von einem Jeedo
 ## Tempo
 
 - Beschreibung : Ermöglicht den EDF-Tempo-Status
-- Quote : 10 / 1h
+- Quote : 10/1h
 
 ## TTS
 
 - Beschreibung : ermöglicht ein qualitativ hochwertiges TTS (basiert auf Google TTS)
-- Quote : 10 / 1h
+- Quote : 10/1h
 
 ## Frankreich Ferien
 
 - Beschreibung : lässt Sie wissen, ob der Tag ein Schulferientag ist und wenn ja, welcher
-- Quote : 10 / 24h
+- Quote : 10/24h
 
 ## Wachsamkeit Frankreich
 
 - Beschreibung : ermöglicht es, den Grad der Wachsamkeit einer Region zu kennen
-- Quote : 10 / 1h
+- Quote : 10/1h
 
 ## Community-Daten
 
 - Beschreibung : Mit dieser Option können Sie Daten von Benutzern ungefähr (von 1 km bis 100 km) wiederherstellen, um Ihre Installation entweder mit zuverlässigeren Daten abzuschließen, wenn Sie nicht über die Ausrüstung verfügen (Temperatur, Luftfeuchtigkeit ...), oder um deren Daten zu vergleichen andere Benutzer. Die Daten werden über den Zeitraum und den gewählten Umfang gemittelt
-- Quote : 30 / 15min
+- Quote : 30/15min
 
 >**Wichtig**
 >

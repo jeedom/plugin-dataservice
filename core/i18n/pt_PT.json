@@ -61,7 +61,7 @@
     },
     "plugins\/dataservice\/core\/ajax\/dataservice.ajax.php": {
         "401 - Accès non autorisé": "401 - Acesso não autorizado",
-        "Aucune méthode correspondante à : ": "Aucune methode correspondante à : "
+        "Aucune méthode correspondante à : ": "Aucune methode correspondante à :"
     },
     "plugins\/dataservice\/core\/class\/dataservice_twilio.class.php": {
         "Erreur sur la récuperation des données : ": "Erro de recuperação de dados:",
