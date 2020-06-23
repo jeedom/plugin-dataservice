@@ -172,6 +172,58 @@
             "dashboard" : "core::line",
             "mobile" : "core::line"
           }
+        },
+        {
+          "name": "Température de rosée",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "unite" : "°C",
+          "logicalId": "dew_point::value",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
+        },
+        {
+          "name": "Pluie",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "unite" : "mm",
+          "logicalId": "rain::value",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
+        },
+        {
+          "name": "Neige",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "unite" : "mm",
+          "logicalId": "snow::value",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
+        },
+        {
+          "name": "Visibilité",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "unite" : "m",
+          "logicalId": "visibility::value",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
         }
       ]
     }
