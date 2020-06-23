@@ -1,6 +1,6 @@
 # Dataservice
 
-Das Plugin ermöglicht die Wiederherstellung verschiedener Daten von einem Jeedom SAS-Dienst (dem Datendienst). Außerdem können bestimmte anonymisierte Daten mit Benutzern geteilt werden
+Das Plugin ermöglicht die Wiederherstellung verschiedener Daten von einem Jeedom SAS-Dienst (dem Datendienst)). Außerdem können bestimmte anonymisierte Daten mit Benutzern geteilt werden
 
 >**Wichtig**
 >
@@ -39,7 +39,7 @@ Das Plugin ermöglicht die Wiederherstellung verschiedener Daten von einem Jeedo
 
 ## Wetter
 
-- Beschreibung : informiert Sie über das Wetter für D, D + 1, D + 2, D + 3 oder D + 4 (enthält Wetter, Temperaturen, UV, Wind, Luftfeuchtigkeit, Druck und Wolkenmenge. ..)
+- Beschreibung : Informiert Sie über das Wetter für D, D + 1, D + 2, D + 3 oder D + 4 (enthält Wetter, Temperaturen, UV, Wind, Luftfeuchtigkeit, Druck und Wolkenmenge...)
 - Quote : 10/1h
 
 ## Verschmutzung Frankreich
@@ -49,7 +49,7 @@ Das Plugin ermöglicht die Wiederherstellung verschiedener Daten von einem Jeedo
 
 ## Sonnenstand
 
-- Beschreibung : informiert Sie über den Sonnenstand (Zeitpunkt des Sonnenuntergangs / Sonnenaufgangs / Mondes, genaue Position von Sonne und Mond ...)
+- Beschreibung : ermöglicht es, die Position der Sonne zu kennen (Zeit des Sonnenuntergangs / Sonnenaufgangs / Mondes, genaue Position der Sonne und des Mondes...)
 - Quote : 2/1min
 
 ## Tempo
@@ -59,7 +59,7 @@ Das Plugin ermöglicht die Wiederherstellung verschiedener Daten von einem Jeedo
 
 ## TTS
 
-- Beschreibung : ermöglicht ein qualitativ hochwertiges TTS (basiert auf Google TTS)
+- Beschreibung : ermöglicht eine Qualität TTS (basiert auf Google TTS)
 - Quote : 10/1h
 
 ## Frankreich Ferien

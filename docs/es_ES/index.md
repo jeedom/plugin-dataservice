@@ -39,7 +39,7 @@ El complemento permite recuperar varios datos de un servicio Jeedom SAS (el serv
 
 ## Tiempo
 
-- Descripción : le permite conocer el clima para D, D + 1, D + 2, D + 3 o D + 4 (contiene el clima, temperaturas, UV, viento, humedad, presión, cantidad de nubes. ..)
+- Descripción : le permite conocer el clima para D, D + 1, D + 2, D + 3 o D + 4 (contiene el clima, temperaturas, UV, viento, humedad, presión, cantidad de nubes...)
 - Cuota : 10/1h
 
 ## Contaminación Francia
@@ -49,7 +49,7 @@ El complemento permite recuperar varios datos de un servicio Jeedom SAS (el serv
 
 ## Posición del sol
 
-- Descripción : le permite conocer la posición del sol (hora del atardecer / amanecer / luna, posición exacta del sol y la luna ...)
+- Descripción : permite conocer la posición del sol (hora de la puesta del sol / amanecer / luna, posición exacta del sol y la luna...)
 - Cuota : 2/1min
 
 ## Tempo
