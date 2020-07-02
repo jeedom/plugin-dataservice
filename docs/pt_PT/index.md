@@ -1,6 +1,6 @@
 # Dataservice
 
-O plug-in possibilita recuperar vários dados de um serviço Jeedom SAS (o serviço de dados). Também permite compartilhar certos dados anônimos com os usuários
+O plug-in permite recuperar vários dados de um serviço Jeedom SAS (o serviço de dados). Também permite compartilhar certos dados anônimos com os usuários
 
 >**IMPORTANTE**
 >
@@ -39,7 +39,7 @@ O plug-in possibilita recuperar vários dados de um serviço Jeedom SAS (o servi
 
 ## Previsão do tempo
 
-- Descrição : permite saber o tempo para D, D + 1, D + 2, D + 3 ou D + 4 (contém o tempo, temperaturas, UV, vento, umidade, pressão, quantidade de nuvens. ..)
+- Descrição : permite saber o tempo para D, D + 1, D + 2, D + 3 ou D + 4 (contém o tempo, temperaturas, UV, vento, umidade, pressão, quantidade de nuvens...)
 - Quota : 10/1h
 
 ## Poluição França
@@ -49,7 +49,7 @@ O plug-in possibilita recuperar vários dados de um serviço Jeedom SAS (o servi
 
 ## Posição do sol
 
-- Descrição : permite saber a posição do sol (hora do pôr do sol / nascer do sol / lua, posição exata do sol e da lua ...)
+- Descrição : permite conhecer a posição do sol (hora do pôr do sol / nascer do sol / lua, posição exata do sol e da lua...)
 - Quota : 2/1min
 
 ## Tempo

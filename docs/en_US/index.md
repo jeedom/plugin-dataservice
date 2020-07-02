@@ -39,7 +39,7 @@ The plugin makes it possible to recover various data from a Jeedom SAS service (
 
 ## Weather
 
-- Description : lets you know the weather for D, D + 1, D + 2, D + 3 or D + 4 (contains the weather, temperatures, UV, wind, humidity, pressure, amount of cloud. ..)
+- Description : lets you know the weather for D, D + 1, D + 2, D + 3 or D + 4 (contains the weather, temperatures, UV, wind, humidity, pressure, amount of cloud...)
 - Quota : 10/1h
 
 ## Pollution France
@@ -49,7 +49,7 @@ The plugin makes it possible to recover various data from a Jeedom SAS service (
 
 ## Position of the sun
 
-- Description : lets you know the position of the sun (time of sunset / sunrise / moon, exact position of the sun and the moon ...)
+- Description : allows to know the position of the sun (time of sunset / sunrise / moon, exact position of the sun and the moon...)
 - Quota : 2/1min
 
 ## Tempo
