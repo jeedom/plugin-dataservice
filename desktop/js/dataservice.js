@@ -18,7 +18,7 @@
 $('.bt_oauth').off('click').on('click',function(){
   var url = $(this).data('href')+'?service='+$(this).data('service')
   if($(this).data('multiuser') == 1){
-    url += '&logical_user='+$('.eqLogicAttr[data-l1key=id]').value();
+    url += '&user_logical='+$('.eqLogicAttr[data-l1key=id]').value();
   }
   window.open(url, '_blank');
 })
