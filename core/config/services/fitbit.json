@@ -1,0 +1,52 @@
+{
+  "fitbit" : {
+    "name" : "Fitbit",
+    "oauth" : true,
+    "eqLogic" : {
+      "configuration" : {
+        "cron" : "*/20 * * * *"
+      },
+      "commands" : [
+        {
+          "name": "Rafraîchir",
+          "type": "action",
+          "subtype": "other",
+          "logicalId": "refresh"
+        },
+        {
+          "name": "Poids",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "configuration" : {
+            "path" : "body/log/weight/date/#date#.json"
+          },
+          "logicalId": "weight"
+        },
+        {
+          "name": "Masse grasse",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "configuration" : {
+            "path" : "body/log/weight/date/#date#.json"
+          },
+          "logicalId": "fat"
+        },
+        {
+          "name": "IMC",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "configuration" : {
+            "path" : "body/log/weight/date/#date#.json"
+          },
+          "logicalId": "bmi"
+        }
+      ]
+    }
+  }
+}
