@@ -15,6 +15,14 @@
 * along with Jeedom. If not, see <http://www.gnu.org/licenses/>.
 */
 
+$('.bt_oauth').off('click').on('click',function(){
+  var url = $(this).data('href')+'?service='+$(this).data('service')
+  if($(this).data('multiuser') == 1){
+    url += '&logical_user='+$('.eqLogicAttr[data-l1key=id]').value();
+  }
+  window.open(url, '_blank');
+})
+
 $('.eqLogicAttr[data-l1key=configuration][data-l2key=service]').off('change').on('change',function(){
   $('.serviceConfig').hide();
   if($(this).value() != ''){

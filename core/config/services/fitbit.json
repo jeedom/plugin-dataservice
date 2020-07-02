@@ -2,6 +2,7 @@
   "fitbit" : {
     "name" : "Fitbit",
     "oauth" : true,
+    "oauth_multi_user" : true, 
     "eqLogic" : {
       "configuration" : {
         "cron" : "*/20 * * * *"
