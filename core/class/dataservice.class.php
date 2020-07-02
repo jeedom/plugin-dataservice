@@ -282,6 +282,15 @@ class dataservice extends eqLogic {
     }
   }
   
+  public function getImage() {
+    $file = dirname(__FILE__) . '/../img/' . $this->getConfiguration('service') . '.png';
+    if (file_exists($file)) {
+      return 'plugins/dataservice/core/img/' . $this->getConfiguration('service') . '.png';
+    } else {
+      return 'plugins/dataservice/plugin_info/dataservice_icon.png';
+    }
+  }
+  
   /*     * **********************Getteur Setteur*************************** */
 }
 
