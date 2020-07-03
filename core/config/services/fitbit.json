@@ -23,7 +23,7 @@
           "configuration" : {
             "path" : "body/log/weight/date/#date#.json"
           },
-          "logicalId": "0::weight"
+          "logicalId": "weight::0::weight"
         },
         {
           "name": "Masse grasse",
@@ -34,7 +34,7 @@
           "configuration" : {
             "path" : "body/log/weight/date/#date#.json"
           },
-          "logicalId": "0::fat"
+          "logicalId": "weight::0::fat"
         },
         {
           "name": "IMC",
@@ -45,7 +45,7 @@
           "configuration" : {
             "path" : "body/log/weight/date/#date#.json"
           },
-          "logicalId": "0::bmi"
+          "logicalId": "weight::0::bmi"
         },
         {
           "name": "Calories",

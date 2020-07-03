@@ -35,22 +35,26 @@ class dataservice_fitbit {
         }
       }
       $value = self::getValue($cmd->getLogicalId(),$data[$cmd->getConfiguration('path')]);
-      if($value !== null){
-        $_eqLogic->checkAndUpdateCmd($cmd, $value,$data[$cmd->getConfiguration('path')]['datetime']);
+      if($value['value'] !== null && $value['value'] != ''){
+        $_eqLogic->checkAndUpdateCmd($cmd, $value['value'],$value['datetime']);
       }
     }
   }
   
   public static function getValue($_key,$_data,$_default = null){
-    $return = $_data;
+    $datetime = date('Y-m-d H:i:s');
+    $value = $_data;
     $keys = explode('::',$_key);
-    foreach ($keys as $key) {
-      if(!isset($return[$key])){
-        return $_default;
+    foreach ($keys as &$key) {
+      if(!isset($value[$key])){
+        return array('value' => null);
       }
-      $return = $return[$key];
+      $value = $value[$key];
+      if(isset($value['date']) && isset($value['time'])){
+        $datetime = $value['date'].' '.$value['time'];
+      }
     }
-    return $return;
+    return array('value' => $value,'datetime' => $datetime);
   }
   
   public static function getData($_path,$_user_logical){
