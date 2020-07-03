@@ -37,7 +37,7 @@
             "historizeRound" : 2,
             "path" : "body/log/weight/date/#date#.json"
           },
-          "unite" : "kg",
+          "unite" : "%",
           "logicalId": "weight::0::fat"
         },
         {
@@ -267,7 +267,7 @@
             "historizeRound" : 2,
             "path" : "activities/heart/date/#date#/1d.json"
           },
-          "unite" : "min",
+          "unite" : "kcal",
           "logicalId": "activities-heart::0::value::heartRateZones::0::caloriesOut"
         },
         {
@@ -293,7 +293,7 @@
             "historizeRound" : 2,
             "path" : "activities/heart/date/#date#/1d.json"
           },
-          "unite" : "min",
+          "unite" : "kcal",
           "logicalId": "activities-heart::0::value::heartRateZones::1::caloriesOut"
         },
         {
@@ -319,7 +319,7 @@
             "historizeRound" : 2,
             "path" : "activities/heart/date/#date#/1d.json"
           },
-          "unite" : "min",
+          "unite" : "kcal",
           "logicalId": "activities-heart::0::value::heartRateZones::2::caloriesOut"
         },
         {
@@ -345,7 +345,7 @@
             "historizeRound" : 2,
             "path" : "activities/heart/date/#date#/1d.json"
           },
-          "unite" : "min",
+          "unite" : "kcal",
           "logicalId": "activities-heart::0::value::heartRateZones::3::caloriesOut"
         }
       ]
