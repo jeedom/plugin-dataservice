@@ -2,7 +2,7 @@
   "fitbit" : {
     "name" : "Fitbit",
     "oauth" : true,
-    "oauth_multi_user" : true, 
+    "oauth_multi_user" : true,
     "eqLogic" : {
       "configuration" : {
         "cron" : "*/20 * * * *"
@@ -23,7 +23,7 @@
           "configuration" : {
             "path" : "body/log/weight/date/#date#.json"
           },
-          "logicalId": "weight"
+          "logicalId": "0::weight"
         },
         {
           "name": "Masse grasse",
@@ -34,7 +34,7 @@
           "configuration" : {
             "path" : "body/log/weight/date/#date#.json"
           },
-          "logicalId": "fat"
+          "logicalId": "0::fat"
         },
         {
           "name": "IMC",
@@ -45,7 +45,172 @@
           "configuration" : {
             "path" : "body/log/weight/date/#date#.json"
           },
-          "logicalId": "bmi"
+          "logicalId": "0::bmi"
+        },
+        {
+          "name": "Calories",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "configuration" : {
+            "path" : "activities/date/#date#.json"
+          },
+          "logicalId": "summary::caloriesOut"
+        },
+        {
+          "name": "Pas",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "configuration" : {
+            "path" : "activities/date/#date#.json"
+          },
+          "logicalId": "summary::steps"
+        },
+        {
+          "name": "Elévation",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "configuration" : {
+            "path" : "activities/date/#date#.json"
+          },
+          "logicalId": "summary::elevation"
+        },
+        {
+          "name": "Minutes assez actives",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "configuration" : {
+            "path" : "activities/date/#date#.json"
+          },
+          "logicalId": "summary::fairlyActiveMinutes"
+        },
+        {
+          "name": "Minutes légèrement actives",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "configuration" : {
+            "path" : "activities/date/#date#.json"
+          },
+          "logicalId": "summary::lightlyActiveMinutes"
+        },
+        {
+          "name": "Minutes sédentaires",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "configuration" : {
+            "path" : "activities/date/#date#.json"
+          },
+          "logicalId": "summary::sedentaryMinutes"
+        },
+        {
+          "name": "Minutes très actives",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "configuration" : {
+            "path" : "activities/date/#date#.json"
+          },
+          "logicalId": "summary::veryActiveMinutes"
+        },
+        {
+          "name": "Etage",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "configuration" : {
+            "path" : "activities/date/#date#.json"
+          },
+          "logicalId": "summary::floors"
+        },
+        {
+          "name": "Durée sommeil",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "configuration" : {
+            "path" : "activities/sleep/date/#date#.json"
+          },
+          "logicalId": "sleep::0::duration"
+        },
+        {
+          "name": "Efficacité sommeil",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "configuration" : {
+            "path" : "activities/sleep/date/#date#.json"
+          },
+          "logicalId": "sleep::0::efficiency"
+        },
+        {
+          "name": "Minutes après le réveil",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "configuration" : {
+            "path" : "activities/sleep/date/#date#.json"
+          },
+          "logicalId": "sleep::0::minutesAfterWakeup"
+        },
+        {
+          "name": "Minutes endormi",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "configuration" : {
+            "path" : "activities/sleep/date/#date#.json"
+          },
+          "logicalId": "sleep::0::minutesAsleep"
+        },
+        {
+          "name": "Minutes éveillé",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "configuration" : {
+            "path" : "activities/sleep/date/#date#.json"
+          },
+          "logicalId": "sleep::0::minutesAwake"
+        },
+        {
+          "name": "Minutes pour s'endormir",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "configuration" : {
+            "path" : "activities/sleep/date/#date#.json"
+          },
+          "logicalId": "sleep::0::minutesToFallAsleep"
+        },
+        {
+          "name": "Temps au lit",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "configuration" : {
+            "path" : "activities/sleep/date/#date#.json"
+          },
+          "logicalId": "sleep::0::timeInBed"
         }
       ]
     }

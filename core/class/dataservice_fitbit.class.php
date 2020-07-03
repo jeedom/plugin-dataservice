@@ -26,19 +26,31 @@ class dataservice_fitbit {
     foreach ($_eqLogic->getCmd('info') as $cmd) {
       if(!isset($data[$cmd->getConfiguration('path')])){
         $data[$cmd->getConfiguration('path')] = self::getData($cmd->getConfiguration('path'),$_eqLogic->getId());
-        if(isset($data[$cmd->getConfiguration('path')][0])){
-          $data[$cmd->getConfiguration('path')] = $data[$cmd->getConfiguration('path')][0];
-        }
+        $data[$cmd->getConfiguration('path')]['datetime'] = date('Y-m-d H:i:s');
         if($data[$cmd->getConfiguration('path')]['date'] && $data[$cmd->getConfiguration('path')]['time']){
           $data[$cmd->getConfiguration('path')]['datetime'] = $data[$cmd->getConfiguration('path')]['date'].' '.$data[$cmd->getConfiguration('path')]['time'];
-        }else{
-          $data[$cmd->getConfiguration('path')]['datetime'] = date('Y-m-d H:i:s');
+        }
+        if($data[$cmd->getConfiguration('path')][0]['date'] && $data[$cmd->getConfiguration('path')][0]['time']){
+          $data[$cmd->getConfiguration('path')][0]['datetime'] = $data[$cmd->getConfiguration('path')][0]['date'].' '.$data[$cmd->getConfiguration('path')]['time'];
         }
       }
-      if(isset($data[$cmd->getConfiguration('path')][$cmd->getLogicalId()])){
-        $_eqLogic->checkAndUpdateCmd($cmd, $data[$cmd->getConfiguration('path')][$cmd->getLogicalId()],$data[$cmd->getConfiguration('path')]['datetime']);
+      $value = self::getValue($cmd->getLogicalId(),$data[$cmd->getConfiguration('path')]);
+      if($value !== null){
+        $_eqLogic->checkAndUpdateCmd($cmd, $value,$data[$cmd->getConfiguration('path')]['datetime']);
       }
     }
+  }
+  
+  public static function getValue($_key,$_data,$_default = null){
+    $return = $_data;
+    $keys = explode('::',$_key);
+    foreach ($keys as $key) {
+      if(!isset($return[$key])){
+        return $_default;
+      }
+      $return = $return[$key];
+    }
+    return $return;
   }
   
   public static function getData($_path,$_user_logical){
@@ -48,7 +60,6 @@ class dataservice_fitbit {
     $request_http = new com_http($url);
     $request_http->setHeader(array('Content-Type: application/json','Autorization: '.sha512(mb_strtolower(config::byKey('market::username')).':'.config::byKey('market::password'))));
     $result = json_decode($request_http->exec(30,1),true);
-    //var_dump($result);
     if(!is_array($result)){
       throw new Exception(__('[Fitbit] Erreur lors de la récuperation des données : ',__FILE__).$result);
     }
