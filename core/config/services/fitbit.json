@@ -21,6 +21,7 @@
           "isVisible": 1,
           "isHistorized": 1,
           "configuration" : {
+            "historizeRound" : 2,
             "path" : "body/log/weight/date/#date#.json"
           },
           "unite" : "kg",
@@ -46,6 +47,7 @@
           "isVisible": 1,
           "isHistorized": 1,
           "configuration" : {
+            "historizeRound" : 2,
             "path" : "body/log/weight/date/#date#.json"
           },
           "logicalId": "weight::0::bmi"
@@ -57,6 +59,7 @@
           "isVisible": 1,
           "isHistorized": 1,
           "configuration" : {
+            "historizeRound" : 2,
             "path" : "activities/date/#date#.json"
           },
           "unite" : "kcal",
@@ -69,6 +72,7 @@
           "isVisible": 1,
           "isHistorized": 1,
           "configuration" : {
+            "historizeRound" : 2,
             "path" : "activities/date/#date#.json"
           },
           "logicalId": "summary::steps"
@@ -80,6 +84,7 @@
           "isVisible": 1,
           "isHistorized": 1,
           "configuration" : {
+            "historizeRound" : 2,
             "path" : "activities/date/#date#.json"
           },
           "unite" : "m",
@@ -92,6 +97,7 @@
           "isVisible": 1,
           "isHistorized": 1,
           "configuration" : {
+            "historizeRound" : 2,
             "path" : "activities/date/#date#.json"
           },
           "unite" : "min",
@@ -104,6 +110,7 @@
           "isVisible": 1,
           "isHistorized": 1,
           "configuration" : {
+            "historizeRound" : 2,
             "path" : "activities/date/#date#.json"
           },
           "unite" : "min",
@@ -116,6 +123,7 @@
           "isVisible": 1,
           "isHistorized": 1,
           "configuration" : {
+            "historizeRound" : 2,
             "path" : "activities/date/#date#.json"
           },
           "unite" : "min",
@@ -128,6 +136,7 @@
           "isVisible": 1,
           "isHistorized": 1,
           "configuration" : {
+            "historizeRound" : 2,
             "path" : "activities/date/#date#.json"
           },
           "unite" : "min",
@@ -140,6 +149,7 @@
           "isVisible": 1,
           "isHistorized": 1,
           "configuration" : {
+            "historizeRound" : 2,
             "path" : "activities/date/#date#.json"
           },
           "logicalId": "summary::floors"
@@ -151,6 +161,7 @@
           "isVisible": 1,
           "isHistorized": 1,
           "configuration" : {
+            "historizeRound" : 2,
             "path" : "activities/sleep/date/#date#.json"
           },
           "unite" : "min",
@@ -163,6 +174,7 @@
           "isVisible": 1,
           "isHistorized": 1,
           "configuration" : {
+            "historizeRound" : 2,
             "path" : "activities/sleep/date/#date#.json"
           },
           "logicalId": "sleep::0::efficiency"
@@ -174,6 +186,7 @@
           "isVisible": 1,
           "isHistorized": 1,
           "configuration" : {
+            "historizeRound" : 2,
             "path" : "activities/sleep/date/#date#.json"
           },
           "unite" : "min",
@@ -186,6 +199,7 @@
           "isVisible": 1,
           "isHistorized": 1,
           "configuration" : {
+            "historizeRound" : 2,
             "path" : "activities/sleep/date/#date#.json"
           },
           "unite" : "min",
@@ -198,6 +212,7 @@
           "isVisible": 1,
           "isHistorized": 1,
           "configuration" : {
+            "historizeRound" : 2,
             "path" : "activities/sleep/date/#date#.json"
           },
           "unite" : "min",
@@ -210,6 +225,7 @@
           "isVisible": 1,
           "isHistorized": 1,
           "configuration" : {
+            "historizeRound" : 2,
             "path" : "activities/sleep/date/#date#.json"
           },
           "unite" : "min",
@@ -222,10 +238,115 @@
           "isVisible": 1,
           "isHistorized": 1,
           "configuration" : {
+            "historizeRound" : 2,
             "path" : "activities/sleep/date/#date#.json"
           },
           "unite" : "min",
           "logicalId": "sleep::0::timeInBed"
+        },
+        {
+          "name": "Temps rythme cardiaque bas",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "configuration" : {
+            "historizeRound" : 2,
+            "path" : "activities/heart/date/#date#/1d.json"
+          },
+          "unite" : "min",
+          "logicalId": "activities-heart::0::value::heartRateZones::0::minutes"
+        },
+        {
+          "name": "Calories rythme cardiaque bas",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "configuration" : {
+            "historizeRound" : 2,
+            "path" : "activities/heart/date/#date#/1d.json"
+          },
+          "unite" : "min",
+          "logicalId": "activities-heart::0::value::heartRateZones::0::caloriesOut"
+        },
+        {
+          "name": "Temps rythme cardiaque bruleur de graisse",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "configuration" : {
+            "historizeRound" : 2,
+            "path" : "activities/heart/date/#date#/1d.json"
+          },
+          "unite" : "min",
+          "logicalId": "activities-heart::0::value::heartRateZones::1::minutes"
+        },
+        {
+          "name": "Calories rythme cardiaque bruleur de graisse",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "configuration" : {
+            "historizeRound" : 2,
+            "path" : "activities/heart/date/#date#/1d.json"
+          },
+          "unite" : "min",
+          "logicalId": "activities-heart::0::value::heartRateZones::1::caloriesOut"
+        },
+        {
+          "name": "Temps rythme cardiaque cardio",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "configuration" : {
+            "historizeRound" : 2,
+            "path" : "activities/heart/date/#date#/1d.json"
+          },
+          "unite" : "min",
+          "logicalId": "activities-heart::0::value::heartRateZones::2::minutes"
+        },
+        {
+          "name": "Calories rythme cardiaque cardio",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "configuration" : {
+            "historizeRound" : 2,
+            "path" : "activities/heart/date/#date#/1d.json"
+          },
+          "unite" : "min",
+          "logicalId": "activities-heart::0::value::heartRateZones::2::caloriesOut"
+        },
+        {
+          "name": "Temps rythme cardiaque max",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "configuration" : {
+            "historizeRound" : 2,
+            "path" : "activities/heart/date/#date#/1d.json"
+          },
+          "unite" : "min",
+          "logicalId": "activities-heart::0::value::heartRateZones::3::minutes"
+        },
+        {
+          "name": "Calories rythme cardiaque max",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "configuration" : {
+            "historizeRound" : 2,
+            "path" : "activities/heart/date/#date#/1d.json"
+          },
+          "unite" : "min",
+          "logicalId": "activities-heart::0::value::heartRateZones::3::caloriesOut"
         }
       ]
     }
