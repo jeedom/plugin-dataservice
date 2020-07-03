@@ -63,6 +63,9 @@
         "401 - Accès non autorisé": "401 - Accès non autorisé",
         "Aucune méthode correspondante à : ": "Aucune méthode correspondante à : "
     },
+    "plugins\/dataservice\/core\/class\/dataservice_fitbit.class.php": {
+        "[Fitbit] Erreur lors de la récuperation des données : ": "[Fitbit] Erreur lors de la récuperation des données : "
+    },
     "plugins\/dataservice\/core\/class\/dataservice_twilio.class.php": {
         "Erreur sur la récuperation des données : ": "Erreur sur la récuperation des données : ",
         "Message de ": "Message de "
