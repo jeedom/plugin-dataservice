@@ -23,6 +23,7 @@
           "configuration" : {
             "path" : "body/log/weight/date/#date#.json"
           },
+          "unite" : "kg",
           "logicalId": "weight::0::weight"
         },
         {
@@ -32,8 +33,10 @@
           "isVisible": 1,
           "isHistorized": 1,
           "configuration" : {
+            "historizeRound" : 2,
             "path" : "body/log/weight/date/#date#.json"
           },
+          "unite" : "kg",
           "logicalId": "weight::0::fat"
         },
         {
@@ -56,6 +59,7 @@
           "configuration" : {
             "path" : "activities/date/#date#.json"
           },
+          "unite" : "kcal",
           "logicalId": "summary::caloriesOut"
         },
         {
@@ -78,10 +82,11 @@
           "configuration" : {
             "path" : "activities/date/#date#.json"
           },
+          "unite" : "m",
           "logicalId": "summary::elevation"
         },
         {
-          "name": "Minutes assez actives",
+          "name": "Assez actives",
           "type": "info",
           "subtype": "numeric",
           "isVisible": 1,
@@ -89,10 +94,11 @@
           "configuration" : {
             "path" : "activities/date/#date#.json"
           },
+          "unite" : "min",
           "logicalId": "summary::fairlyActiveMinutes"
         },
         {
-          "name": "Minutes légèrement actives",
+          "name": "Légèrement actives",
           "type": "info",
           "subtype": "numeric",
           "isVisible": 1,
@@ -100,10 +106,11 @@
           "configuration" : {
             "path" : "activities/date/#date#.json"
           },
+          "unite" : "min",
           "logicalId": "summary::lightlyActiveMinutes"
         },
         {
-          "name": "Minutes sédentaires",
+          "name": "Sédentaires",
           "type": "info",
           "subtype": "numeric",
           "isVisible": 1,
@@ -111,10 +118,11 @@
           "configuration" : {
             "path" : "activities/date/#date#.json"
           },
+          "unite" : "min",
           "logicalId": "summary::sedentaryMinutes"
         },
         {
-          "name": "Minutes très actives",
+          "name": "Très actives",
           "type": "info",
           "subtype": "numeric",
           "isVisible": 1,
@@ -122,6 +130,7 @@
           "configuration" : {
             "path" : "activities/date/#date#.json"
           },
+          "unite" : "min",
           "logicalId": "summary::veryActiveMinutes"
         },
         {
@@ -144,6 +153,7 @@
           "configuration" : {
             "path" : "activities/sleep/date/#date#.json"
           },
+          "unite" : "min",
           "logicalId": "sleep::0::duration"
         },
         {
@@ -158,7 +168,7 @@
           "logicalId": "sleep::0::efficiency"
         },
         {
-          "name": "Minutes après le réveil",
+          "name": "Temps après le réveil",
           "type": "info",
           "subtype": "numeric",
           "isVisible": 1,
@@ -166,10 +176,11 @@
           "configuration" : {
             "path" : "activities/sleep/date/#date#.json"
           },
+          "unite" : "min",
           "logicalId": "sleep::0::minutesAfterWakeup"
         },
         {
-          "name": "Minutes endormi",
+          "name": "Temps endormi",
           "type": "info",
           "subtype": "numeric",
           "isVisible": 1,
@@ -177,10 +188,11 @@
           "configuration" : {
             "path" : "activities/sleep/date/#date#.json"
           },
+          "unite" : "min",
           "logicalId": "sleep::0::minutesAsleep"
         },
         {
-          "name": "Minutes éveillé",
+          "name": "Temps éveillé",
           "type": "info",
           "subtype": "numeric",
           "isVisible": 1,
@@ -188,10 +200,11 @@
           "configuration" : {
             "path" : "activities/sleep/date/#date#.json"
           },
+          "unite" : "min",
           "logicalId": "sleep::0::minutesAwake"
         },
         {
-          "name": "Minutes pour s'endormir",
+          "name": "Temps pour s'endormir",
           "type": "info",
           "subtype": "numeric",
           "isVisible": 1,
@@ -199,6 +212,7 @@
           "configuration" : {
             "path" : "activities/sleep/date/#date#.json"
           },
+          "unite" : "min",
           "logicalId": "sleep::0::minutesToFallAsleep"
         },
         {
@@ -210,6 +224,7 @@
           "configuration" : {
             "path" : "activities/sleep/date/#date#.json"
           },
+          "unite" : "min",
           "logicalId": "sleep::0::timeInBed"
         }
       ]
