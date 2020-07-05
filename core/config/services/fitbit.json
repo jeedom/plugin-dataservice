@@ -162,7 +162,7 @@
           "isHistorized": 1,
           "configuration" : {
             "historizeRound" : 2,
-            "path" : "activities/sleep/date/#date#.json"
+            "path" : "sleep/date/#date#.json"
           },
           "unite" : "min",
           "logicalId": "sleep::0::duration"
@@ -175,7 +175,7 @@
           "isHistorized": 1,
           "configuration" : {
             "historizeRound" : 2,
-            "path" : "activities/sleep/date/#date#.json"
+            "path" : "sleep/date/#date#.json"
           },
           "logicalId": "sleep::0::efficiency"
         },
@@ -187,7 +187,7 @@
           "isHistorized": 1,
           "configuration" : {
             "historizeRound" : 2,
-            "path" : "activities/sleep/date/#date#.json"
+            "path" : "sleep/date/#date#.json"
           },
           "unite" : "min",
           "logicalId": "sleep::0::minutesAfterWakeup"
@@ -200,7 +200,7 @@
           "isHistorized": 1,
           "configuration" : {
             "historizeRound" : 2,
-            "path" : "activities/sleep/date/#date#.json"
+            "path" : "sleep/date/#date#.json"
           },
           "unite" : "min",
           "logicalId": "sleep::0::minutesAsleep"
@@ -213,7 +213,7 @@
           "isHistorized": 1,
           "configuration" : {
             "historizeRound" : 2,
-            "path" : "activities/sleep/date/#date#.json"
+            "path" : "sleep/date/#date#.json"
           },
           "unite" : "min",
           "logicalId": "sleep::0::minutesAwake"
@@ -226,7 +226,7 @@
           "isHistorized": 1,
           "configuration" : {
             "historizeRound" : 2,
-            "path" : "activities/sleep/date/#date#.json"
+            "path" : "sleep/date/#date#.json"
           },
           "unite" : "min",
           "logicalId": "sleep::0::minutesToFallAsleep"
@@ -239,7 +239,7 @@
           "isHistorized": 1,
           "configuration" : {
             "historizeRound" : 2,
-            "path" : "activities/sleep/date/#date#.json"
+            "path" : "sleep/date/#date#.json"
           },
           "unite" : "min",
           "logicalId": "sleep::0::timeInBed"
