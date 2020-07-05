@@ -155,19 +155,6 @@
           "logicalId": "summary::floors"
         },
         {
-          "name": "Durée sommeil",
-          "type": "info",
-          "subtype": "numeric",
-          "isVisible": 1,
-          "isHistorized": 1,
-          "configuration" : {
-            "historizeRound" : 2,
-            "path" : "sleep/date/#date#.json"
-          },
-          "unite" : "min",
-          "logicalId": "sleep::0::duration"
-        },
-        {
           "name": "Efficacité sommeil",
           "type": "info",
           "subtype": "numeric",
