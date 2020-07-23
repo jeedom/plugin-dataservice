@@ -30,7 +30,7 @@ class dataservice_fitbit {
         if($data[$cmd->getConfiguration('path')]['date'] && $data[$cmd->getConfiguration('path')]['time']){
           $data[$cmd->getConfiguration('path')]['datetime'] = $data[$cmd->getConfiguration('path')]['date'].' '.$data[$cmd->getConfiguration('path')]['time'];
         }
-        if($data[$cmd->getConfiguration('path')][0]['date'] && $data[$cmd->getConfiguration('path')][0]['time']){
+        if(isset($data[$cmd->getConfiguration('path')][0]) && $data[$cmd->getConfiguration('path')][0]['date'] && $data[$cmd->getConfiguration('path')][0]['time']){
           $data[$cmd->getConfiguration('path')][0]['datetime'] = $data[$cmd->getConfiguration('path')][0]['date'].' '.$data[$cmd->getConfiguration('path')]['time'];
         }
       }
