@@ -27,7 +27,7 @@ class dataservice_fitbit {
       if(!isset($data[$cmd->getConfiguration('path')])){
         $data[$cmd->getConfiguration('path')] = self::getData($cmd->getConfiguration('path'),$_eqLogic->getId());
         $data[$cmd->getConfiguration('path')]['datetime'] = date('Y-m-d H:i:s');
-        if($data[$cmd->getConfiguration('path')]['date'] && $data[$cmd->getConfiguration('path')]['time']){
+        if(isset($data[$cmd->getConfiguration('path')]['date']) && isset($data[$cmd->getConfiguration('path')]['time'])){
           $data[$cmd->getConfiguration('path')]['datetime'] = $data[$cmd->getConfiguration('path')]['date'].' '.$data[$cmd->getConfiguration('path')]['time'];
         }
         if(isset($data[$cmd->getConfiguration('path')][0]) && $data[$cmd->getConfiguration('path')][0]['date'] && $data[$cmd->getConfiguration('path')][0]['time']){
