@@ -7,7 +7,7 @@ sendVarToJS('eqType', $plugin->getId());
 $eqLogics = eqLogic::byType($plugin->getId());
 $services = dataservice::devicesParameters();
 uasort($services, function ($a, $b) {
-	return $a['name'] - $b['name'];
+	return @$a['name'] - $b['name'];
 });
 sendVarToJS('dataservice_services',$services);
 ?>
