@@ -120,9 +120,9 @@ sendVarToJS('dataservice_services',$services);
 								echo '<label class="col-sm-3 control-label">{{Lier}} '.$service['name'].' {{avec Jeedom}}</label>';
 								echo '<div class="col-sm-3">';
 								if(isset($service['oauth_multi_user']) && $service['oauth_multi_user']){
-									echo '<a class="btn btn-default bt_oauth" data-service="'.$key.'" data-multiuser="1" data-href="'.config::byKey('service::cloud::url').'/frontend/login.html">{{Lier}}</a>';
+									echo '<a class="btn btn-default bt_oauth" data-service="'.$key.'" data-multiuser="1" data-href="'.config::byKey('service::cloud::url').'/frontend/login.html"><i class="fas fa-link"></i> {{Lier}}</a>';
 								}else{
-									echo '<a class="btn btn-default bt_oauth" data-service="'.$key.'" data-multiuser="0" data-href="'.config::byKey('service::cloud::url').'/frontend/login.html">{{Lier}}</a>';
+									echo '<a class="btn btn-default bt_oauth" data-service="'.$key.'" data-multiuser="0" data-href="'.config::byKey('service::cloud::url').'/frontend/login.html"><i class="fas fa-link"></i> {{Lier}}</a>';
 								}
 								echo '</div>';
 								echo '</div>';
