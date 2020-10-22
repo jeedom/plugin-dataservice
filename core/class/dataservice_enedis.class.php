@@ -34,13 +34,19 @@ class dataservice_enedis {
     $data = self::getData('/metering_data/daily_consumption_max_power?start='.$start_date.'&end='.$end_date.'&usage_point_id='.$_eqLogic->getConfiguration('enedis::usage_point_id'));
     if(isset($data['meter_reading']) && isset($data['meter_reading']['interval_reading'])){
       $value = end($data['meter_reading']['interval_reading']);
-      $_eqLogic->checkAndUpdateCmd('consumption_max_power', $value['value'],$value['date']);
+      $_eqLogic->checkAndUpdateCmd('daily_consumption_max_power', $value['value'],$value['date']);
     }
     
     $data = self::getData('/metering_data/daily_production?start='.$start_date.'&end='.$end_date.'&usage_point_id='.$_eqLogic->getConfiguration('enedis::usage_point_id'));
     if(isset($data['meter_reading']) && isset($data['meter_reading']['interval_reading'])){
       $value = end($data['meter_reading']['interval_reading']);
       $_eqLogic->checkAndUpdateCmd('daily_production', $value['value'],$value['date']);
+    }
+    
+    $data = self::getData('/metering_data/daily_production_max_power?start='.$start_date.'&end='.$end_date.'&usage_point_id='.$_eqLogic->getConfiguration('enedis::usage_point_id'));
+    if(isset($data['meter_reading']) && isset($data['meter_reading']['interval_reading'])){
+      $value = end($data['meter_reading']['interval_reading']);
+      $_eqLogic->checkAndUpdateCmd('daily_production_max_power', $value['value'],$value['date']);
     }
   }
   
@@ -49,7 +55,7 @@ class dataservice_enedis {
     $request_http = new com_http($url);
     $request_http->setHeader(array('Content-Type: application/json','Autorization: '.sha512(mb_strtolower(config::byKey('market::username')).':'.config::byKey('market::password'))));
     $result = json_decode($request_http->exec(30,1),true);
-    if(isset($result['error'])){
+    if(isset($result['error']) && !in_array($result['error'],array('Not found'))){
       throw new \Exception($result['error'].' => '.$result['error_description']);
     }
     return $result;

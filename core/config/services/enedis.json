@@ -25,17 +25,19 @@
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 1,
+          "unite" :"Wh",
+          "generic_type":"CONSUMPTION",
           "logicalId": "daily_consumption"
         },
         {
-          "name": "Puissance Jour Max",
+          "name": "Consommation Puissance max",
           "type": "info",
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 1,
           "unite":"W",
           "generic_type":"POWER",
-          "logicalId": "consumption_max_power"
+          "logicalId": "daily_consumption_max_power"
         },
         {
           "name": "Production",
@@ -43,7 +45,18 @@
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 1,
-          "logicalId": "production_load_curve"
+          "unite" :"Wh",
+          "logicalId": "daily_production"
+        },
+        {
+          "name": "Production Puissance Max",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "unite":"W",
+          "generic_type":"POWER",
+          "logicalId": "daily_production_max_power"
         }
       ]
     }
