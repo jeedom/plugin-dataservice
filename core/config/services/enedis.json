@@ -20,14 +20,6 @@
           "logicalId": "refresh"
         },
         {
-          "name": "Consommation",
-          "type": "info",
-          "subtype": "numeric",
-          "isVisible": 1,
-          "isHistorized": 1,
-          "logicalId": "consumption_load_curve"
-        },
-        {
           "name": "Consommation Jour",
           "type": "info",
           "subtype": "numeric",
@@ -36,11 +28,13 @@
           "logicalId": "daily_consumption"
         },
         {
-          "name": "Consommation Jour Max",
+          "name": "Puissance Jour Max",
           "type": "info",
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 1,
+          "unite":"W",
+          "generic_type":"POWER",
           "logicalId": "consumption_max_power"
         },
         {
@@ -50,22 +44,6 @@
           "isVisible": 1,
           "isHistorized": 1,
           "logicalId": "production_load_curve"
-        },
-        {
-          "name": "Production Jour",
-          "type": "info",
-          "subtype": "numeric",
-          "isVisible": 1,
-          "isHistorized": 1,
-          "logicalId": "daily_production"
-        },
-        {
-          "name": "Production Jour Max",
-          "type": "info",
-          "subtype": "numeric",
-          "isVisible": 1,
-          "isHistorized": 1,
-          "logicalId": "production_max_power"
         }
       ]
     }
