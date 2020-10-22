@@ -10,7 +10,7 @@
     },
     "eqLogic" : {
       "configuration" : {
-        "cron" : "01 * * * *"
+        "cron" : "50 */4 * * *"
       },
       "commands" : [
         {
