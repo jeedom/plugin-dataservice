@@ -44,7 +44,11 @@
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 0,
-          "logicalId": "sun::altitude"
+          "logicalId": "sun::altitude",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
         },
         {
           "name": "Azimuth soleil",
@@ -52,7 +56,11 @@
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 0,
-          "logicalId": "sun::azimuth"
+          "logicalId": "sun::azimuth",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
         },
         {
           "name": "Levé de la lune",
@@ -76,7 +84,11 @@
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 0,
-          "logicalId": "moon::fraction"
+          "logicalId": "moon::fraction",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
         },
         {
           "name": "Angle de la lune",
@@ -84,7 +96,11 @@
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 0,
-          "logicalId": "moon::angle"
+          "logicalId": "moon::angle",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
         },
         {
           "name": "Phase de la lune",
@@ -92,7 +108,11 @@
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 0,
-          "logicalId": "moon::phase"
+          "logicalId": "moon::phase",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
         },
         {
           "name": "Lune toujours présente",
@@ -100,7 +120,11 @@
           "subtype": "binary",
           "isVisible": 1,
           "isHistorized": 0,
-          "logicalId": "moon::alwaysUp"
+          "logicalId": "moon::alwaysUp",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
         },
         {
           "name": "Lune toujours absente",
@@ -108,7 +132,11 @@
           "subtype": "binary",
           "isVisible": 1,
           "isHistorized": 0,
-          "logicalId": "moon::alwaysDown"
+          "logicalId": "moon::alwaysDown",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
         }
       ]
     }

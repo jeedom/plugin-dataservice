@@ -41,7 +41,11 @@
           "subtype": "numeric",
           "isVisible": 0,
           "isHistorized": 1,
-          "logicalId": "summary_id"
+          "logicalId": "summary_id",
+          "template" : {
+            "dashboard" : "line",
+            "mobile" : "line",
+          }
         },
         {
           "name": "Description",

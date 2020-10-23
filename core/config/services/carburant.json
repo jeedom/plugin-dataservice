@@ -29,7 +29,11 @@
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 0,
-          "logicalId": "SP95::cost"
+          "logicalId": "SP95::cost",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
         },
         {
           "name": "SP98 - Prix",
@@ -37,7 +41,11 @@
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 0,
-          "logicalId": "SP98::cost"
+          "logicalId": "SP98::cost",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
         },
         {
           "name": "Gazole - Prix",
@@ -45,7 +53,11 @@
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 0,
-          "logicalId": "Gazole::cost"
+          "logicalId": "Gazole::cost",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
         },
         {
           "name": "24/24",
@@ -53,7 +65,11 @@
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 0,
-          "logicalId": "24/24"
+          "logicalId": "24/24",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
         },
         {
           "name": "Adresse",

@@ -29,7 +29,11 @@
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 0,
-          "logicalId": "NO2-MAXJ0"
+          "logicalId": "NO2-MAXJ0",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
         },
         {
           "name": "NO2 Moyen",
@@ -37,7 +41,11 @@
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 0,
-          "logicalId": "NO2-MOYJ0"
+          "logicalId": "NO2-MOYJ0",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
         },
         {
           "name": "O3 Maximum",
@@ -45,7 +53,11 @@
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 0,
-          "logicalId": "O3-MAXJ0"
+          "logicalId": "O3-MAXJ0",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
         },
         {
           "name": "O3 Moyen",
@@ -53,7 +65,11 @@
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 0,
-          "logicalId": "O3-MOYJ0"
+          "logicalId": "O3-MOYJ0",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
         },
         {
           "name": "PM10 Maximum",
@@ -61,7 +77,11 @@
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 0,
-          "logicalId": "PM10-MAXJ0"
+          "logicalId": "PM10-MAXJ0",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
         },
         {
           "name": "PM10 Moyen",
@@ -69,7 +89,11 @@
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 0,
-          "logicalId": "PM10-MOYJ0"
+          "logicalId": "PM10-MOYJ0",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
         },
         {
           "name": "PM25 Maximum",
@@ -77,7 +101,11 @@
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 0,
-          "logicalId": "PM25-MAXJ0"
+          "logicalId": "PM25-MAXJ0",
+          "template" : {
+            "dashboard" : "line",
+            "mobile" : "line",
+          }
         },
         {
           "name": "PM25 Moyen",
@@ -85,7 +113,11 @@
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 0,
-          "logicalId": "PM25-MOYJ0"
+          "logicalId": "PM25-MOYJ0",
+          "template" : {
+            "dashboard" : "core::line",
+            "mobile" : "core::line"
+          }
         }
       ]
     }
