@@ -28,12 +28,29 @@ function dataservice_install() {
   if(config::byKey('info::nbOccupants') != ''){
     config::save('sharedata::nbOccupant',config::byKey('info::nbOccupant'),'dataservice');
   }
-  
-  
+  $cron = cron::byClassAndFunction('dataservice', 'updateData');
+  if (!is_object($cron)) {
+    $cron = new cron();
+    $cron->setClass('dataservice');
+    $cron->setFunction('updateData');
+    $cron->setEnable(1);
+    $cron->setSchedule('* * * * *');
+    $cron->setTimeout(1440);
+    $cron->save();
+  }
 }
 
 function dataservice_update() {
-  
+  $cron = cron::byClassAndFunction('dataservice', 'updateData');
+  if (!is_object($cron)) {
+    $cron = new cron();
+    $cron->setClass('dataservice');
+    $cron->setFunction('updateData');
+    $cron->setEnable(1);
+    $cron->setSchedule('* * * * *');
+    $cron->setTimeout(1440);
+    $cron->save();
+  }
 }
 
 
