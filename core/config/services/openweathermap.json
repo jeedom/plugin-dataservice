@@ -1,14 +1,15 @@
 {
   "openweathermap" : {
     "name" : "Météo",
+    "description" : "Service permetant de recuperer la météo (température, humidité, prevision, UV, neige, visibilité...) des coordonées geographique indiquées pour J, J+1, J+2, J+3, J+4 (il faut creer un équipement par jour voulu)",
     "translation" : 1,
     "configuration" : {
       "lat" : {
-        "name" : "Latitude",
+        "name" : "Latitude (XX.XXXXXX)",
         "type" : "input"
       },
       "long" : {
-        "name" : "Longitude",
+        "name" : "Longitude (XX.XXXXXX)",
         "type" : "input"
       },
       "day" : {

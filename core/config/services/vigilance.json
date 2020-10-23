@@ -1,6 +1,7 @@
 {
   "vigilance" : {
     "name" : "Vigilance",
+    "description" : "Service vous donnant le niveau de vigilance (couleur, crue, risque) pour le departement voulu", 
     "configuration" : {
       "departement" : {
         "name" : "Département",

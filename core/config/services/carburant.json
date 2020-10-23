@@ -1,6 +1,7 @@
 {
   "carburant" : {
     "name" : "Carburant France",
+    "description" : "Service vous donnant le prix de la station la plus proche des coordonées indiquées qui est reference par le gouvernement (il vous donne aussi l'adresse de celle-ci)",
     "configuration" : {
       "lat" : {
         "name" : "Latitude",
@@ -13,7 +14,7 @@
     },
     "eqLogic" : {
       "configuration" : {
-        "cron" : "11 * * * *"
+        "cron" : "01 04 * * *"
       },
       "commands" : [
         {

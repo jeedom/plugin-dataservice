@@ -1,13 +1,14 @@
 {
   "pollution_fr" : {
     "name" : "Prévision pollution France",
+    "description" : "Service valable uniquement en France donnant la pollution prévu pour le jour en cours au plus proche de vos coordonées (se base sur les données du gouvernement)",
     "configuration" : {
       "lat" : {
-        "name" : "Latitude",
+        "name" : "Latitude (XX.XXXXXX)",
         "type" : "input"
       },
       "long" : {
-        "name" : "Longitude",
+        "name" : "Longitude (XX.XXXXXX)",
         "type" : "input"
       }
     },

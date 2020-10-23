@@ -1,6 +1,7 @@
 {
   "vacancesscolaire" : {
     "name" : "Vacances scolaire",
+    "description" : "Service donnant le nom des vacances scolaire si vous êtes dans la periode de vacances scolaire",
     "configuration" : {
       "zone" : {
         "name" : "Zone",

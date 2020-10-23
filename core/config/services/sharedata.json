@@ -1,6 +1,7 @@
 {
   "sharedata" : {
     "name" : "Données communautaire",
+    "description" : "Service permetant la recuperation de données partagé par la communauté anonymisé se basant sur les coordonées géographique et un rayon autorisé",
     "configuration" : {
       "radius" : {
         "name" : "Rayon",

@@ -1,6 +1,7 @@
 {
   "tempo" : {
     "name" : "Tempo",
+    "description" : "Service vous donnant la couleur tempo EDF du jour et celle prévu pour le lendemain",
     "configuration" : {
     },
     "eqLogic" : {

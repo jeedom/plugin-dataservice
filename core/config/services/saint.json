@@ -1,6 +1,7 @@
 {
   "saint" : {
     "name" : "Saint du jour",
+    "description" : "Service vous donnant le nom du saint du jour et du lendemain (en version longue et courte)",
     "configuration" : {
       
     },
