@@ -41,6 +41,22 @@
           "isVisible": 1,
           "isHistorized": 0,
           "logicalId": "name"
+        },
+        {
+          "name": "J+1 Férié",
+          "type": "info",
+          "subtype": "binary",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "isHoliday_1"
+        },
+        {
+          "name": "J+1 Nom",
+          "type": "info",
+          "subtype": "string",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "name_1"
         }
       ]
     }

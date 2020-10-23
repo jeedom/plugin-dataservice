@@ -30,6 +30,22 @@
           "isVisible": 1,
           "isHistorized": 0,
           "logicalId": "full"
+        },
+        {
+          "name": "J+1 Court",
+          "type": "info",
+          "subtype": "string",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "short_1"
+        },
+        {
+          "name": "J+1 Long",
+          "type": "info",
+          "subtype": "string",
+          "isVisible": 1,
+          "isHistorized": 0,
+          "logicalId": "full_1"
         }
       ]
     }
