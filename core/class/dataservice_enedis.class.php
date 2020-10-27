@@ -37,16 +37,22 @@ class dataservice_enedis {
       $_eqLogic->checkAndUpdateCmd('daily_consumption_max_power', $value['value'],$value['date']);
     }
     
-    $data = self::getData('/metering_data/daily_production?start='.$start_date.'&end='.$end_date.'&usage_point_id='.$_eqLogic->getConfiguration('enedis::usage_point_id'));
-    if(isset($data['meter_reading']) && isset($data['meter_reading']['interval_reading'])){
-      $value = end($data['meter_reading']['interval_reading']);
-      $_eqLogic->checkAndUpdateCmd('daily_production', $value['value'],$value['date']);
+    $cmd = $_eqLogic->getCmd(null,'daily_production');
+    if(is_object($cmd)){
+      $data = self::getData('/metering_data/daily_production?start='.$start_date.'&end='.$end_date.'&usage_point_id='.$_eqLogic->getConfiguration('enedis::usage_point_id'));
+      if(isset($data['meter_reading']) && isset($data['meter_reading']['interval_reading'])){
+        $value = end($data['meter_reading']['interval_reading']);
+        $_eqLogic->checkAndUpdateCmd($cmd, $value['value'],$value['date']);
+      }
     }
     
-    $data = self::getData('/metering_data/daily_production_max_power?start='.$start_date.'&end='.$end_date.'&usage_point_id='.$_eqLogic->getConfiguration('enedis::usage_point_id'));
-    if(isset($data['meter_reading']) && isset($data['meter_reading']['interval_reading'])){
-      $value = end($data['meter_reading']['interval_reading']);
-      $_eqLogic->checkAndUpdateCmd('daily_production_max_power', $value['value'],$value['date']);
+    $cmd = $_eqLogic->getCmd(null,'daily_production_max_power');
+    if(is_object($cmd)){
+      $data = self::getData('/metering_data/daily_production_max_power?start='.$start_date.'&end='.$end_date.'&usage_point_id='.$_eqLogic->getConfiguration('enedis::usage_point_id'));
+      if(isset($data['meter_reading']) && isset($data['meter_reading']['interval_reading'])){
+        $value = end($data['meter_reading']['interval_reading']);
+        $_eqLogic->checkAndUpdateCmd($cmd, $value['value'],$value['date']);
+      }
     }
   }
   
