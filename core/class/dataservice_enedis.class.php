@@ -56,7 +56,7 @@ class dataservice_enedis {
     $request_http->setHeader(array('Content-Type: application/json','Autorization: '.sha512(mb_strtolower(config::byKey('market::username')).':'.config::byKey('market::password'))));
     $result = json_decode($request_http->exec(30,1),true);
     if(isset($result['error']) && !in_array($result['error'],array('Not found'))){
-      throw new \Exception($result['error'].' => '.$result['error_description']);
+      throw new \Exception($_path.' : '.$result['error'].' => '.$result['error_description']);
     }
     return $result;
   }
