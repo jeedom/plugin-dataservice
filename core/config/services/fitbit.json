@@ -1,7 +1,7 @@
 {
   "fitbit" : {
     "name" : "Fitbit",
-    "description" : "Service vous permetant de récuperer les informations d'un compate Fitbit",
+    "description" : "Service vous permetant de récuperer les informations de votre compate Fitbit",
     "oauth" : true,
     "oauth_multi_user" : true,
     "eqLogic" : {
