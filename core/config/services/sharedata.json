@@ -1,7 +1,7 @@
 {
   "sharedata" : {
     "name" : "Données communautaire",
-    "description" : "Service permetant la recuperation de données partagé par la communauté anonymisé se basant sur les coordonées géographique et un rayon autorisé",
+    "description" : "Service permetant la recuperation de données partagées par la communauté, dans un rayon autour de coordonées géographique. Ces données sont anonymisées et permettent une comparaison de certains indicateurs (consommation électrique, ...)",
     "configuration" : {
       "radius" : {
         "name" : "Rayon",
