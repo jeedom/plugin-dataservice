@@ -35,6 +35,7 @@
         "Activer": "アクティブ",
         "Visible": "目に見えます",
         "Service": "",
+        "Description": "説明",
         "Lier": "",
         "avec Jeedom": "",
         "Ajouter une commande": "コマンドの追加",
@@ -85,5 +86,8 @@
         "Consommation journaliere eau": "",
         "Erreur sur la récuperation des données : ": "",
         "Erreur sur ": "エラーオン"
+    },
+    "info.json": {
+        "Plugin pour la récupération de diverse données (ejp, vacance, saint du jour...) et l'envoi de diverse données (sms, mail) ainsi que le partage communautaire de données (température, humidité...)": ""
     }
 }
