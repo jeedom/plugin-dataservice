@@ -1,7 +1,7 @@
 {
   "carburant" : {
     "name" : "Carburant France",
-    "description" : "Service vous donnant le prix de la station la plus proche des coordonées indiquées qui est reference par le gouvernement (il vous donne aussi l'adresse de celle-ci)",
+    "description" : "Service vous donnant le prix du carburant de la station la plus proche des coordonées indiquées (il vous donne aussi l'adresse de celle-ci) - Source gouvernementale",
     "configuration" : {
       "lat" : {
         "name" : "Latitude",
