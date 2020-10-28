@@ -1,7 +1,7 @@
 {
   "myip" : {
-    "name" : "Mon ip",
-    "description" : "Service vous donnant juste votre IP externe",
+    "name" : "Mon adresse ip",
+    "description" : "Service indiquant votre adresse IP externe",
     "configuration" : {
       
     },
