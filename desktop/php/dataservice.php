@@ -149,6 +149,23 @@ sendVarToJS('dataservice_services',$services);
 										echo '<input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="'.$key.'::'.$key2.'"/>';
 										echo '</div>';
 										echo '</div>';
+									}elseif($value['type'] == 'number'){
+										$option = '';
+										if(isset($value['max'])){
+											$option .= ' max="'.$value['max'].'"';
+										}
+										if(isset($value['min'])){
+											$option .= ' min="'.$value['min'].'"';
+										}
+										if(isset($value['step'])){
+											$option .= ' step="'.$value['step'].'"';
+										}
+										echo '<div class="form-group">';
+										echo '<label class="col-sm-3 control-label">'.$value['name'].'</label>';
+										echo '<div class="col-sm-3">';
+										echo '<input type="number" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="'.$key.'::'.$key2.'" '.$option.' />';
+										echo '</div>';
+										echo '</div>';
 									}elseif($value['type'] == 'select'){
 										echo '<div class="form-group">';
 										echo '<label class="col-sm-3 control-label">'.$value['name'].'</label>';
