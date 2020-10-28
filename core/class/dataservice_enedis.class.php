@@ -22,14 +22,46 @@ require_once __DIR__  . '/../../../../core/php/core.inc.php';
 class dataservice_enedis {
   
   public static function refreshData($_eqLogic){
-    $start_date = date('Y-m-d',strtotime('now -1 day'));
+    $start_date = date('Y-m-d',strtotime('first day of January'));
     $end_date = date('Y-m-d');
-    
     $data = self::getData('/metering_data/daily_consumption?start='.$start_date.'&end='.$end_date.'&usage_point_id='.$_eqLogic->getConfiguration('enedis::usage_point_id'));
     if(isset($data['meter_reading']) && isset($data['meter_reading']['interval_reading'])){
       $value = end($data['meter_reading']['interval_reading']);
       $_eqLogic->checkAndUpdateCmd('daily_consumption', $value['value'],$value['date']);
+      $year = 0;
+      $month = 0;
+      foreach ($data['meter_reading']['interval_reading'] as $value) {
+        if(strtotime($value['date']) >= strtotime('first day of this month')){
+          $month += $value['value'];
+        }
+        $year += $value['value'];
+      }
+      $_eqLogic->checkAndUpdateCmd('yearly_consumption', $year);
+      $_eqLogic->checkAndUpdateCmd('monthly_consumption', $month);
     }
+    
+    try {
+      $data = self::getData('/metering_data/daily_production?start='.$start_date.'&end='.$end_date.'&usage_point_id='.$_eqLogic->getConfiguration('enedis::usage_point_id'));
+      if(isset($data['meter_reading']) && isset($data['meter_reading']['interval_reading'])){
+        $value = end($data['meter_reading']['interval_reading']);
+        $_eqLogic->checkAndUpdateCmd('daily_production', $value['value'],$value['date']);
+        $year = 0;
+        $month = 0;
+        foreach ($data['meter_reading']['interval_reading'] as $value) {
+          if(strtotime($value['date']) >= strtotime('first day of this month')){
+            $month += $value['value'];
+          }
+          $year += $value['value'];
+        }
+        $_eqLogic->checkAndUpdateCmd('yearly_production', $year);
+        $_eqLogic->checkAndUpdateCmd('monthly_production', $month);
+      }
+    } catch (\Exception $e) {
+      
+    }
+    
+    $start_date = date('Y-m-d',strtotime('now -1 day'));
+    $end_date = date('Y-m-d');
     
     $data = self::getData('/metering_data/daily_consumption_max_power?start='.$start_date.'&end='.$end_date.'&usage_point_id='.$_eqLogic->getConfiguration('enedis::usage_point_id'));
     if(isset($data['meter_reading']) && isset($data['meter_reading']['interval_reading'])){
@@ -37,22 +69,14 @@ class dataservice_enedis {
       $_eqLogic->checkAndUpdateCmd('daily_consumption_max_power', $value['value'],$value['date']);
     }
     
-    $cmd = $_eqLogic->getCmd(null,'daily_production');
-    if(is_object($cmd)){
-      $data = self::getData('/metering_data/daily_production?start='.$start_date.'&end='.$end_date.'&usage_point_id='.$_eqLogic->getConfiguration('enedis::usage_point_id'));
-      if(isset($data['meter_reading']) && isset($data['meter_reading']['interval_reading'])){
-        $value = end($data['meter_reading']['interval_reading']);
-        $_eqLogic->checkAndUpdateCmd($cmd, $value['value'],$value['date']);
-      }
-    }
-    
-    $cmd = $_eqLogic->getCmd(null,'daily_production_max_power');
-    if(is_object($cmd)){
+    try {
       $data = self::getData('/metering_data/daily_production_max_power?start='.$start_date.'&end='.$end_date.'&usage_point_id='.$_eqLogic->getConfiguration('enedis::usage_point_id'));
       if(isset($data['meter_reading']) && isset($data['meter_reading']['interval_reading'])){
         $value = end($data['meter_reading']['interval_reading']);
-        $_eqLogic->checkAndUpdateCmd($cmd, $value['value'],$value['date']);
+        $_eqLogic->checkAndUpdateCmd('daily_production_max_power', $value['value'],$value['date']);
       }
+    } catch (\Exception $e) {
+      
     }
   }
   

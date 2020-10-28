@@ -31,6 +31,26 @@
           "logicalId": "daily_consumption"
         },
         {
+          "name": "Consommation Mois",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "unite" :"Wh",
+          "generic_type":"CONSUMPTION",
+          "logicalId": "monthly_consumption"
+        },
+        {
+          "name": "Consommation Année",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "unite" :"Wh",
+          "generic_type":"CONSUMPTION",
+          "logicalId": "yearly_consumption"
+        },
+        {
           "name": "Consommation Puissance max",
           "type": "info",
           "subtype": "numeric",
@@ -41,13 +61,31 @@
           "logicalId": "daily_consumption_max_power"
         },
         {
-          "name": "Production",
+          "name": "Production Jour",
           "type": "info",
           "subtype": "numeric",
           "isVisible": 1,
           "isHistorized": 1,
           "unite" :"Wh",
           "logicalId": "daily_production"
+        },
+        {
+          "name": "Production Mois",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "unite" :"Wh",
+          "logicalId": "monthly_production"
+        },
+        {
+          "name": "Production Année",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "unite" :"Wh",
+          "logicalId": "yearly_production"
         },
         {
           "name": "Production Puissance Max",
