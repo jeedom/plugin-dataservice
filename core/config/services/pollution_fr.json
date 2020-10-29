@@ -104,7 +104,7 @@
           "logicalId": "PM25-MAXJ0",
           "template" : {
             "dashboard" : "line",
-            "mobile" : "line",
+            "mobile" : "line"
           }
         },
         {
