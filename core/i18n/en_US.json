@@ -35,6 +35,7 @@
         "Activer": "Activate",
         "Visible": "Visible",
         "Service": "Service",
+        "Description": "Description",
         "Lier": "Bind",
         "avec Jeedom": "with Jeedom",
         "Ajouter une commande": "Add a command",
@@ -85,5 +86,8 @@
         "Consommation journaliere eau": "Daily water consumption",
         "Erreur sur la récuperation des données : ": "Data recovery error:",
         "Erreur sur ": "Error on"
+    },
+    "info.json": {
+        "Plugin pour la récupération de diverse données (ejp, vacance, saint du jour...) et l'envoi de diverse données (sms, mail) ainsi que le partage communautaire de données (température, humidité...)": "Plugin for the recovery of various data (ejp, vacancy, saint of the day ...) and the sending of various data (sms, mail) as well as the community sharing of data (temperature, humidity ...)"
     }
 }

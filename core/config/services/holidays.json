@@ -1,7 +1,7 @@
 {
   "holidays" : {
-    "name" : "Jour ferié",
-    "description" : "Service vous indiquant si le jour en cours ou le lendemain est un jour ferié, et si oui le nom de celui-ci. Vous pouvez voir <a target='_blank' href='https://www.npmjs.com/package/date-holidays#supported-countries-states-regions'>ici</a> les differentes configuration possible",
+    "name" : "Jour férié",
+    "description" : "Service vous indiquant si le jour en cours ou le lendemain est un jour férié, et si oui, le nom de celui-ci. Vous pouvez voir <a target='_blank' href='https://www.npmjs.com/package/date-holidays#supported-countries-states-regions'>ici</a> les differentes configuration possible",
     "configuration" : {
       "country" : {
         "name" : "Pays (FR,US...)",

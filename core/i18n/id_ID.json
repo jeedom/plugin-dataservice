@@ -35,6 +35,7 @@
         "Activer": "Mengaktifkan",
         "Visible": "Terlihat",
         "Service": "",
+        "Description": "Deskripsi",
         "Lier": "",
         "avec Jeedom": "",
         "Ajouter une commande": "Tambahan pesanan",
@@ -85,5 +86,8 @@
         "Consommation journaliere eau": "",
         "Erreur sur la récuperation des données : ": "",
         "Erreur sur ": "Error"
+    },
+    "info.json": {
+        "Plugin pour la récupération de diverse données (ejp, vacance, saint du jour...) et l'envoi de diverse données (sms, mail) ainsi que le partage communautaire de données (température, humidité...)": ""
     }
 }
