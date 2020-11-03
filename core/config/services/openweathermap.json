@@ -44,7 +44,7 @@
           "logicalId": "summary_id",
           "template" : {
             "dashboard" : "line",
-            "mobile" : "line",
+            "mobile" : "line"
           }
         },
         {
