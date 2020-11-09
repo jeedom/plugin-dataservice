@@ -11,7 +11,7 @@
     },
     "eqLogic" : {
       "configuration" : {
-        "cron" : "50 */4 * * *"
+        "cron" : "5 1 * * *"
       },
       "commands" : [
         {
@@ -19,6 +19,16 @@
           "type": "action",
           "subtype": "other",
           "logicalId": "refresh"
+        },
+        {
+          "name": "Consommation horaire",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "unite" :"Wh",
+          "generic_type":"CONSUMPTION",
+          "logicalId": "consumption_load_curve"
         },
         {
           "name": "Consommation Jour",
@@ -59,6 +69,15 @@
           "unite":"W",
           "generic_type":"POWER",
           "logicalId": "daily_consumption_max_power"
+        },
+        {
+          "name": "Production horaire",
+          "type": "info",
+          "subtype": "numeric",
+          "isVisible": 1,
+          "isHistorized": 1,
+          "unite" :"Wh",
+          "logicalId": "production_load_curve"
         },
         {
           "name": "Production Jour",
