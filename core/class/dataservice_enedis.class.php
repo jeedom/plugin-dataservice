@@ -81,6 +81,7 @@ class dataservice_enedis {
     
     try {
       $data = self::getData('/metering_data/consumption_load_curve?start='.$start_date.'&end='.$end_date.'&usage_point_id='.$_eqLogic->getConfiguration('enedis::usage_point_id'));
+      var_dump($data);
       foreach ($data['meter_reading']['interval_reading'] as $value) {
         $_eqLogic->checkAndUpdateCmd('consumption_load_curve', $value['value'],$value['date']);
       }
@@ -103,7 +104,7 @@ class dataservice_enedis {
     $request_http = new com_http($url);
     $request_http->setHeader(array('Content-Type: application/json','Autorization: '.sha512(mb_strtolower(config::byKey('market::username')).':'.config::byKey('market::password'))));
     $result = json_decode($request_http->exec(30,1),true);
-    if(isset($result['error']) && !in_array($result['error'],array('Not found'))){
+    if(isset($result['error']) && !in_array($result['error'],array('Not found')) && isset($result['error_description'])){
       throw new \Exception($_path.' : '.$result['error'].' => '.$result['error_description']);
     }
     return $result;
