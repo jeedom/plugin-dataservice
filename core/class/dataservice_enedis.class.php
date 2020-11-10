@@ -81,7 +81,6 @@ class dataservice_enedis {
     
     try {
       $data = self::getData('/metering_data/consumption_load_curve?start='.$start_date.'&end='.$end_date.'&usage_point_id='.$_eqLogic->getConfiguration('enedis::usage_point_id'));
-      var_dump($data);
       foreach ($data['meter_reading']['interval_reading'] as $value) {
         $_eqLogic->checkAndUpdateCmd('consumption_load_curve', $value['value'],$value['date']);
       }
