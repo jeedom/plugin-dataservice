@@ -264,6 +264,7 @@ class dataservice extends eqLogic {
     }
     $request_http = new com_http(trim($url,'&'));
     $request_http->setHeader(array('Autorization: '.sha512(mb_strtolower(config::byKey('market::username')).':'.config::byKey('market::password'))));
+    
     $datas = json_decode($request_http->exec(10),true);
     if($datas['state'] != 'ok'){
       throw new \Exception(__('Erreur sur la récuperation des données : ',__FILE__).json_encode($datas));
