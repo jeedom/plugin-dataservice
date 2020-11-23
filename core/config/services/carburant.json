@@ -30,6 +30,10 @@
           "isVisible": 1,
           "isHistorized": 0,
           "logicalId": "SP95::cost",
+          "unite" : "€",
+          "configuration":{
+            "historizeRound" : 2
+          },
           "template" : {
             "dashboard" : "core::line",
             "mobile" : "core::line"
@@ -42,6 +46,10 @@
           "isVisible": 1,
           "isHistorized": 0,
           "logicalId": "SP98::cost",
+          "unite" : "€",
+          "configuration":{
+            "historizeRound" : 2
+          },
           "template" : {
             "dashboard" : "core::line",
             "mobile" : "core::line"
@@ -54,6 +62,10 @@
           "isVisible": 1,
           "isHistorized": 0,
           "logicalId": "Gazole::cost",
+          "unite" : "€",
+          "configuration":{
+            "historizeRound" : 2
+          },
           "template" : {
             "dashboard" : "core::line",
             "mobile" : "core::line"
