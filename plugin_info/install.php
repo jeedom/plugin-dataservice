@@ -55,7 +55,10 @@ function dataservice_update() {
 
 
 function dataservice_remove() {
-  
+  $cron = cron::byClassAndFunction('dataservice', 'updateData');
+  if (is_object($cron)) {
+    $cron->remove();
+  }
 }
 
 ?>
