@@ -1,16 +1,16 @@
 {
     "plugins\/dataservice\/plugin_info\/configuration.php": {
-        "Envoyer configuration au market": "",
+        "Envoyer configuration au market": "Envoyer configuration au market",
         "Envoyer": "送ります",
-        "Partage de données": "",
-        "Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data": "",
-        "Configuration envoyée avec succès": ""
+        "Partage de données": "Partage de données",
+        "Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data": "Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data",
+        "Configuration envoyée avec succès": "Configuration envoyée avec succès"
     },
     "plugins\/dataservice\/desktop\/php\/panel.php": {
         "401 - Accès non autorisé": "401-不正アクセス",
-        "Je veux comparer ma": "",
-        "Avec": "",
-        "Dans un rayon de": "",
+        "Je veux comparer ma": "Je veux comparer ma",
+        "Avec": "Avec",
+        "Dans un rayon de": "Dans un rayon de",
         "Période": "期間",
         "Valider": "検証"
     },
@@ -19,7 +19,7 @@
         "Gestion": "管理",
         "Ajouter": "加えます",
         "Configuration": "コンフィギュレーション",
-        "Mes datas": "",
+        "Mes datas": "Mes datas",
         "Rechercher": "検索",
         "Configuration avancée": "高度な構成",
         "Dupliquer": "重複",
@@ -34,17 +34,17 @@
         "Catégorie": "カテゴリ",
         "Activer": "アクティブ",
         "Visible": "目に見えます",
-        "Service": "",
+        "Service": "Service",
         "Description": "説明",
-        "Lier": "",
-        "avec Jeedom": "",
+        "Lier": "Lier",
+        "avec Jeedom": "avec Jeedom",
         "Ajouter une commande": "コマンドの追加",
         "Nom": "表題",
         "Type": "タイプ",
         "Options": "オプション",
         "Paramètres": "設定",
         "Action": "アクション",
-        "Cron de mise à jour": ""
+        "Cron de mise à jour": "Cron de mise à jour"
     },
     "plugins\/dataservice\/desktop\/js\/dataservice.js": {
         "Nom": "表題",
@@ -55,7 +55,7 @@
         "Min": "低いです",
         "Max": "マックス",
         "Tester": "テスト",
-        "Envoyer à": ""
+        "Envoyer à": "Envoyer à"
     },
     "plugins\/dataservice\/core\/php\/jeeDataservice.php": {
         "Vous n\\'etes pas autorisé à effectuer cette action": "このアクションを実行する権限がありません"
@@ -65,29 +65,29 @@
         "Aucune méthode correspondante à : ": "以下に対応するメソッドはありません："
     },
     "plugins\/dataservice\/core\/class\/dataservice_fitbit.class.php": {
-        "[Fitbit] Erreur lors de la récuperation des données : ": ""
+        "[Fitbit] Erreur lors de la récuperation des données : ": "[Fitbit] Erreur lors de la récuperation des données :"
     },
     "plugins\/dataservice\/core\/class\/dataservice_twilio.class.php": {
-        "Erreur sur la récuperation des données : ": "",
+        "Erreur sur la récuperation des données : ": "Erreur sur la récuperation des données :",
         "Message de ": "メッセージ"
     },
     "plugins\/dataservice\/core\/class\/dataservice_mail.class.php": {
-        "Erreur sur la récuperation des données : ": ""
+        "Erreur sur la récuperation des données : ": "Erreur sur la récuperation des données :"
     },
     "plugins\/dataservice\/core\/class\/dataservice.class.php": {
         "Température extérieure": "屋外の気温",
-        "Humidité extérieure": "",
-        "Luminosité exterieure": "",
-        "Pression extérieure": "",
-        "Pluie": "",
-        "Vent": "",
-        "Consommation journaliere éléctrique": "",
-        "Consommation journaliere gaz": "",
-        "Consommation journaliere eau": "",
-        "Erreur sur la récuperation des données : ": "",
+        "Humidité extérieure": "Humidité extérieure",
+        "Luminosité exterieure": "Luminosité exterieure",
+        "Pression extérieure": "Pression extérieure",
+        "Pluie": "Pluie",
+        "Vent": "Vent",
+        "Consommation journaliere éléctrique": "Consommation journaliere éléctrique",
+        "Consommation journaliere gaz": "Consommation journaliere gaz",
+        "Consommation journaliere eau": "Consommation journaliere eau",
+        "Erreur sur la récuperation des données : ": "Erreur sur la récuperation des données :",
         "Erreur sur ": "エラーオン"
     },
     "info.json": {
-        "Plugin pour la récupération de diverse données (ejp, vacance, saint du jour...) et l'envoi de diverse données (sms, mail) ainsi que le partage communautaire de données (température, humidité...)": ""
+        "Plugin pour la récupération de diverse données (ejp, vacance, saint du jour...) et l'envoi de diverse données (sms, mail) ainsi que le partage communautaire de données (température, humidité...)": "Plugin pour la récupération de diverse données (ejp, vacance, saint du jour...) et l'envoi de diverse données (sms, mail) ainsi que le partage communautaire de données (température, humidité...)"
     }
 }
