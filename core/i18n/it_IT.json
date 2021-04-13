@@ -1,16 +1,16 @@
 {
     "plugins\/dataservice\/plugin_info\/configuration.php": {
-        "Envoyer configuration au market": "",
+        "Envoyer configuration au market": "Envoyer configuration au market",
         "Envoyer": "Invia",
-        "Partage de données": "",
-        "Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data": "",
-        "Configuration envoyée avec succès": ""
+        "Partage de données": "Partage de données",
+        "Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data": "Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data",
+        "Configuration envoyée avec succès": "Configuration envoyée avec succès"
     },
     "plugins\/dataservice\/desktop\/php\/panel.php": {
         "401 - Accès non autorisé": "401 - Accesso non autorizzato",
-        "Je veux comparer ma": "",
-        "Avec": "",
-        "Dans un rayon de": "",
+        "Je veux comparer ma": "Je veux comparer ma",
+        "Avec": "Avec",
+        "Dans un rayon de": "Dans un rayon de",
         "Période": "Periodo",
         "Valider": "Convalidare"
     },
@@ -19,7 +19,7 @@
         "Gestion": "Gestione",
         "Ajouter": "Aggiungi",
         "Configuration": "Configurazione",
-        "Mes datas": "",
+        "Mes datas": "Mes datas",
         "Rechercher": "Ricercare",
         "Configuration avancée": "Configurazione avanzata",
         "Dupliquer": "Duplicato",
@@ -34,17 +34,17 @@
         "Catégorie": "Categoria",
         "Activer": "Attivare",
         "Visible": "Visibile",
-        "Service": "",
+        "Service": "Service",
         "Description": "Descrizione",
-        "Lier": "",
-        "avec Jeedom": "",
+        "Lier": "Lier",
+        "avec Jeedom": "avec Jeedom",
         "Ajouter une commande": "Aggiungi un comando",
         "Nom": "Nome",
         "Type": "Tipo",
         "Options": "Opzioni",
         "Paramètres": "Impostazioni",
         "Action": "Azione",
-        "Cron de mise à jour": ""
+        "Cron de mise à jour": "Cron de mise à jour"
     },
     "plugins\/dataservice\/desktop\/js\/dataservice.js": {
         "Nom": "Nome",
@@ -52,10 +52,10 @@
         "Historiser": "Storicizza",
         "Inverser": "Inverti",
         "Unité": "Unità",
-        "Min": "",
-        "Max": "",
+        "Min": "Min",
+        "Max": "Max",
         "Tester": "Prova",
-        "Envoyer à": ""
+        "Envoyer à": "Envoyer à"
     },
     "plugins\/dataservice\/core\/php\/jeeDataservice.php": {
         "Vous n\\'etes pas autorisé à effectuer cette action": "Non sei autorizzato a eseguire questa azione"
@@ -65,29 +65,29 @@
         "Aucune méthode correspondante à : ": "Nessun metodo corrispondente a:"
     },
     "plugins\/dataservice\/core\/class\/dataservice_fitbit.class.php": {
-        "[Fitbit] Erreur lors de la récuperation des données : ": ""
+        "[Fitbit] Erreur lors de la récuperation des données : ": "[Fitbit] Erreur lors de la récuperation des données :"
     },
     "plugins\/dataservice\/core\/class\/dataservice_twilio.class.php": {
-        "Erreur sur la récuperation des données : ": "",
+        "Erreur sur la récuperation des données : ": "Erreur sur la récuperation des données :",
         "Message de ": "Messaggio da"
     },
     "plugins\/dataservice\/core\/class\/dataservice_mail.class.php": {
-        "Erreur sur la récuperation des données : ": ""
+        "Erreur sur la récuperation des données : ": "Erreur sur la récuperation des données :"
     },
     "plugins\/dataservice\/core\/class\/dataservice.class.php": {
         "Température extérieure": "Temperatura esterna",
-        "Humidité extérieure": "",
-        "Luminosité exterieure": "",
-        "Pression extérieure": "",
-        "Pluie": "",
-        "Vent": "",
-        "Consommation journaliere éléctrique": "",
-        "Consommation journaliere gaz": "",
-        "Consommation journaliere eau": "",
-        "Erreur sur la récuperation des données : ": "",
+        "Humidité extérieure": "Humidité extérieure",
+        "Luminosité exterieure": "Luminosité exterieure",
+        "Pression extérieure": "Pression extérieure",
+        "Pluie": "Pluie",
+        "Vent": "Vent",
+        "Consommation journaliere éléctrique": "Consommation journaliere éléctrique",
+        "Consommation journaliere gaz": "Consommation journaliere gaz",
+        "Consommation journaliere eau": "Consommation journaliere eau",
+        "Erreur sur la récuperation des données : ": "Erreur sur la récuperation des données :",
         "Erreur sur ": "Errore acceso"
     },
     "info.json": {
-        "Plugin pour la récupération de diverse données (ejp, vacance, saint du jour...) et l'envoi de diverse données (sms, mail) ainsi que le partage communautaire de données (température, humidité...)": ""
+        "Plugin pour la récupération de diverse données (ejp, vacance, saint du jour...) et l'envoi de diverse données (sms, mail) ainsi que le partage communautaire de données (température, humidité...)": "Plugin pour la récupération de diverse données (ejp, vacance, saint du jour...) et l'envoi de diverse données (sms, mail) ainsi que le partage communautaire de données (température, humidité...)"
     }
 }
