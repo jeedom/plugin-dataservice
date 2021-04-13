@@ -137,25 +137,6 @@ class dataservice extends eqLogic {
     return $return;
   }
   
-  
-  public static function tts($_filename,$_text) {
-    try {
-      $url = config::byKey('service::cloud::url').'/user/';
-      $url .= sha512(mb_strtolower(config::byKey('market::username')).':'.config::byKey('market::password'));
-      $url .= '/service/tts';
-      $url .= '?lang='.config::byKey('language', 'core', 'fr_FR');
-      $url .= '&text='.urlencode($_text);
-      $request_http = new com_http(trim($url,'&'));
-      $datas = $request_http->exec();
-      if(is_json($datas)){
-        throw new \Exception(__('Erreur sur la récuperation des données : ',__FILE__).$datas);
-      }
-      file_put_contents($_filename, $datas);
-    } catch (Exception $e) {
-      log::add('dataservice', 'error', '[TTS] ' . $e->getMessage());
-    }
-  }
-  
   public static function updateData(){
     foreach (eqLogic::byType('dataservice',true) as $eqLogic) {
       $cron = $eqLogic->getConfiguration('cron');
