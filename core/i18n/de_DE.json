@@ -64,15 +64,9 @@
         "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
         "Aucune méthode correspondante à : ": "Keine Methode entsprechend:"
     },
-    "plugins\/dataservice\/core\/class\/dataservice_fitbit.class.php": {
-        "[Fitbit] Erreur lors de la récuperation des données : ": "[Fitbit] Fehler beim Abrufen der Daten:"
-    },
     "plugins\/dataservice\/core\/class\/dataservice_twilio.class.php": {
         "Erreur sur la récuperation des données : ": "Datenwiederherstellungsfehler:",
         "Message de ": "Nachricht"
-    },
-    "plugins\/dataservice\/core\/class\/dataservice_mail.class.php": {
-        "Erreur sur la récuperation des données : ": "Datenwiederherstellungsfehler:"
     },
     "plugins\/dataservice\/core\/class\/dataservice.class.php": {
         "Température extérieure": "Außentemperatur",
