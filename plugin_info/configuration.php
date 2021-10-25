@@ -42,7 +42,7 @@ if (!isConnect()) {
           $name .=','.$key;
         }
       }
-      $name .= ')'
+      $name .= ')';
       echo '<div class="form-group">';
       echo '<label class="col-lg-2 control-label">'.$name.'</label>';
       echo '<div class="col-lg-3">';
