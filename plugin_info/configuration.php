@@ -31,42 +31,11 @@ if (!isConnect()) {
         <a class="btn btn-default" id="bt_sendConfigToMarket"><i class="fa fa-paper-plane" aria-hidden="true"></i> {{Envoyer}}</a>
       </div>
     </div>
-    <legend>{{Partage de données}}</legend>
-    <div class="alert alert-info">{{Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data}}</div>
-    <?php
-    $shareDataService = dataservice::getShareDataService();
-    foreach ($shareDataService as $key => $value) {
-      $name = $value['name'].' ('.$value['unit'];
-      if(isset($value['convert'])){
-        foreach ($value['convert'] as $key => $value) {
-          $name .=','.$key;
-        }
-      }
-      $name .= ')';
-      echo '<div class="form-group">';
-      echo '<label class="col-lg-2 control-label">'.$name.'</label>';
-      echo '<div class="col-lg-3">';
-      echo '<div class="input-group">';
-      echo '<input class="configKey form-control" data-l1key="'.$value['key'].'"/>';
-      echo '<span class="input-group-btn">';
-      echo '<a class="btn btn-default listCmdInfo roundedRight"><i class="fas fa-list-alt"></i></a>';
-      echo '</span>';
-      echo '</div>';
-      echo '</div>';
-      echo '</div>';
-    }
-    ?>
+   
   </fieldset>
 </form>
 
 <script>
-$("#configureShareData").off('click','.listCmdInfo').on('click','.listCmdInfo', function () {
-  var el = $(this).closest('.form-group').find('.configKey');
-  jeedom.cmd.getSelectModal({cmd: {type: 'info'}}, function (result) {
-    el.value(result.human);
-  });
-});
-
 $('#bt_sendConfigToMarket').on('click', function () {
   $.ajax({
     type: "POST",
