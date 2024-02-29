@@ -2,17 +2,7 @@
     "plugins\/dataservice\/plugin_info\/configuration.php": {
         "Envoyer configuration au market": "Send configuration to market",
         "Envoyer": "Send",
-        "Partage de données": "Data sharing",
-        "Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data": "Data sharing allows you to send certain data (which you choose) to Jeedom, which is anonymized and allows you to compare this data with one another. In exchange for this data sharing Jeedom will increase your request quota to the data service",
         "Configuration envoyée avec succès": "Configuration successfully sent"
-    },
-    "plugins\/dataservice\/desktop\/php\/panel.php": {
-        "401 - Accès non autorisé": "401 - Unauthorized access",
-        "Je veux comparer ma": "I want to compare my",
-        "Avec": "With",
-        "Dans un rayon de": "Within",
-        "Période": "Period",
-        "Valider": "Validate"
     },
     "plugins\/dataservice\/desktop\/php\/dataservice.php": {
         "401 - Accès non autorisé": "401 - Unauthorized access",
@@ -69,17 +59,8 @@
         "Message de ": "Message from"
     },
     "plugins\/dataservice\/core\/class\/dataservice.class.php": {
-        "Température extérieure": "Outside temperature",
-        "Humidité extérieure": "Outdoor humidity",
-        "Luminosité exterieure": "Exterior brightness",
-        "Pression extérieure": "External pressure",
-        "Pluie": "Rain",
-        "Vent": "Wind",
-        "Consommation journaliere éléctrique": "Daily electrical consumption",
-        "Consommation journaliere gaz": "Daily gas consumption",
-        "Consommation journaliere eau": "Daily water consumption",
-        "Erreur sur la récuperation des données : ": "Data recovery error:",
-        "Erreur sur ": "Error on"
+        "Erreur sur ": "Error on",
+        "Erreur sur la récuperation des données : ": "Data recovery error:"
     },
     "info.json": {
         "Plugin pour la récupération de diverse données (ejp, vacance, saint du jour...) et l'envoi de diverse données (sms, mail) ainsi que le partage communautaire de données (température, humidité...)": "Plugin for the recovery of various data (ejp, vacancy, saint of the day ...) and the sending of various data (sms, mail) as well as the community sharing of data (temperature, humidity ...)"

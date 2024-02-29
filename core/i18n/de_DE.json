@@ -2,17 +2,7 @@
     "plugins\/dataservice\/plugin_info\/configuration.php": {
         "Envoyer configuration au market": "Konfiguration an den Markt senden",
         "Envoyer": "Senden",
-        "Partage de données": "Datenaustausch",
-        "Le partage de données permet d'envoyer certaines données (que vous choisissez) à Jeedom, celle-ci sont anonymisées et permettent de comparer entre vous ces données. En échange de ce partage de données Jeedom augmentera votre quota de requete au service data": "Durch die gemeinsame Nutzung von Daten können Sie bestimmte Daten (die Sie auswählen) an Jeedom senden, das anonymisiert ist und es Ihnen ermöglicht, diese Daten miteinander zu vergleichen. Im Gegenzug für diese gemeinsame Nutzung von Daten erhöht Jeedom Ihr Anforderungskontingent für den Datendienst",
         "Configuration envoyée avec succès": "Konfiguration erfolgreich gesendet"
-    },
-    "plugins\/dataservice\/desktop\/php\/panel.php": {
-        "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
-        "Je veux comparer ma": "Ich möchte meine vergleichen",
-        "Avec": "Mit",
-        "Dans un rayon de": "Innerhalb eines Radius von",
-        "Période": "Zeit",
-        "Valider": "Validate"
     },
     "plugins\/dataservice\/desktop\/php\/dataservice.php": {
         "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
@@ -69,17 +59,8 @@
         "Message de ": "Nachricht"
     },
     "plugins\/dataservice\/core\/class\/dataservice.class.php": {
-        "Température extérieure": "Außentemperatur",
-        "Humidité extérieure": "Luftfeuchtigkeit im Freien",
-        "Luminosité exterieure": "Außenhelligkeit",
-        "Pression extérieure": "Äußerer Druck",
-        "Pluie": "Regen",
-        "Vent": "Wind",
-        "Consommation journaliere éléctrique": "Täglicher Stromverbrauch",
-        "Consommation journaliere gaz": "Täglicher Gasverbrauch",
-        "Consommation journaliere eau": "Täglicher Wasserverbrauch",
-        "Erreur sur la récuperation des données : ": "Datenwiederherstellungsfehler:",
-        "Erreur sur ": "Fehler ein"
+        "Erreur sur ": "Fehler ein",
+        "Erreur sur la récuperation des données : ": "Datenwiederherstellungsfehler:"
     },
     "info.json": {
         "Plugin pour la récupération de diverse données (ejp, vacance, saint du jour...) et l'envoi de diverse données (sms, mail) ainsi que le partage communautaire de données (température, humidité...)": "Plugin zur Wiederherstellung verschiedener Daten (EJP, Vakanz, Heiliger des Tages ...) und zum Versenden verschiedener Daten (SMS, Mail) sowie zum Community-Austausch von Daten (Temperatur, Luftfeuchtigkeit ...)"
